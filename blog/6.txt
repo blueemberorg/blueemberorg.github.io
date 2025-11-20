@@ -1,0 +1,110 @@
+1:"$Sreact.fragment"
+2:I[6179,["711","static/chunks/8e1d74a4-da3cf7414a69db6f.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","177","static/chunks/app/layout-c1285ceee168d2f6.js"],"default"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[4198,["711","static/chunks/8e1d74a4-da3cf7414a69db6f.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","177","static/chunks/app/layout-c1285ceee168d2f6.js"],"default"]
+6:I[1356,["356","static/chunks/356-4ea754c2f0a1feb1.js","450","static/chunks/app/(route)/blog/%5Bslug%5D/page-65f3f021a858c51d.js"],"Image"]
+7:I[7121,["711","static/chunks/8e1d74a4-da3cf7414a69db6f.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","177","static/chunks/app/layout-c1285ceee168d2f6.js"],"default"]
+e:I[7150,[],""]
+:HL["/_next/static/css/d77ae95da198c05c.css","style"]
+0:{"P":null,"b":"NYMH5zDuUOBBQRdgQZQtj","p":"","c":["","blog","6"],"i":false,"f":[[["",{"children":["(route)",{"children":["blog",{"children":[["slug","6","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d77ae95da198c05c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_372368 bg-black text-white relative overflow-x-hidden","children":[["$","div",null,{"className":"fixed inset-0 z-0 pointer-events-none","children":[["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light left","className":"absolute left-[-150px] top-[-100px] w-[800px]   rotate-180"}],["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light right","className":"absolute right-[-150px] bottom-[-100px] w-[800px] "}]]}],["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L5",null,{}],["$","div",null,{"className":"relative text-center overflow-hidden ","children":[["$","div",null,{"className":"absolute inset-0 -z-10","children":["$","$L6",null,{"src":"/HomePageImage/stars2.png","alt":"stars background","width":437,"height":194,"className":"object-cover opacity-40 animate-pulse","priority":true}]}],["$","div",null,{"className":"absolute -top-10 left-0  -z-10","children":["$","$L6",null,{"src":"/HomePageImage/stars2.png","alt":"left stars","width":437,"height":194,"className":"object-contain animate-pulse"}]}],["$","div",null,{"className":"absolute top-0 right-0    -z-10","children":["$","$L6",null,{"src":"/HomePageImage/stars2.png","alt":"right stars","width":437,"height":194,"className":"object-contain animate-pulse"}]}],["$","div",null,{"className":"absolute bottom-0 left-1/2 -translate-x-1/2   -z-10","children":["$","$L6",null,{"src":"/HomePageImage/stars2.png","alt":"bottom stars","width":437,"height":194,"className":"object-contain animate-pulse"}]}],["$","div",null,{"className":"text-[40px] sm:text-[55px] md:text-[70px] lg:text-[78px] font-bold leading-tight relative z-10","children":[["$","h1",null,{"children":"BIR SONRAKI"}],["$","h1",null,{"className":"italic text-[#00A4D1]","children":["ADIMINIZI BIZIMLE ",["$","span",null,{"className":"text-white","children":"ATIN"}]]}]]}],["$","button",null,{"className":"cursor-pointer py-2 px-14 bg-gradient-to-b text-black from-[#00A4D1] to-[#00FFE3] rounded-4xl","children":"Bizimle İletişime Geçin"}],["$","div",null,{"className":"relative mt-10 flex justify-center","children":["$","$L6",null,{"src":"/FooterUstu/footerustu.png","alt":"footer üstü görseli","width":2000,"height":895,"className":"w-[100%] object-contain drop-shadow-[0_0_35px_#00A4D1]"}]}]]}],["$","$L7",null,{}]]}]}]]}],{"children":["(route)",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L8","$L9"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["blog","$La",{"children":[["slug","6","d"],"$Lb",{"children":["__PAGE__","$Lc",{},null,false]},null,false]},null,false]},null,false]},null,false],"$Ld",false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+11:I[4431,[],"ViewportBoundary"]
+13:I[4431,[],"MetadataBoundary"]
+14:"$Sreact.suspense"
+8:["$","h1",null,{"className":"next-error-h1","style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:1:props:style","children":404}]
+9:["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]
+a:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+b:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+f:Tc0c,
+Dijital dönüşüm çağında işletmelerin en büyük önceliği; daha hızlı, daha düşük maliyetle ve minimum insan hatasıyla çalışmak. İşte tam bu noktada yapay zekâ destekli otomasyon, günümüz şirketleri için bir lüks değil, operasyonel verimliliği artıran bir zorunluluk haline geldi.
+
+Güncel araştırmalar, yapay zekâ ile otomasyona geçen şirketlerin ilk 12 ay içinde ortalama %40'a kadar verimlilik artışı yaşadığını gösteriyor. Bu artış yalnızca iş gücü maliyetlerini azaltmakla kalmıyor; karar alma hızından müşteri deneyimine kadar tüm yapıyı dönüştürüyor.
+
+1. Yapay Zeka Otomasyonunun Şirketlere Sağladığı Temel Avantajlar
+
+Yapay zekâ, klasik otomasyondan farklı olarak yalnızca görevleri tekrar eden bir mekanizma değildir. AI sistemi öğrenir, analiz eder ve öneri sunar.
+Bunun işletmelere sağladığı temel faydalar:
+
+✔ Daha Hızlı Operasyonlar
+
+AI destekli süreçler insan gücünden 5 ila 20 kat daha hızlı çalışır.
+
+✔ Hata Oranında Dramatik Azalma
+
+Tekrarlayan görevlerde insan hatası neredeyse tamamen ortadan kalkar.
+
+✔ Maliyetlerde Düşüş
+
+İş gücü yükü azalır, operasyon maliyetleri düşer.
+
+✔ Veriye Dayalı Karar Alma
+
+AI, günlük yüzbinlerce veri noktasını analiz ederek doğru karar önerileri sunar.
+
+✔ CRM ve Satış Süreçlerinde Kesintisizlik
+
+Otomatik e-posta, teklif hazırlama, müşteri segmentasyonu gibi işlemler 7/24 devam eder.
+
+2. İş Süreçleri Otomasyonu Nerelerde Kullanılır?
+
+İş süreçleri otomasyonu, şirketin tüm departmanlarına uygulanabilir. En yaygın örnekler:
+
+Müşteri hizmetleri: Chatbot, otomatik yanıt sistemleri
+
+Satış: Otomatik teklif oluşturma, lead puanlama
+
+Finans: Fatura tanıma, otomatik ödeme akışı
+
+İK: CV filtreleme, mülakat planlama
+
+Operasyon: Stok takibi, sipariş süreçleri
+
+Raporlama: Gerçek zamanlı analiz ve otomatik rapor oluşturma
+
+AI entegre edilmiş süreçler, manuel işlemleri ortadan kaldırarak çalışanların daha stratejik görevlere odaklanmasını sağlar.
+
+3. %40 Verimlilik Artışının Arkasındaki Matematik
+
+Yapay zeka otomasyonu sayesinde:
+
+İşlem hızında %300’e kadar artış
+
+İş gücü maliyetlerinde %20–50 arası düşüş
+
+Hata oranında %90’a varan azalma
+
+Süreç tamamlanma süresinde %50’ye kadar kısalma
+
+gibi metrikler ortaya çıkar.
+
+Bu değerlerin birleşimi, ortalama olarak şirketin %40 daha verimli çalışmasına neden olur.
+
+4. Yapay Zekâ Destekli Otomasyon Gelecekte Ne Getirecek?
+
+Gelecekte şirketler:
+
+Tamamen otonom iş süreçlerine,
+
+Kendi kendini optimize eden yapay zekâ modellerine,
+
+Departmanlar arası %100 veri senkronizasyonuna,
+
+ChatGPT tabanlı operasyon merkezlerine
+
+sahip olacak.
+
+Bu dönüşüm erken başlayan şirketler için büyük rekabet avantajı anlamına gelir.
+
+Sonuç
+
+Yapay zekâ otomasyonu, şirketleri hem verimlilik hem hız hem maliyet açısından geleceğe taşır.
+Bugün entegre edilen doğru AI çözümleri, yarının en güçlü rekabet üstünlüklerinden birini oluşturur.c:["$","$1","c",{"children":[["$","div",null,{"className":"max-w-5xl mx-auto mt-20 mb-12 px-4 sm:px-6 lg:px-8","children":[["$","h1",null,{"className":"text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white text-center sm:text-left","children":"Yapay Zekâ Destekli Otomasyonla Şirketler Nasıl %40 Daha Verimli Hale Geliyor?"}],["$","div",null,{"className":"w-full h-64 sm:h-80 md:h-96 relative mb-6 sm:mb-8","children":["$","$L6",null,{"src":"/DigitalBlog/blogbg.png","alt":"Yapay Zekâ Destekli Otomasyonla Şirketler Nasıl %40 Daha Verimli Hale Geliyor?","fill":true,"className":"object-cover rounded-2xl"}]}],["$","p",null,{"className":"text-base sm:text-lg md:text-xl leading-relaxed text-[#ccc]","children":"$f"}]]}],null,"$L10"]}]
+d:["$","$1","h",{"children":[null,[["$","$L11",null,{"children":"$L12"}],null],["$","$L13",null,{"children":["$","div",null,{"hidden":true,"children":["$","$14",null,{"fallback":null,"children":"$L15"}]}]}]]}]
+16:I[4431,[],"OutletBoundary"]
+18:I[5278,[],"AsyncMetadataOutlet"]
+10:["$","$L16",null,{"children":["$L17",["$","$L18",null,{"promise":"$@19"}]]}]
+12:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+17:null
+1a:I[622,[],"IconMark"]
+19:{"metadata":[["$","title","0",{"children":"BlueEmber"}],["$","meta","1",{"name":"description","content":"Generated by create next app"}],["$","link","2",{"rel":"icon","href":"/icon.png?0daa1a3d36f67756","type":"image/png","sizes":"25x34"}],["$","$L1a","3",{}]],"error":null,"digest":"$undefined"}
+15:"$19:metadata"

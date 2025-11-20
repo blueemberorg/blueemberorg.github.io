@@ -1,0 +1,57 @@
+1:"$Sreact.fragment"
+2:I[6179,["711","static/chunks/8e1d74a4-da3cf7414a69db6f.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","177","static/chunks/app/layout-c1285ceee168d2f6.js"],"default"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[4198,["711","static/chunks/8e1d74a4-da3cf7414a69db6f.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","177","static/chunks/app/layout-c1285ceee168d2f6.js"],"default"]
+6:I[1356,["356","static/chunks/356-4ea754c2f0a1feb1.js","450","static/chunks/app/(route)/blog/%5Bslug%5D/page-65f3f021a858c51d.js"],"Image"]
+7:I[7121,["711","static/chunks/8e1d74a4-da3cf7414a69db6f.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","177","static/chunks/app/layout-c1285ceee168d2f6.js"],"default"]
+e:I[7150,[],""]
+:HL["/_next/static/css/d77ae95da198c05c.css","style"]
+0:{"P":null,"b":"NYMH5zDuUOBBQRdgQZQtj","p":"","c":["","blog","isletmeler"],"i":false,"f":[[["",{"children":["(route)",{"children":["blog",{"children":[["slug","isletmeler","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/d77ae95da198c05c.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_372368 bg-black text-white relative overflow-x-hidden","children":[["$","div",null,{"className":"fixed inset-0 z-0 pointer-events-none","children":[["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light left","className":"absolute left-[-150px] top-[-100px] w-[800px]   rotate-180"}],["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light right","className":"absolute right-[-150px] bottom-[-100px] w-[800px] "}]]}],["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L5",null,{}],["$","div",null,{"className":"relative text-center overflow-hidden ","children":[["$","div",null,{"className":"absolute inset-0 -z-10","children":["$","$L6",null,{"src":"/HomePageImage/stars2.png","alt":"stars background","width":437,"height":194,"className":"object-cover opacity-40 animate-pulse","priority":true}]}],["$","div",null,{"className":"absolute -top-10 left-0  -z-10","children":["$","$L6",null,{"src":"/HomePageImage/stars2.png","alt":"left stars","width":437,"height":194,"className":"object-contain animate-pulse"}]}],["$","div",null,{"className":"absolute top-0 right-0    -z-10","children":["$","$L6",null,{"src":"/HomePageImage/stars2.png","alt":"right stars","width":437,"height":194,"className":"object-contain animate-pulse"}]}],["$","div",null,{"className":"absolute bottom-0 left-1/2 -translate-x-1/2   -z-10","children":["$","$L6",null,{"src":"/HomePageImage/stars2.png","alt":"bottom stars","width":437,"height":194,"className":"object-contain animate-pulse"}]}],["$","div",null,{"className":"text-[40px] sm:text-[55px] md:text-[70px] lg:text-[78px] font-bold leading-tight relative z-10","children":[["$","h1",null,{"children":"BIR SONRAKI"}],["$","h1",null,{"className":"italic text-[#00A4D1]","children":["ADIMINIZI BIZIMLE ",["$","span",null,{"className":"text-white","children":"ATIN"}]]}]]}],["$","button",null,{"className":"cursor-pointer py-2 px-14 bg-gradient-to-b text-black from-[#00A4D1] to-[#00FFE3] rounded-4xl","children":"Bizimle İletişime Geçin"}],["$","div",null,{"className":"relative mt-10 flex justify-center","children":["$","$L6",null,{"src":"/FooterUstu/footerustu.png","alt":"footer üstü görseli","width":2000,"height":895,"className":"w-[100%] object-contain drop-shadow-[0_0_35px_#00A4D1]"}]}]]}],["$","$L7",null,{}]]}]}]]}],{"children":["(route)",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],"$L8","$L9"]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["blog","$La",{"children":[["slug","isletmeler","d"],"$Lb",{"children":["__PAGE__","$Lc",{},null,false]},null,false]},null,false]},null,false]},null,false],"$Ld",false]],"m":"$undefined","G":["$e",[]],"s":false,"S":true}
+10:I[4431,[],"OutletBoundary"]
+12:I[5278,[],"AsyncMetadataOutlet"]
+14:I[4431,[],"ViewportBoundary"]
+16:I[4431,[],"MetadataBoundary"]
+17:"$Sreact.suspense"
+8:["$","h1",null,{"className":"next-error-h1","style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:1:props:style","children":404}]
+9:["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]
+a:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+b:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+f:T8a4,2025’in modern web uygulamalarında bulunması gereken hız, güvenlik, SEO, entegrasyon ve yapay zekâ özelliklerini tüm detaylarıyla keşfedin.
+
+2025’te İşletmelerin Mutlaka Sahip Olması Gereken Web Uygulaması Özellikleri
+
+Web uygulamaları artık bir internet sitesinden çok daha fazlası. Satış merkezi, iletişim platformu, müşteri hizmetleri alanı, marka vitrini ve otomasyon merkezi hâline geldi. 2025 yılına girerken modern bir web uygulamasının sahip olması gereken temel standartlar şu şekildedir:
+
+1. Ultra Hızlı Yükleme Süresi (2 Saniyenin Altı Şart)
+Hızlı açılan siteler SEO’da avantaj sağlarken, kullanıcıların siteyi terk etme oranını ciddi oranda düşürür.
+Kullanılması gereken teknolojiler: Next.js, CDN, lazy-loading, edge caching, optimize görseller, code splitting.
+
+2. Mobile-First Tasarım
+2025’te trafiğin büyük kısmı mobilde. Bu yüzden tam responsive yapı, minimalist menüler, tek elle kullanım ve hızlı açılış süreleri zorunludur.
+
+3. Yapay Zekâ Destekli Kullanıcı Deneyimi
+AI arama, chatbot ve kişiye özel öneriler modern web uygulamalarının vazgeçilmezi hâline geldi.
+
+4. Güçlü Güvenlik Katmanı
+2025 standartları artık sadece SSL ile sınırlı değil. 2FA, JWT, rate limiting, veri şifreleme ve bot koruma gibi ek güvenlik katmanları şart.
+
+5. SEO Dostu Mimariler
+Temiz URL yapısı, SSR, schema markup, optimize görseller, hızlı LCP ve doğru başlık hiyerarşisi SEO başarısının temelini oluşturur.
+
+6. API Entegrasyonlarına Uygun Esnek Mimari
+CRM, ERP, ödeme sistemleri, AI çözümleri ve lojistik API’leri gibi sistemlerle uyumlu headless mimari artık standarttır.
+
+7. Modern ve Minimalist UI/UX
+Soft renkler, geniş boşluklar, sade ikonlar, net tipografi ve karanlık mod desteği modern tasarımın ana unsurlarıdır.
+
+8. Ölçeklenebilir ve Bulut Destekli Sistemler
+Sunucusuz mimari, otomatik ölçeklendirme ve bulut veritabanları büyüyen işletmeler için zorunluluktur.
+
+Sonuç olarak 2025’te başarılı bir web uygulaması hız, güvenlik, SEO, entegrasyon ve yapay zekâ üçgeninde gelişir. Bunlara sahip olmayan işletmeler dijital yarışta geride kalır.c:["$","$1","c",{"children":[["$","div",null,{"className":"max-w-5xl mx-auto mt-20 mb-12 px-4 sm:px-6 lg:px-8","children":[["$","h1",null,{"className":"text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white text-center sm:text-left","children":"2025’te İşletmelerin Mutlaka Sahip Olması Gereken Web Uygulaması Özellikleri "}],["$","div",null,{"className":"w-full h-64 sm:h-80 md:h-96 relative mb-6 sm:mb-8","children":["$","$L6",null,{"src":"/DigitalBlog/blogbg.png","alt":"2025’te İşletmelerin Mutlaka Sahip Olması Gereken Web Uygulaması Özellikleri ","fill":true,"className":"object-cover rounded-2xl"}]}],["$","p",null,{"className":"text-base sm:text-lg md:text-xl leading-relaxed text-[#ccc]","children":"$f"}]]}],null,["$","$L10",null,{"children":["$L11",["$","$L12",null,{"promise":"$@13"}]]}]]}]
+d:["$","$1","h",{"children":[null,[["$","$L14",null,{"children":"$L15"}],null],["$","$L16",null,{"children":["$","div",null,{"hidden":true,"children":["$","$17",null,{"fallback":null,"children":"$L18"}]}]}]]}]
+15:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+11:null
+19:I[622,[],"IconMark"]
+13:{"metadata":[["$","title","0",{"children":"BlueEmber"}],["$","meta","1",{"name":"description","content":"Generated by create next app"}],["$","link","2",{"rel":"icon","href":"/icon.png?0daa1a3d36f67756","type":"image/png","sizes":"25x34"}],["$","$L19","3",{}]],"error":null,"digest":"$undefined"}
+18:"$13:metadata"
