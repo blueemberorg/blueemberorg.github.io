@@ -1,0 +1,109 @@
+1:"$Sreact.fragment"
+2:I[8977,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[4198,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+6:I[3947,["356","static/chunks/356-4ea754c2f0a1feb1.js","916","static/chunks/916-2b4cd392cdf31a2e.js","619","static/chunks/619-9168df9c2a29b74b.js","400","static/chunks/400-3970119f3729967d.js","512","static/chunks/app/(route)/(home)/page-de2bdbab9ea6eb64.js"],"default"]
+7:I[7121,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+8:I[1402,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],""]
+d:I[7150,[],""]
+:HL["/_next/static/css/be3262ddd87e41c7.css","style"]
+0:{"P":null,"b":"uYI67IbqwPuEdYAmlIUfo","p":"","c":["","blog","6"],"i":false,"f":[[["",{"children":["(route)",{"children":["blog",{"children":[["slug","6","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/be3262ddd87e41c7.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_0cb770 dark:bg-black text-white relative overflow-x-hidden","children":[["$","div",null,{"className":"fixed inset-0 z-0 pointer-events-none","children":[["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light left","className":"absolute left-[-150px] top-[-100px] w-[800px]   rotate-180"}],["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light right","className":"absolute right-[-150px] bottom-[-100px] w-[800px] "}]]}],["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{"src":"https://identity.netlify.com/v1/netlify-identity-widget.js"}],["$","$L8",null,{"id":"netlify-redirect","children":"\n            if (window.netlifyIdentity) {\n              window.netlifyIdentity.on(\"init\", user => {\n                if (!user) {\n                  window.netlifyIdentity.on(\"login\", () => {\n                    document.location.href = \"/admin/\";\n                  });\n                }\n              });\n            }\n          "}]]}]}]]}],{"children":["(route)",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","6","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"className":"max-w-5xl mx-auto mt-20 mb-12 px-4 sm:px-6 lg:px-8","children":[["$","h1",null,{"className":"text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white text-center sm:text-left","children":"Yapay Zekâ Destekli Otomasyonla Şirketler Nasıl %40 Daha Verimli Hale Geliyor?"}],"$L9","$La"]}],null,"$Lb"]}],{},null,false]},null,false]},null,false]},null,false]},null,false],"$Lc",false]],"m":"$undefined","G":["$d",[]],"s":false,"S":true}
+e:I[1356,["356","static/chunks/356-4ea754c2f0a1feb1.js","450","static/chunks/app/(route)/blog/%5Bslug%5D/page-65f3f021a858c51d.js"],"Image"]
+10:I[4431,[],"OutletBoundary"]
+12:I[5278,[],"AsyncMetadataOutlet"]
+14:I[4431,[],"ViewportBoundary"]
+16:I[4431,[],"MetadataBoundary"]
+17:"$Sreact.suspense"
+9:["$","div",null,{"className":"w-full h-64 sm:h-80 md:h-96 relative mb-6 sm:mb-8","children":["$","$Le",null,{"src":"/DigitalBlog/blogbg.png","alt":"Yapay Zekâ Destekli Otomasyonla Şirketler Nasıl %40 Daha Verimli Hale Geliyor?","fill":true,"className":"object-cover rounded-2xl"}]}]
+f:Tc0c,
+Dijital dönüşüm çağında işletmelerin en büyük önceliği; daha hızlı, daha düşük maliyetle ve minimum insan hatasıyla çalışmak. İşte tam bu noktada yapay zekâ destekli otomasyon, günümüz şirketleri için bir lüks değil, operasyonel verimliliği artıran bir zorunluluk haline geldi.
+
+Güncel araştırmalar, yapay zekâ ile otomasyona geçen şirketlerin ilk 12 ay içinde ortalama %40'a kadar verimlilik artışı yaşadığını gösteriyor. Bu artış yalnızca iş gücü maliyetlerini azaltmakla kalmıyor; karar alma hızından müşteri deneyimine kadar tüm yapıyı dönüştürüyor.
+
+1. Yapay Zeka Otomasyonunun Şirketlere Sağladığı Temel Avantajlar
+
+Yapay zekâ, klasik otomasyondan farklı olarak yalnızca görevleri tekrar eden bir mekanizma değildir. AI sistemi öğrenir, analiz eder ve öneri sunar.
+Bunun işletmelere sağladığı temel faydalar:
+
+✔ Daha Hızlı Operasyonlar
+
+AI destekli süreçler insan gücünden 5 ila 20 kat daha hızlı çalışır.
+
+✔ Hata Oranında Dramatik Azalma
+
+Tekrarlayan görevlerde insan hatası neredeyse tamamen ortadan kalkar.
+
+✔ Maliyetlerde Düşüş
+
+İş gücü yükü azalır, operasyon maliyetleri düşer.
+
+✔ Veriye Dayalı Karar Alma
+
+AI, günlük yüzbinlerce veri noktasını analiz ederek doğru karar önerileri sunar.
+
+✔ CRM ve Satış Süreçlerinde Kesintisizlik
+
+Otomatik e-posta, teklif hazırlama, müşteri segmentasyonu gibi işlemler 7/24 devam eder.
+
+2. İş Süreçleri Otomasyonu Nerelerde Kullanılır?
+
+İş süreçleri otomasyonu, şirketin tüm departmanlarına uygulanabilir. En yaygın örnekler:
+
+Müşteri hizmetleri: Chatbot, otomatik yanıt sistemleri
+
+Satış: Otomatik teklif oluşturma, lead puanlama
+
+Finans: Fatura tanıma, otomatik ödeme akışı
+
+İK: CV filtreleme, mülakat planlama
+
+Operasyon: Stok takibi, sipariş süreçleri
+
+Raporlama: Gerçek zamanlı analiz ve otomatik rapor oluşturma
+
+AI entegre edilmiş süreçler, manuel işlemleri ortadan kaldırarak çalışanların daha stratejik görevlere odaklanmasını sağlar.
+
+3. %40 Verimlilik Artışının Arkasındaki Matematik
+
+Yapay zeka otomasyonu sayesinde:
+
+İşlem hızında %300’e kadar artış
+
+İş gücü maliyetlerinde %20–50 arası düşüş
+
+Hata oranında %90’a varan azalma
+
+Süreç tamamlanma süresinde %50’ye kadar kısalma
+
+gibi metrikler ortaya çıkar.
+
+Bu değerlerin birleşimi, ortalama olarak şirketin %40 daha verimli çalışmasına neden olur.
+
+4. Yapay Zekâ Destekli Otomasyon Gelecekte Ne Getirecek?
+
+Gelecekte şirketler:
+
+Tamamen otonom iş süreçlerine,
+
+Kendi kendini optimize eden yapay zekâ modellerine,
+
+Departmanlar arası %100 veri senkronizasyonuna,
+
+ChatGPT tabanlı operasyon merkezlerine
+
+sahip olacak.
+
+Bu dönüşüm erken başlayan şirketler için büyük rekabet avantajı anlamına gelir.
+
+Sonuç
+
+Yapay zekâ otomasyonu, şirketleri hem verimlilik hem hız hem maliyet açısından geleceğe taşır.
+Bugün entegre edilen doğru AI çözümleri, yarının en güçlü rekabet üstünlüklerinden birini oluşturur.a:["$","p",null,{"className":"text-base sm:text-lg md:text-xl leading-relaxed text-black dark:text-white","children":"$f"}]
+b:["$","$L10",null,{"children":["$L11",["$","$L12",null,{"promise":"$@13"}]]}]
+c:["$","$1","h",{"children":[null,[["$","$L14",null,{"children":"$L15"}],null],["$","$L16",null,{"children":["$","div",null,{"hidden":true,"children":["$","$17",null,{"fallback":null,"children":"$L18"}]}]}]]}]
+15:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+11:null
+19:I[622,[],"IconMark"]
+13:{"metadata":[["$","title","0",{"children":"BlueEmber"}],["$","meta","1",{"name":"description","content":"Generated by create next app"}],["$","link","2",{"rel":"icon","href":"/icon.png?0daa1a3d36f67756","type":"image/png","sizes":"25x34"}],["$","$L19","3",{}]],"error":null,"digest":"$undefined"}
+18:"$13:metadata"

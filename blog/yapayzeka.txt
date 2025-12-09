@@ -1,0 +1,181 @@
+1:"$Sreact.fragment"
+2:I[8977,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[4198,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+6:I[3947,["356","static/chunks/356-4ea754c2f0a1feb1.js","916","static/chunks/916-2b4cd392cdf31a2e.js","619","static/chunks/619-9168df9c2a29b74b.js","400","static/chunks/400-3970119f3729967d.js","512","static/chunks/app/(route)/(home)/page-de2bdbab9ea6eb64.js"],"default"]
+7:I[7121,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+8:I[1402,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],""]
+d:I[7150,[],""]
+:HL["/_next/static/css/be3262ddd87e41c7.css","style"]
+0:{"P":null,"b":"uYI67IbqwPuEdYAmlIUfo","p":"","c":["","blog","yapayzeka"],"i":false,"f":[[["",{"children":["(route)",{"children":["blog",{"children":[["slug","yapayzeka","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/be3262ddd87e41c7.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_0cb770 dark:bg-black text-white relative overflow-x-hidden","children":[["$","div",null,{"className":"fixed inset-0 z-0 pointer-events-none","children":[["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light left","className":"absolute left-[-150px] top-[-100px] w-[800px]   rotate-180"}],["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light right","className":"absolute right-[-150px] bottom-[-100px] w-[800px] "}]]}],["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{"src":"https://identity.netlify.com/v1/netlify-identity-widget.js"}],["$","$L8",null,{"id":"netlify-redirect","children":"\n            if (window.netlifyIdentity) {\n              window.netlifyIdentity.on(\"init\", user => {\n                if (!user) {\n                  window.netlifyIdentity.on(\"login\", () => {\n                    document.location.href = \"/admin/\";\n                  });\n                }\n              });\n            }\n          "}]]}]}]]}],{"children":["(route)",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","yapayzeka","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"className":"max-w-5xl mx-auto mt-20 mb-12 px-4 sm:px-6 lg:px-8","children":[["$","h1",null,{"className":"text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white text-center sm:text-left","children":"2025’te İş Dünyasını Değiştirecek Yapay Zekâ Trendleri "}],"$L9","$La"]}],null,"$Lb"]}],{},null,false]},null,false]},null,false]},null,false]},null,false],"$Lc",false]],"m":"$undefined","G":["$d",[]],"s":false,"S":true}
+e:I[1356,["356","static/chunks/356-4ea754c2f0a1feb1.js","450","static/chunks/app/(route)/blog/%5Bslug%5D/page-65f3f021a858c51d.js"],"Image"]
+10:I[4431,[],"OutletBoundary"]
+12:I[5278,[],"AsyncMetadataOutlet"]
+14:I[4431,[],"ViewportBoundary"]
+16:I[4431,[],"MetadataBoundary"]
+17:"$Sreact.suspense"
+9:["$","div",null,{"className":"w-full h-64 sm:h-80 md:h-96 relative mb-6 sm:mb-8","children":["$","$Le",null,{"src":"/DigitalBlog/blogbg.png","alt":"2025’te İş Dünyasını Değiştirecek Yapay Zekâ Trendleri ","fill":true,"className":"object-cover rounded-2xl"}]}]
+f:Td4d,Yapay zekânın 2025’te iş dünyasında hangi trendleri değiştireceğini öğrenin: Voice agent, otonom ajanlar, GenAI, otomasyon, predictive AI ve daha fazlası.
+
+2025’te İş Dünyasını Değiştirecek Yapay Zekâ Trendleri
+
+Yapay zekâ artık sadece bir teknoloji değil; şirketlerin rekabet gücünü belirleyen ana faktör.
+2025, AI teknolojilerinin günlük iş süreçlerine tam entegre olduğu yıl olacak.
+
+Aşağıda 2025’te dünya genelinde milyonlarca şirketi değiştirecek yapay zekâ trendlerini detaylı olarak inceleyelim.
+
+1. Voice Agent (Konuşan Yapay Zekâ) Devri
+
+Voice agent çözümleri 2024’te yükselişe geçti, ancak 2025’te:
+
+Çağrı merkezlerinin yerini alacak
+
+Soğuk aramalarda %90 zaman tasarrufu sağlayacak
+
+Müşteri hizmetlerini otomatik yönetecek
+
+Tahsilat hatırlatma yapacak
+
+Randevu oluşturacak
+
+Satış yapacak
+
+Şirketler voice agent kullanarak:
+
+Maliyetleri %70 azaltıyor
+
+Arama performansını 10 kat artırıyor
+
+Hataları minimuma indiriyor
+
+Voice agent 2025’in en hızlı büyüyecek AI pazarlarından biri.
+
+2. Üretken Yapay Zekâ (GenAI) İş Süreçlerini Yeniden Tanımlıyor
+
+Üretken yapay zekâ artık sadece yazı yazmıyor.
+
+2025’te GenAI:
+
+Kod yazıyor
+
+Sunum hazırlıyor
+
+Sözleşme oluşturuyor
+
+Verilerden rapor çıkartıyor
+
+Çağrı senaryosu yazıyor
+
+Teklif dosyası oluşturuyor
+
+Şirketler “AI çalışan” dönemine giriyor.
+
+3. AI Otomasyonu ile İnsan Gücü Yarı Yarıya Azalıyor
+
+Rutin işler tamamen AI’ya devrediliyor:
+
+Veri girişi
+
+Faturalama
+
+CRM kayıtları
+
+Excel işleme
+
+Müşteri bilgilendirme
+
+E-ticaret sipariş akışı
+
+Depo yönetimi
+
+Bu sayede işletmeler yıllık binlerce saat iş gücü tasarrufu sağlıyor.
+
+4. Otonom Yapay Zekâ Ajanları (Autonomous Agents)
+
+Bu ajanlar kendi kendine düşünüyor ve karar veriyor.
+
+Otonom ajanlar neler yapar?
+
+Görev planlar
+
+Araştırma yapar
+
+Analiz çıkarır
+
+Strateji önerir
+
+Müşteri iletişimi yürütür
+
+Satış potansiyeli belirler
+
+Şirketler için bir “dijital çalışan” haline geliyor.
+
+5. Predictive AI (Tahmini Zekâ) Karar Mekanizmasını Dönüştürüyor
+
+Tahmine dayalı yapay zekâ:
+
+Stok ihtiyaçlarını öngörür
+
+Müşteri kaybı riski hesaplar
+
+Satış trendlerini tahmin eder
+
+Kampanya başarısını analiz eder
+
+Finansal risk yönetimi sağlar
+
+Özellikle e-ticaret, lojistik, finans ve sağlık sektörlerinde büyük dönüşüm yaratacak.
+
+6. AI + İnsan Hibrit Çalışma Modelleri Standart Oluyor
+
+Yapay zekâ çalışanların yerini almak yerine, onların “yardımcı çalışanı” oluyor.
+
+AI destekli çalışanlar:
+
+Aynı anda 4 kat fazla iş yapıyor
+
+Hata oranı %85 azalıyor
+
+Zamanlarını stratejik işlere ayırıyor
+
+Bu model işletmelerin verimliliğini minimum %40 artırıyor.
+
+7. AI Güvenlik ve Veri Analitiği Öne Çıkıyor
+
+2025’te şirketlerin en büyük yatırımları şunlar olacak:
+
+AI güvenlik sistemleri
+
+Tehdit tespit modelleri
+
+Veri sahteciliği engelleme
+
+Anomali tespiti
+
+AI ile log analizi
+
+Büyük şirketler artık siber güvenlikte yapay zekâ zorunluluğuna geçiyor.
+
+Sonuç
+
+2025 iş dünyasında yapay zekâ:
+
+Operasyonları hızlandıracak
+
+İnsan gücünü destekleyecek
+
+Maliyetleri azaltacak
+
+Satışları artıracak
+
+Müşteri deneyimini dönüştürecek
+
+AI teknolojilerini erken uygulayan şirketler, 2025–2030 döneminin kazananları olacak.a:["$","p",null,{"className":"text-base sm:text-lg md:text-xl leading-relaxed text-black dark:text-white","children":"$f"}]
+b:["$","$L10",null,{"children":["$L11",["$","$L12",null,{"promise":"$@13"}]]}]
+c:["$","$1","h",{"children":[null,[["$","$L14",null,{"children":"$L15"}],null],["$","$L16",null,{"children":["$","div",null,{"hidden":true,"children":["$","$17",null,{"fallback":null,"children":"$L18"}]}]}]]}]
+15:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+11:null
+19:I[622,[],"IconMark"]
+13:{"metadata":[["$","title","0",{"children":"BlueEmber"}],["$","meta","1",{"name":"description","content":"Generated by create next app"}],["$","link","2",{"rel":"icon","href":"/icon.png?0daa1a3d36f67756","type":"image/png","sizes":"25x34"}],["$","$L19","3",{}]],"error":null,"digest":"$undefined"}
+18:"$13:metadata"

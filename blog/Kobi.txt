@@ -1,0 +1,154 @@
+1:"$Sreact.fragment"
+2:I[8977,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+3:I[9766,[],""]
+4:I[8924,[],""]
+5:I[4198,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+6:I[3947,["356","static/chunks/356-4ea754c2f0a1feb1.js","916","static/chunks/916-2b4cd392cdf31a2e.js","619","static/chunks/619-9168df9c2a29b74b.js","400","static/chunks/400-3970119f3729967d.js","512","static/chunks/app/(route)/(home)/page-de2bdbab9ea6eb64.js"],"default"]
+7:I[7121,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],"default"]
+8:I[1402,["711","static/chunks/8e1d74a4-706f5d8d8e57a75d.js","356","static/chunks/356-4ea754c2f0a1feb1.js","619","static/chunks/619-9168df9c2a29b74b.js","261","static/chunks/261-fa93c0d8c9df1365.js","177","static/chunks/app/layout-59f4c4f39e8b2149.js"],""]
+d:I[7150,[],""]
+:HL["/_next/static/css/be3262ddd87e41c7.css","style"]
+0:{"P":null,"b":"uYI67IbqwPuEdYAmlIUfo","p":"","c":["","blog","Kobi"],"i":false,"f":[[["",{"children":["(route)",{"children":["blog",{"children":[["slug","Kobi","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/be3262ddd87e41c7.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"__className_0cb770 dark:bg-black text-white relative overflow-x-hidden","children":[["$","div",null,{"className":"fixed inset-0 z-0 pointer-events-none","children":[["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light left","className":"absolute left-[-150px] top-[-100px] w-[800px]   rotate-180"}],["$","img",null,{"src":"/HomePageImage/radialblue.png","alt":"blue light right","className":"absolute right-[-150px] bottom-[-100px] w-[800px] "}]]}],["$","$L2",null,{}],["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L5",null,{}],["$","$L6",null,{}],["$","$L7",null,{}],["$","$L8",null,{"src":"https://identity.netlify.com/v1/netlify-identity-widget.js"}],["$","$L8",null,{"id":"netlify-redirect","children":"\n            if (window.netlifyIdentity) {\n              window.netlifyIdentity.on(\"init\", user => {\n                if (!user) {\n                  window.netlifyIdentity.on(\"login\", () => {\n                    document.location.href = \"/admin/\";\n                  });\n                }\n              });\n            }\n          "}]]}]}]]}],{"children":["(route)",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:f:0:1:1:props:children:1:props:children:props:children:2:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","Kobi","d"],["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","div",null,{"className":"max-w-5xl mx-auto mt-20 mb-12 px-4 sm:px-6 lg:px-8","children":[["$","h1",null,{"className":"text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white text-center sm:text-left","children":"KOBİ’ler Neden Özelleştirilmiş Bir Mobil Uygulamaya İhtiyaç Duyar? (2025 Mega Rehberi)"}],"$L9","$La"]}],null,"$Lb"]}],{},null,false]},null,false]},null,false]},null,false]},null,false],"$Lc",false]],"m":"$undefined","G":["$d",[]],"s":false,"S":true}
+e:I[1356,["356","static/chunks/356-4ea754c2f0a1feb1.js","450","static/chunks/app/(route)/blog/%5Bslug%5D/page-65f3f021a858c51d.js"],"Image"]
+10:I[4431,[],"OutletBoundary"]
+12:I[5278,[],"AsyncMetadataOutlet"]
+14:I[4431,[],"ViewportBoundary"]
+16:I[4431,[],"MetadataBoundary"]
+17:"$Sreact.suspense"
+9:["$","div",null,{"className":"w-full h-64 sm:h-80 md:h-96 relative mb-6 sm:mb-8","children":["$","$Le",null,{"src":"/DigitalBlog/blogbg.png","alt":"KOBİ’ler Neden Özelleştirilmiş Bir Mobil Uygulamaya İhtiyaç Duyar? (2025 Mega Rehberi)","fill":true,"className":"object-cover rounded-2xl"}]}]
+f:T10e5,2025’te KOBİ’lerin neden özelleştirilmiş mobil uygulamalara ihtiyaç duyduğunu, satış, verimlilik ve müşteri deneyimi açısından tüm faydalarıyla keşfedin.
+
+Dijital dönüşüm sadece büyük markaların gündemi olmaktan çıktı; artık KOBİ’lerin varlığını koruyabilmesi için temel bir gereklilik haline geldi. Son 5 yılda tüketici davranışları dramatik bir şekilde değişti. İnsanlar artık her ihtiyacını mobil cihazlar üzerinden çözmek istiyor: Sipariş vermek, randevu almak, ödeme yapmak, destek talebi oluşturmak, kampanyaları takip etmek…
+
+Bu noktada özelleştirilmiş bir mobil uygulama, KOBİ’ler için artık sadece “iyi olur” değil; zorunluluk.
+
+Aşağıda, 2025’te KOBİ’lerin mobil uygulamalara neden ihtiyaç duyduğunu tüm detaylarıyla inceleyelim.
+
+1. Mobil Davranışların Hakimiyeti: Müşteri Cebinde Olmak
+
+2024 sonunda yapılan araştırmalara göre:
+
+Kullanıcıların %87’si markalarla etkileşimi mobil cihazlardan gerçekleştiriyor.  
+İnternet alışverişlerinin %74’ü mobil uygulamalardan yapılıyor.  
+Kullanıcıların %70’i, web sitesine göre mobil uygulamalarda daha fazla zaman geçiriyor.  
+
+Bu veriler bir gerçeği gösteriyor:  
+
+Müşterinin olduğu yerde olmayan marka, yarışa geriden başlar.
+
+KOBİ’ler için mobil uygulama, müşterinin cebine yerleşmek anlamına geliyor. Bu da:  
+
+✔ 7/24 görünürlük  
+✔ Markayı sürekli hatırlatma  
+✔ Tıklayıp erişme kolaylığı  
+✔ Online satışa dönüşü hızlandırma  
+
+Demek oluyor.
+
+2. Push Bildirimlerinin Gücü (Ücretsiz Pazarlama Kanalı)
+
+Push bildirimleri, KOBİ’ler için maliyetisiz bir satış motorudur.  
+
+Anında kampanya duyurusu  
+Sepete ekleyip almayan müşteriye hatırlatma  
+Yeni ürün tanıtımı  
+Bölgesel veya saatlik fırsatlar  
+Randevu hatırlatma  
+
+Mobil uygulaması olan bir işletme, push bildirimler sayesinde %32 daha fazla geri dönüş alıyor.  
+
+Push bildirimleri = Ücretsiz reklam + Anlık satış etkisi
+
+3. Müşteri Sadakati ve Tekrar Satış Oranları Artar
+
+Mobil uygulamalar KOBİ’lere şunu sağlar:  
+
+Kullanıcıya özel kampanyalar  
+Sadakat puan sistemi  
+Üyelere özel indirim  
+Otomatik “Hoş Geldin” hediyesi  
+VIP müşteri programı  
+
+Bu sistemler sayesinde:  
+
+Sadakat programına entegre edilen uygulamalar, tekrar satın alma oranını %60’a kadar artırıyor.  
+
+Bu artış, KOBİ’lerin gelirine doğrudan yansıyor.
+
+4. İşletme İçi Operasyonları Dijitalleştirir
+
+Bir mobil uygulama yalnızca müşteri tarafı için değil, “arka ofis” için de büyük avantaj sağlar.  
+
+Mobil uygulamayla yönetilen operasyonlar:  
+
+Sipariş yönetimi  
+Randevu planlama  
+Stok takibi  
+Çalışan görev dağılımı  
+Otomatik fatura – bildirim sistemi  
+Günlük/haftalık raporlar  
+
+Bu sayede KOBİ’ler:  
+
+%30 daha hızlı işlem yapıyor  
+İnsan hatası %70 azalıyor  
+Operasyon maliyetleri düşüyor
+
+5. Online Ödeme Sistemleri ile Gelir Artışı
+
+Mobil uygulamanın sağladığı ödeme kolaylıkları işletmelere dramatik gelir artışı getiriyor.  
+
+Entegre ödeme çözümleri:  
+
+Kredi kartı  
+Havale/EFT  
+Kapıda ödeme entegrasyonu  
+Pay-by-link  
+Mobil cüzdan  
+Abonelik bazlı model  
+
+Satış dönüşüm oranı ortalama %22 yükseliyor.
+
+6. Marka Algısını Profesyonelleştirir
+
+Çoğu KOBİ hâlâ yalnızca Instagram hesabıyla var olmaya çalışıyor.  
+
+Bir mobil uygulamaya sahip olmak müşteriye şunu söyler:  
+
+“Bu işletme profesyonel, kendine güveniyor ve modern.”  
+
+Özellikle sektörler:  
+
+Fitness  
+Restoran/kafe  
+Güzellik ve bakım  
+Danışmanlık  
+E-ticaret  
+Klinik/sağlık turizmi  
+
+Mobil uygulama sayesinde prestijini ciddi şekilde artırıyor.
+
+7. Rekabette Büyük Avantaj Sağlar
+
+Bir müşteri iki markayı değerlendiriyorsa ve sadece birinin mobil uygulaması varsa:  
+
+Uygulaması olan markanın tercih edilme olasılığı %63 daha yüksek.  
+
+KOBİ’ler için bu fark, büyüme hızına doğrudan etki eder.
+
+Sonuç: Mobil Uygulama KOBİ’lerin 2025 Silahıdır
+
+Satış artırır  
+Müşteriyi elde tutar  
+Operasyonları hızlandırır  
+Marka değerini yükseltir  
+Rakiplerin önüne geçirir  
+
+Bugün mobil uygulamaya yatırım yapan KOBİ’ler, önümüzdeki 5 yılı domine edecek.a:["$","p",null,{"className":"text-base sm:text-lg md:text-xl leading-relaxed text-black dark:text-white","children":"$f"}]
+b:["$","$L10",null,{"children":["$L11",["$","$L12",null,{"promise":"$@13"}]]}]
+c:["$","$1","h",{"children":[null,[["$","$L14",null,{"children":"$L15"}],null],["$","$L16",null,{"children":["$","div",null,{"hidden":true,"children":["$","$17",null,{"fallback":null,"children":"$L18"}]}]}]]}]
+15:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+11:null
+19:I[622,[],"IconMark"]
+13:{"metadata":[["$","title","0",{"children":"BlueEmber"}],["$","meta","1",{"name":"description","content":"Generated by create next app"}],["$","link","2",{"rel":"icon","href":"/icon.png?0daa1a3d36f67756","type":"image/png","sizes":"25x34"}],["$","$L19","3",{}]],"error":null,"digest":"$undefined"}
+18:"$13:metadata"
