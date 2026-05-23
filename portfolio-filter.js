@@ -6,7 +6,7 @@
 
   var categories = {
     "Mobil Apps": ["YKS Cepte", "WorldChain Airdrop", "Soruçöz: LGS", "Combeen", "Morgenmarkt", "Tolky", "Nerd AI", "Facebuilding"],
-    "Web Projeleri": ["Kariyermahall", "Gedik", "AR Reklam", "Mertay", "Eleman", "Agency", "UKUS", "Benim Temizlik", "Bihter", "Gemicart"],
+    "Web Projeleri": ["Gedik", "AR Reklam", "Eleman", "Agency", "UKUS", "Benim Temizlik", "Bihter", "Gemicart"],
     "Oyun Projeleri": ["Arena Pit", "Flesh Reaver", "American Camp", "Tech Shop", "Bead Match", "Room Up", "Color Around", "Color Survivor", "Makeup Shooter", "Mecha Chain"]
   };
 
