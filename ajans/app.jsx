@@ -1,12 +1,14 @@
 // app.jsx — kök bileşen
 function App() {
-  React.useEffect(() => {
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('.reveal:not(.in)').forEach(el => io.observe(el));
-    return () => io.disconnect();
-  }, []);
+  var Hero = window.Hero;
+  var Stats = window.Stats;
+  var Showcase = window.Showcase;
+  var Services = window.Services;
+  var Tech = window.Tech;
+  var Testimonials = window.Testimonials;
+  var FAQ = window.FAQ;
+  var RequestForm = window.RequestForm;
+  var Contact = window.Contact;
 
   return (
     <React.Fragment>
@@ -22,4 +24,9 @@ function App() {
     </React.Fragment>
   );
 }
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+var rootEl = document.getElementById('root');
+if (rootEl && !rootEl.dataset.mounted) {
+  rootEl.dataset.mounted = '1';
+  ReactDOM.createRoot(rootEl).render(<App />);
+}

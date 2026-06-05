@@ -1,6 +1,4 @@
 // screens1.jsx — Yemek siparişi · Bankacılık/Fintech · Rezervasyon
-const { useState } = React;
-
 const wrapStyle = { height: '100%', display: 'flex', flexDirection: 'column', fontFamily: 'var(--body)' };
 const scrollStyle = { flex: 1, overflowY: 'auto', overflowX: 'hidden' };
 
@@ -17,9 +15,9 @@ function Thumb({ from, to, glyph, h = 78, r = 14 }) {
 /* ============== 1 · YEMEK SİPARİŞİ ============== */
 function FoodApp() {
   const cats = [['🍔', 'Burger'], ['🍕', 'Pizza'], ['🍣', 'Suşi'], ['🥗', 'Salata'], ['🍰', 'Tatlı']];
-  const [cat, setCat] = useState(0);
-  const [cart, setCart] = useState(2);
-  const [tab, setTab] = useState(0);
+  const [cat, setCat] = React.useState(0);
+  const [cart, setCart] = React.useState(2);
+  const [tab, setTab] = React.useState(0);
   const items = [
     { n: 'Truffle Burger', r: '4.9', t: '20 dk', p: '₺145', g: '🍔', c: ['#ff8a3c', '#ff5a3c'] },
     { n: 'Margherita', r: '4.7', t: '25 dk', p: '₺120', g: '🍕', c: ['#ffb020', '#ff7a3c'] },
@@ -84,7 +82,7 @@ function FoodApp() {
 
 /* ============== 2 · BANKACILIK / FINTECH ============== */
 function FintechApp() {
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = React.useState(0);
   const tx = [
     { n: 'Spotify', s: 'Abonelik', a: '-₺59,99', g: '🎵', c: '#1db954' },
     { n: 'Migros', s: 'Market', a: '-₺342,10', g: '🛒', c: '#ff7a3c' },
@@ -150,9 +148,9 @@ function FintechApp() {
 
 /* ============== 3 · REZERVASYON / RANDEVU ============== */
 function BookingApp() {
-  const [day, setDay] = useState(3);
-  const [slot, setSlot] = useState(2);
-  const [tab, setTab] = useState(0);
+  const [day, setDay] = React.useState(3);
+  const [slot, setSlot] = React.useState(2);
+  const [tab, setTab] = React.useState(0);
   const days = [['Pzt', 9], ['Sal', 10], ['Çar', 11], ['Per', 12], ['Cum', 13], ['Cmt', 14]];
   const slots = ['10:00', '11:30', '13:00', '14:30', '16:00', '17:30'];
   return (

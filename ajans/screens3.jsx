@@ -1,9 +1,7 @@
 // screens3.jsx — Eğitim · Fitness & Sağlık · Müzik/Streaming
-const { useState } = React;
-
 /* ============== 7 · EĞİTİM ============== */
 function EduApp() {
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = React.useState(0);
   const courses = [
     { n: 'Mobil UI Tasarımı', pr: 72, l: '18/25 ders', g: '🎨', c: ['#6d3bf5', '#a02bf0'] },
     { n: 'React Native', pr: 45, l: '9/20 ders', g: '⚛️', c: ['#2b7cff', '#0bbf9e'] },
@@ -53,7 +51,7 @@ function EduApp() {
 
 /* ============== 8 · FITNESS & SAĞLIK ============== */
 function FitApp() {
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = React.useState(0);
   const rings = [['Hareket', 78, '#ff2d72', '420', 'kcal'], ['Egzersiz', 60, '#a8ff2d', '38', 'dk'], ['Ayakta', 90, '#2ddfff', '11', 'sa']];
   return (
     <div style={{ ...wrapStyle, background: '#0a0a0f' }}>
@@ -102,9 +100,9 @@ function FitApp() {
 
 /* ============== 9 · MÜZİK / STREAMING ============== */
 function MusicApp() {
-  const [tab, setTab] = useState(0);
-  const [playing, setPlaying] = useState(true);
-  const [prog, setProg] = useState(38);
+  const [tab, setTab] = React.useState(0);
+  const [playing, setPlaying] = React.useState(true);
+  const [prog, setProg] = React.useState(38);
   React.useEffect(() => {
     if (!playing) return;
     const id = setInterval(() => setProg(p => (p >= 100 ? 0 : p + 0.6)), 350);

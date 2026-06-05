@@ -1,9 +1,7 @@
 // screens2.jsx — Araç/Kurye takip · E-ticaret · Sosyal medya
-const { useState } = React;
-
 /* ============== 4 · ARAÇ / KURYE TAKİP (HARİTA) ============== */
 function MapApp() {
-  const [tab, setTab] = useState(0);
+  const [tab, setTab] = React.useState(0);
   return (
     <div style={{ ...wrapStyle, background: '#0d1b2a' }}>
       <div style={{ flex: 1, position: 'relative', overflow: 'hidden' }}>
@@ -56,10 +54,10 @@ function MapApp() {
 
 /* ============== 5 · E-TİCARET / ALIŞVERİŞ ============== */
 function ShopApp() {
-  const [tab, setTab] = useState(0);
-  const [fav, setFav] = useState({});
+  const [tab, setTab] = React.useState(0);
+  const [fav, setFav] = React.useState({});
   const cats = ['Tümü', 'Giyim', 'Ayakkabı', 'Aksesuar', 'Çanta'];
-  const [cat, setCat] = useState(0);
+  const [cat, setCat] = React.useState(0);
   const prod = [
     { n: 'Oversize Ceket', p: '₺899', o: '₺1.299', g: '🧥', c: ['#6d3bf5', '#a02bf0'] },
     { n: 'Retro Sneaker', p: '₺1.249', o: '', g: '👟', c: ['#ec3a8e', '#ff6b8a'] },
@@ -113,8 +111,8 @@ function ShopApp() {
 
 /* ============== 6 · SOSYAL MEDYA ============== */
 function SocialApp() {
-  const [tab, setTab] = useState(0);
-  const [liked, setLiked] = useState({ 0: true });
+  const [tab, setTab] = React.useState(0);
+  const [liked, setLiked] = React.useState({ 0: true });
   const stories = [['Sen', '#6d3bf5', 1], ['ayşe', '#ec3a8e'], ['can_d', '#ff7a3c'], ['zeynep', '#0bbf9e'], ['mert', '#2b7cff']];
   const posts = [
     { u: 'ayse.travels', t: 'Kapadokya gün doğumu 🎈', g: '🌄', c: ['#ff7a3c', '#ec3a8e'], likes: '2.418', av: '#ec3a8e' },
