@@ -206,9 +206,9 @@ function FAQ() {
 
 function Contact() {
   const cc = [
-    { ic: 'chat', c: ['#6d3bf5', '#a02bf0'], s: 'E-POSTA', b: 'merhaba@mobiluygulamaajansi.com', p: '24 saat içinde dönüş' },
-    { ic: 'bell', c: ['#ec3a8e', '#ff6b8a'], s: 'TELEFON', b: '+90 212 000 00 00', p: 'Hafta içi 09:00 - 18:00' },
-    { ic: 'pin', c: ['#0bbf9e', '#07a6c9'], s: 'OFİS', b: 'Maslak, İstanbul', p: 'Randevu ile ziyaret' },
+    { ic: 'chat', c: ['#6d3bf5', '#a02bf0'], s: 'E-POSTA', b: 'goktan@blueemberorg.com', p: '24 saat içinde dönüş', href: 'mailto:goktan@blueemberorg.com' },
+    { ic: 'bell', c: ['#ec3a8e', '#ff6b8a'], s: 'TELEFON', b: '+90 537 058 00 38', p: 'Hafta içi 09:00 - 18:00', href: 'tel:+905370580038' },
+    { ic: 'pin', c: ['#0bbf9e', '#07a6c9'], s: 'OFİS', b: 'İstanbul', p: 'Randevu ile ziyaret' },
   ];
   return (
     <section className="section" id="iletisim">
@@ -221,7 +221,9 @@ function Contact() {
           {cc.map((x, i) => (
             <div className="ccard reveal" key={i} style={{ transitionDelay: `${i * 70}ms` }}>
               <div className="ico" style={{ background: `linear-gradient(135deg,${x.c[0]},${x.c[1]})` }}><Icon name={x.ic} size={24} stroke="#fff" /></div>
-              <small>{x.s}</small><b>{x.b}</b><p>{x.p}</p>
+              <small>{x.s}</small>
+              {x.href ? <a href={x.href} style={{ color: 'inherit', textDecoration: 'none' }}><b>{x.b}</b></a> : <b>{x.b}</b>}
+              <p>{x.p}</p>
             </div>
           ))}
         </div>
