@@ -27,7 +27,27 @@ function RequestForm() {
   };
   const next = () => { if (validate(step)) setStep(s => s + 1); };
   const back = () => setStep(s => s - 1);
-  const submit = () => { if (validate(2)) setDone(true); };
+
+  const buildWhatsAppMessage = () => [
+    'Merhaba Blue Ember, mobil uygulama teklif talebim var.',
+    '',
+    'Uygulama tipi: ' + f.cat,
+    'Platform: ' + f.platform.join(', '),
+    'Diller: ' + f.lang.join(', '),
+    'Bütçe: ' + f.budget,
+    'Açıklama: ' + f.desc,
+    '',
+    'Ad Soyad: ' + f.name,
+    'Telefon: ' + f.phone,
+    'E-posta: ' + f.email,
+  ].join('\n');
+
+  const submit = () => {
+    if (!validate(2)) return;
+    var text = encodeURIComponent(buildWhatsAppMessage());
+    window.open('https://wa.me/905370580038?text=' + text, '_blank', 'noopener,noreferrer');
+    setDone(true);
+  };
 
   const Opt = ({ on, onClick, children, check }) => (
     <button type="button" className={'opt' + (on ? ' sel' : '')} onClick={onClick}>
@@ -55,8 +75,8 @@ function RequestForm() {
           {done ? (
             <div className="form-success">
               <div className="ok"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12l5 5 9-11" /></svg></div>
-              <h3>Talebin alındı! 🎉</h3>
-              <p>Teşekkürler {f.name.split(' ')[0]}. Ekibimiz <b style={{ color: 'var(--ink)' }}>24 saat içinde</b> {f.email} adresinden sana dönecek.</p>
+              <h3>Talebin WhatsApp ile iletildi! 🎉</h3>
+              <p>Teşekkürler {f.name.split(' ')[0]}. Form bilgilerin WhatsApp üzerinden ekibimize ulaştı. <b style={{ color: 'var(--ink)' }}>24 saat içinde</b> {f.email} adresinden sana döneceğiz.</p>
               <div className="summary">
                 <div className="row"><span>Uygulama tipi</span><b>{f.cat}</b></div>
                 <div className="row"><span>Platform</span><b>{f.platform.join(', ')}</b></div>
