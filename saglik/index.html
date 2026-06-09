@@ -6,53 +6,17 @@
 <title>Blue Ember — Klinik Yönetimi & Sağlık Turizmi Platformu</title>
 <meta name="description" content="Hasta takibinden ilaç yönetimine, hemşire koordinasyonundan uluslararası hasta lojistiğine — kliniğinizin tüm operasyonu tek ekranda. Kliniğiniz için özel teklif alın.">
 <link rel="icon" href="/icon.png" type="image/png">
+<link rel="stylesheet" href="/landing-shell.css">
 <link rel="stylesheet" href="/saglik/styles.css">
 <style>
-  .site-header {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 1100;
-    background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-  }
-  .site-header-inner {
-    max-width: 1200px; margin: 0 auto; padding: 18px 20px;
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-  }
-  .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111; font-weight: 700; font-size: 18px; }
-  .site-nav { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .site-nav a {
-    text-decoration: none; color: #222; font-weight: 500; font-size: 15px;
-    padding: 10px 16px; border-radius: 999px; transition: background .2s;
-  }
-  .site-nav a:hover { background: rgba(0,0,0,0.05); }
-  .site-nav a.active { background: rgba(0,0,0,0.08); font-weight: 700; }
-  .site-actions { display: flex; align-items: center; gap: 10px; }
-  .site-btn-outline {
-    text-decoration: none; color: #111; border: 1.5px solid #111;
-    padding: 10px 20px; border-radius: 14px; font-weight: 500; font-size: 14px;
-  }
-  .site-btn-primary {
-    text-decoration: none; color: #fff; background: #111;
-    padding: 10px 24px; border-radius: 999px; font-weight: 700; font-size: 14px;
-  }
-  body { padding-top: 72px; }
-  .nav { top: 72px; }
-  html { scroll-padding-top: 160px; }
-  .wa-float {
-    position: fixed; bottom: 24px; right: 24px; z-index: 1200;
-    width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff;
-    display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    text-decoration: none; font-weight: 700; font-size: 13px;
-  }
-  @media (max-width: 900px) {
-    .site-nav, .site-actions { display: none; }
-    .site-mobile-link { display: inline-block; text-decoration: none; color: #111; font-weight: 600; }
-  }
-  @media (min-width: 901px) {
-    .site-mobile-link { display: none; }
-  }
+  html { scroll-padding-top: 120px; }
+  .page-subnav.saglik-theme { background: rgba(238,244,246,.95); border-bottom-color: #e0eaee; }
+  .page-subnav.saglik-theme a { color: #38505a; }
+  .page-subnav.saglik-theme a:hover { color: #0a90b8; }
+  .page-subnav.saglik-theme .subnav-cta { background: #0a90b8; color: #fff; }
 </style>
 </head>
-<body>
+<body class="landing-body saglik-page">
 
 <header class="site-header">
   <div class="site-header-inner">
@@ -65,6 +29,7 @@
       <a href="/product">Portföy</a>
       <a href="/ajans">Mobil Uygulama Hizmetleri</a>
       <a href="/saglik" class="active">Sağlık Sektörü Çözümleri</a>
+      <a href="/lojistik">Araç Kiralama ve Lojistik</a>
       <a href="/blog">Blog</a>
     </nav>
     <div class="site-actions">
@@ -75,33 +40,15 @@
   </div>
 </header>
 
-<!-- ============================ NAV ============================ -->
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
-    <a class="brand" href="/" aria-label="Blue Ember Ana Sayfa">
-      <span class="brand-mark">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-2.5-7-6-7-10a7 7 0 0 1 14 0c0 4-3 7.5-7 10Z"/><path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
-      </span>
-      <span>
-        <div class="brand-name">Blue<span>Ember</span></div>
-        <div class="brand-sub">Klinik Yönetim Platformu</div>
-      </span>
-    </a>
-    <nav class="nav-links">
-      <a href="#problem">Neden Blue Ember</a>
-      <a href="#cozum">Modüller</a>
-      <a href="#turizm">Sağlık Turizmi</a>
-      <a href="#sonuc">Sonuçlar</a>
-    </nav>
-    <div class="nav-cta">
-      <a href="#turizm" class="btn btn-ghost">Platformu Gör</a>
-      <a href="#teklif" class="btn btn-primary">Teklif Al</a>
-    </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Menü">
-      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-    </button>
+<nav class="page-subnav saglik-theme" id="pageSubnav" aria-label="Sayfa bölümleri">
+  <div class="page-subnav-inner">
+    <a href="#problem">Neden Blue Ember</a>
+    <a href="#cozum">Modüller</a>
+    <a href="#turizm">Sağlık Turizmi</a>
+    <a href="#sonuc">Sonuçlar</a>
+    <a href="#teklif" class="subnav-cta">Teklif Al</a>
   </div>
-</header>
+</nav>
 
 <a id="top"></a>
 

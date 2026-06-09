@@ -1,7 +1,8 @@
 (function () {
   var ITEMS = [
     { label: 'Mobil Uygulama Hizmetleri', href: '/ajans' },
-    { label: 'Sağlık Sektörü Çözümleri', href: '/saglik' }
+    { label: 'Sağlık Sektörü Çözümleri', href: '/saglik' },
+    { label: 'Araç Kiralama ve Lojistik', href: '/lojistik' }
   ];
 
   function createItem(label, href) {

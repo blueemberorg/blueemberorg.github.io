@@ -1,0 +1,161 @@
+/* Shared site header for landing pages (saglik, lojistik, etc.) */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+.site-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.site-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 13px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.site-nav a:hover { background: rgba(0, 0, 0, 0.05); }
+.site-nav a.active { background: rgba(0, 0, 0, 0.08); font-weight: 700; }
+.site-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.site-btn-outline {
+  text-decoration: none;
+  color: #111;
+  border: 1.5px solid #111;
+  padding: 9px 16px;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 13px;
+}
+.site-btn-primary {
+  text-decoration: none;
+  color: #fff;
+  background: #111;
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.landing-body { padding-top: 64px; }
+.landing-body html { scroll-padding-top: 120px; }
+
+/* Slim in-page section nav — no duplicate brand */
+.page-subnav {
+  position: sticky;
+  top: 64px;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+.page-subnav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 20px;
+  flex-wrap: wrap;
+}
+.page-subnav a {
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #5a6781;
+  padding: 6px 2px;
+  transition: color 0.15s;
+  white-space: nowrap;
+}
+.page-subnav a:hover { color: #0b1e3f; }
+.page-subnav .subnav-cta {
+  margin-left: 4px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.page-subnav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  padding: 6px;
+}
+.wa-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1200;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+}
+@media (max-width: 960px) {
+  .site-nav,
+  .site-actions { display: none; }
+  .site-mobile-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  .page-subnav-inner {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .page-subnav-inner::-webkit-scrollbar { display: none; }
+}
+@media (min-width: 961px) {
+  .site-mobile-link { display: none; }
+}

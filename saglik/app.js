@@ -194,29 +194,13 @@ form.addEventListener('submit', e => {
   successBox.classList.add('show');
 });
 
-/* ---------- Nav: scrolled state + mobile toggle ---------- */
-const nav = document.getElementById('nav');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
-
-const navToggle = document.getElementById('navToggle');
-const navLinks = document.querySelector('.nav-links');
-navToggle.addEventListener('click', () => {
-  const open = navLinks.style.display === 'flex';
-  navLinks.style.display = open ? '' : 'flex';
-  if (!open) {
-    Object.assign(navLinks.style, {
-      position: 'absolute', top: '72px', left: '0', right: '0',
-      flexDirection: 'column', gap: '4px', background: 'var(--surface)',
-      padding: '16px 28px 22px', borderBottom: '1px solid var(--line)',
-      boxShadow: 'var(--shadow)', alignItems: 'flex-start'
-    });
-  }
-});
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-  if (window.innerWidth <= 980) navLinks.style.display = '';
-}));
+/* ---------- Subnav: scrolled state ---------- */
+const subnav = document.getElementById('pageSubnav');
+if (subnav) {
+  const onScroll = () => subnav.classList.toggle('scrolled', window.scrollY > 80);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+}
 
 /* ---------- Scroll reveal ----------
    In-view elements are revealed *synchronously & instantly* (no dependency
