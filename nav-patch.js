@@ -1,24 +1,30 @@
 (function () {
-  var LABEL = 'Mobil Uygulama Hizmetleri';
-  var HREF = '/ajans';
+  var ITEMS = [
+    { label: 'Mobil Uygulama Hizmetleri', href: '/ajans' },
+    { label: 'Sağlık Sektörü Çözümleri', href: '/saglik' }
+  ];
 
-  function createItem() {
+  function createItem(label, href) {
     var wrap = document.createElement('div');
     wrap.className = 'border border-transparent py-2 px-4 rounded-4xl transition-all duration-300 hover:bg-black/5 dark:hover:bg-white/5 text-inherit';
     var link = document.createElement('a');
-    link.href = HREF;
-    link.textContent = LABEL;
+    link.href = href;
+    link.textContent = label;
     wrap.appendChild(link);
     return wrap;
   }
 
   function patchNav(nav) {
-    if (!nav || nav.querySelector('a[href="' + HREF + '"]')) return;
+    if (!nav) return;
     var blogLink = nav.querySelector('a[href="/blog"]');
     if (!blogLink) return;
     var blogWrap = blogLink.closest('div');
     if (!blogWrap || !blogWrap.parentNode) return;
-    blogWrap.parentNode.insertBefore(createItem(), blogWrap);
+
+    ITEMS.forEach(function (item) {
+      if (nav.querySelector('a[href="' + item.href + '"]')) return;
+      blogWrap.parentNode.insertBefore(createItem(item.label, item.href), blogWrap);
+    });
   }
 
   function patchAll() {

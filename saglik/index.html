@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blue Ember — Klinik Yönetimi & Sağlık Turizmi Platformu</title>
+<meta name="description" content="Hasta takibinden ilaç yönetimine, hemşire koordinasyonundan uluslararası hasta lojistiğine — kliniğinizin tüm operasyonu tek ekranda. Kliniğiniz için özel teklif alın.">
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="stylesheet" href="/saglik/styles.css">
+<style>
+  .site-header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1100;
+    background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+  .site-header-inner {
+    max-width: 1200px; margin: 0 auto; padding: 18px 20px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111; font-weight: 700; font-size: 18px; }
+  .site-nav { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .site-nav a {
+    text-decoration: none; color: #222; font-weight: 500; font-size: 15px;
+    padding: 10px 16px; border-radius: 999px; transition: background .2s;
+  }
+  .site-nav a:hover { background: rgba(0,0,0,0.05); }
+  .site-nav a.active { background: rgba(0,0,0,0.08); font-weight: 700; }
+  .site-actions { display: flex; align-items: center; gap: 10px; }
+  .site-btn-outline {
+    text-decoration: none; color: #111; border: 1.5px solid #111;
+    padding: 10px 20px; border-radius: 14px; font-weight: 500; font-size: 14px;
+  }
+  .site-btn-primary {
+    text-decoration: none; color: #fff; background: #111;
+    padding: 10px 24px; border-radius: 999px; font-weight: 700; font-size: 14px;
+  }
+  body { padding-top: 72px; }
+  .nav { top: 72px; }
+  html { scroll-padding-top: 160px; }
+  .wa-float {
+    position: fixed; bottom: 24px; right: 24px; z-index: 1200;
+    width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff;
+    display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    text-decoration: none; font-weight: 700; font-size: 13px;
+  }
+  @media (max-width: 900px) {
+    .site-nav, .site-actions { display: none; }
+    .site-mobile-link { display: inline-block; text-decoration: none; color: #111; font-weight: 600; }
+  }
+  @media (min-width: 901px) {
+    .site-mobile-link { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo">
+      <img width="25" height="34" alt="logo" src="/NavImage/logo.png" />
+      <span>BLUE EMBER</span>
+    </a>
+    <nav class="site-nav" aria-label="Ana menü">
+      <a href="/">Anasayfa</a>
+      <a href="/product">Portföy</a>
+      <a href="/ajans">Mobil Uygulama Hizmetleri</a>
+      <a href="/saglik" class="active">Sağlık Sektörü Çözümleri</a>
+      <a href="/blog">Blog</a>
+    </nav>
+    <div class="site-actions">
+      <a href="/" class="site-btn-outline">Giriş Yap</a>
+      <a href="#teklif" class="site-btn-primary">Teklif al</a>
+    </div>
+    <a href="/" class="site-mobile-link">Menü</a>
+  </div>
+</header>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="/" aria-label="Blue Ember Ana Sayfa">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-2.5-7-6-7-10a7 7 0 0 1 14 0c0 4-3 7.5-7 10Z"/><path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+      </span>
+      <span>
+        <div class="brand-name">Blue<span>Ember</span></div>
+        <div class="brand-sub">Klinik Yönetim Platformu</div>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#problem">Neden Blue Ember</a>
+      <a href="#cozum">Modüller</a>
+      <a href="#turizm">Sağlık Turizmi</a>
+      <a href="#sonuc">Sonuçlar</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="#turizm" class="btn btn-ghost">Platformu Gör</a>
+      <a href="#teklif" class="btn btn-primary">Teklif Al</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ============================ HERO ============================ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <span class="hero-badge"><span class="dot"></span> <b>16 modül</b> · 9 klinik + 7 sağlık turizmi</span>
+      <h1>Kliniğin tüm operasyonunu <span class="hl">tek ekranda</span> yönet</h1>
+      <p class="hero-sub">Hasta takibinden ilaç yönetimine, hemşire koordinasyonundan uluslararası hasta lojistiğine — kliniklerin gerçekte yaşadığı sorunlara özel, entegre bir platform.</p>
+      <div class="hero-actions">
+        <a href="#teklif" class="btn btn-primary btn-lg">
+          Kliniğime özel teklif al
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#turizm" class="btn btn-ghost btn-lg">Sağlık turizmi modülleri</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num"><span>16×</span></div><div class="lbl">Toplam modül</div></div>
+        <div class="hero-stat"><div class="num">4+</div><div class="lbl">Dil desteği</div></div>
+        <div class="hero-stat"><div class="num">%68</div><div class="lbl">Zaman tasarrufu</div></div>
+        <div class="hero-stat"><div class="num">7/24</div><div class="lbl">Sistem erişimi</div></div>
+      </div>
+    </div>
+
+    <!-- code-drawn mock dashboard -->
+    <div class="mock-stage reveal">
+      <div class="mock">
+        <div class="mock-bar"><i></i><i></i><i></i><span class="mock-url">blueember.app / dashboard</span></div>
+        <div class="mock-body">
+          <div class="mock-head">
+            <div class="mock-title">Klinik Doluluk & Planlama</div>
+            <span class="mock-pill">SON 30 GÜN</span>
+          </div>
+          <div class="mock-row">
+            <div>
+              <div class="mc">
+                <div class="mc-top">
+                  <span class="mc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+                  <span class="mc-badge up">+%12</span>
+                </div>
+                <div class="mc-lbl" style="margin-top:12px">Ortalama doluluk oranı</div>
+                <div class="mc-big">84.2%</div>
+                <div class="bar-track"><div class="bar-fill" style="width:84%"></div></div>
+              </div>
+              <div class="mc" style="margin-top:12px">
+                <div class="mc-lbl">Bölüm bazlı doluluk</div>
+                <div class="dept" style="margin-top:12px">
+                  <div class="dept-row"><span>Kardiyoloji</span><span class="pct">92%</span></div>
+                  <div class="bar-track" style="margin-top:0"><div class="bar-fill" style="width:92%"></div></div>
+                </div>
+                <div class="dept">
+                  <div class="dept-row"><span>Saç Ekimi</span><span class="pct">88%</span></div>
+                  <div class="bar-track" style="margin-top:0"><div class="bar-fill" style="width:88%"></div></div>
+                </div>
+                <div class="dept">
+                  <div class="dept-row"><span>Estetik</span><span class="pct">78%</span></div>
+                  <div class="bar-track" style="margin-top:0"><div class="bar-fill" style="width:78%"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="mc">
+              <div class="mc-lbl">Haftalık yoğunluk haritası</div>
+              <div class="heat" id="heat"></div>
+              <div class="mc-lbl" style="margin-top:16px">Zirve saat bekleme</div>
+              <div class="mc-big" style="font-size:22px">18 dk <span style="font-size:11px;color:var(--coral);font-weight:700">+5 dk</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mock-float float-1">
+        <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg></span>
+        <div><div class="ft">Alerji-ilaç uyarısı</div><div class="fs">Penisilin çakışması · anlık</div></div>
+      </div>
+      <div class="mock-float float-2">
+        <span class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
+        <div><div class="ft">No-show %31 → %8</div><div class="fs">Otomatik hatırlatma aktif</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TRUST STRIP ============================ -->
+<div class="trust">
+  <div class="wrap trust-inner">
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg> KVKK uyumlu şifreli arşiv</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> 7/24 sistem erişimi</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg> TR / EN / AR / RU desteği</div>
+    <div class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg> e-Reçete & SağlıkNet entegrasyonu</div>
+  </div>
+</div>
+
+<!-- ============================ PROBLEM ============================ -->
+<section class="section problem" id="problem">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Neden Blue Ember</span>
+      <h2>Kliniklerin %91'i hâlâ manuel süreçlerle çalışıyor</h2>
+      <p>Kağıt dosyalar, dağınık Excel'ler, WhatsApp'ta kaybolan mesajlar. Her biri ayrı bir sorun — ama hepsinin tek bir kaynağı var: entegre bir sistem yokluğu.</p>
+    </div>
+    <div class="problem-grid">
+      <div class="pcard reveal">
+        <div class="pcard-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.7-.9L9.6 3.9A2 2 0 0 0 7.9 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"/></svg></div>
+        <h3 class="q">"Hasta dosyası nerede, kim baktı?"</h3>
+        <p>Dağınık kayıt tıbbi hata riskini artırır. Doktorlar arası bilgi kopukluğu tekrarlayan testlere yol açar.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></div>
+        <h3 class="q">"Bu ilaç ne zaman bitiyor?"</h3>
+        <p>Reçete takipsizliği komplikasyon doğurur. Alerji-ilaç çakışması fark edilmediğinde ciddi risk oluşur.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></div>
+        <h3 class="q">"Randevu çakışması var, kim halleder?"</h3>
+        <p>Manuel takvim ciro kaybı yaratır. Boş kalan her saat, no-show'ların her biri doğrudan gelir kaybıdır.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div>
+        <h3 class="q">"Yurt dışı hastayı nasıl takip edeceğiz?"</h3>
+        <p>Uzaktan kontrol aracı eksikliği hasta takibini koparır — post-op şikayet ve kötü yorumun ana kaynağı budur.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="11" width="3" height="7"/><rect x="13" y="7" width="3" height="11"/></svg></div>
+        <h3 class="q">"Hangi doktor kaç hasta gördü?"</h3>
+        <p>Görünmezlik yönetimi körleştirir. Performans verisi olmadan doğru kararlar alınamaz.</p>
+      </div>
+      <div class="pcard reveal">
+        <div class="pcard-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.2 2h-.4a2 2 0 0 0-2 2v.2a2 2 0 0 1-1 1.7l-.4.2a2 2 0 0 1-2 0l-.2-.1a2 2 0 0 0-2.7.7l-.2.4a2 2 0 0 0 .7 2.7l.2.1a2 2 0 0 1 1 1.7v.5a2 2 0 0 1-1 1.7l-.2.1a2 2 0 0 0-.7 2.7l.2.4a2 2 0 0 0 2.7.7l.2-.1a2 2 0 0 1 2 0l.4.2a2 2 0 0 1 1 1.7v.2a2 2 0 0 0 2 2h.4a2 2 0 0 0 2-2v-.2a2 2 0 0 1 1-1.7l.4-.2a2 2 0 0 1 2 0l.2.1a2 2 0 0 0 2.7-.7l.2-.4a2 2 0 0 0-.7-2.7l-.2-.1a2 2 0 0 1-1-1.7v-.5a2 2 0 0 1 1-1.7l.2-.1a2 2 0 0 0 .7-2.7l-.2-.4a2 2 0 0 0-2.7-.7l-.2.1a2 2 0 0 1-2 0l-.4-.2a2 2 0 0 1-1-1.7V4a2 2 0 0 0-2-2Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3 class="q">"Cihazın bakım tarihi geçmiş, kim biliyordu?"</h3>
+        <p>Takipsiz ekipman operasyon riskidir. Operasyon günü arızalanan cihaz seansı iptal ettirir.</p>
+      </div>
+    </div>
+    <div class="problem-foot reveal">
+      <p class="big">Blue Ember bu altı sorunu da <b>tek bir entegre sistemde</b> çözer.</p>
+      <a href="#cozum" class="btn btn-dark">Çözümü gör
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ SOLUTION / MODULES ============================ -->
+<section class="section" id="cozum">
+  <div class="wrap">
+    <div class="sol-grid">
+      <div class="sol-copy reveal">
+        <span class="eyebrow">Çözüm · 9 klinik modülü</span>
+        <h2 style="font-size:clamp(30px,3.6vw,42px);margin-top:14px;letter-spacing:-0.03em">Hasta kaydı ilaçla, ilaç takvimle, takvim hemşireyle konuşur</h2>
+        <div class="sol-list">
+          <div class="sol-item">
+            <span class="sol-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>
+            <div><h4>Tek kapsamlı dijital hasta profili</h4><p>Tüm ziyaretler, notlar, alerji kayıtları ve belgeler — kronolojik ve aranabilir. Tekrar test siparişleri %60 azalır.</p></div>
+          </div>
+          <div class="sol-item">
+            <span class="sol-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>
+            <div><h4>Akıllı reçete & alerji kalkanı</h4><p>Kalan gün otomatik hesaplanır, alerji-ilaç çakışması anında uyarı verir. Komplikasyon riski %74 azalır.</p></div>
+          </div>
+          <div class="sol-item">
+            <span class="sol-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>
+            <div><h4>Çakışmasız akıllı takvim</h4><p>Doktor, oda ve ekipman bazlı entegre takvim + 7/24 online randevu. Doluluk oranı %22 artar.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modgrid">
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div class="mn">01</div><h4>Hasta Takip & CRM</h4><p>Kapsamlı dijital profil ve tam geçmiş</p></div>
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></div><div class="mn">02</div><h4>İlaç Takibi</h4><p>Reçete, alerji uyarısı, hatırlatma</p></div>
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><div class="mn">03</div><h4>Akıllı Takvim</h4><p>Çakışmasız randevu, 7/24 online</p></div>
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg></div><div class="mn">04</div><h4>Video Görüşme</h4><p>Entegre telemedicine, not alma</p></div>
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2 5 4-12 2 7h6"/></svg></div><div class="mn">05</div><h4>Vital Değer Grafikleri</h4><p>Trend takibi, eşik uyarısı</p></div>
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13A4 4 0 0 1 16 11"/></svg></div><div class="mn">06</div><h4>Hemşire & Personel</h4><p>Oda ataması, vardiya planı</p></div>
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.2 2h-.4a2 2 0 0 0-2 2v.2a2 2 0 0 1-1 1.7l-.4.2a2 2 0 0 1-2 0l-.2-.1a2 2 0 0 0-2.7.7l-.2.4a2 2 0 0 0 .7 2.7l.2.1a2 2 0 0 1 1 1.7v.5a2 2 0 0 1-1 1.7l-.2.1a2 2 0 0 0-.7 2.7l.2.4a2 2 0 0 0 2.7.7l.2-.1a2 2 0 0 1 2 0l.4.2a2 2 0 0 1 1 1.7v.2a2 2 0 0 0 2 2h.4a2 2 0 0 0 2-2v-.2a2 2 0 0 1 1-1.7l.4-.2a2 2 0 0 1 2 0l.2.1a2 2 0 0 0 2.7-.7l.2-.4a2 2 0 0 0-.7-2.7l-.2-.1a2 2 0 0 1-1-1.7v-.5a2 2 0 0 1 1-1.7l.2-.1a2 2 0 0 0 .7-2.7l-.2-.4a2 2 0 0 0-2.7-.7l-.2.1a2 2 0 0 1-2 0l-.4-.2a2 2 0 0 1-1-1.7V4a2 2 0 0 0-2-2Z"/><circle cx="12" cy="12" r="3"/></svg></div><div class="mn">07</div><h4>Ekipman Kaydı</h4><p>Bakım takvimi, arıza bildirimi</p></div>
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></div><div class="mn">08</div><h4>Muayene Notları</h4><p>SOAP şablonu, sesli not</p></div>
+        <div class="modcard reveal"><div class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/><path d="M3 12a9 9 0 0 1 9-9"/></svg></div><div class="mn">09</div><h4>Medical History</h4><p>Tam tıbbi geçmiş, belge arşivi</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ HEALTH TOURISM ============================ -->
+<section class="section tourism" id="turizm">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark">Sağlık Turizmi · 7 modül</span>
+      <h2>Yabancı hastayı kapıdan masaya taşıyan modüller</h2>
+      <p>Klinik CRM'in üzerine inşa edilen 7 sağlık turizmi modülü, uluslararası hasta yolculuğunu başından sonuna kapsar — dil bariyerinden ödemeye, transferden post-op takibe.</p>
+    </div>
+    <div class="tour-grid">
+      <!-- left: multilingual + chat demo -->
+      <div class="reveal">
+        <div class="lang-card">
+          <div class="lc-head">
+            <span class="t">Çok Dilli Hasta Portalı</span>
+            <span class="live"><i></i> CANLI ÇEVİRİ</span>
+          </div>
+          <div class="langs">
+            <div class="lang"><span class="ln">Türkçe</span><span class="lt">TR</span></div>
+            <div class="lang active"><span class="ln">Русский</span><span class="lt">RU · aktif</span></div>
+            <div class="lang"><span class="ln">English</span><span class="lt">EN</span></div>
+            <div class="lang"><span class="ln">العربية</span><span class="lt">AR · RTL</span></div>
+          </div>
+          <div class="chat">
+            <div class="bubble in">У меня болит нос после операции<small>Hasta · Rusça</small></div>
+            <div class="bubble out">Operasyon sonrası burun ağrısı 3. günde beklenen bir süreç ✓<small>Doktor · AI çeviri</small></div>
+          </div>
+        </div>
+      </div>
+      <!-- right: tourism module list -->
+      <div class="tour-mods">
+        <div class="tmod reveal"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span><div><h4>Çok Dilli Portal</h4><p>TR / EN / AR / RU tam destek, Arapça RTL</p></div></div>
+        <div class="tmod reveal"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12 7.5L3 21l2-6a8.4 8.4 0 1 1 16-3.5Z"/></svg></span><div><h4>WhatsApp Randevu Botu</h4><p>Otomatik onay ve 7/24 hatırlatma</p></div></div>
+        <div class="tmod reveal"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg></span><div><h4>Anlık Tercüman Chatbot</h4><p>Tıbbi terminoloji AI çevirisi · %97 doğruluk</p></div></div>
+        <div class="tmod reveal"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2v-3.3a2 2 0 0 0-.6-1.4l-2.2-2.2A2 2 0 0 0 16.8 9H14V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11h2"/><circle cx="7.5" cy="17.5" r="2"/><circle cx="17.5" cy="17.5" r="2"/></svg></span><div><h4>Transfer + Otel Paketi</h4><p>Havalimanı karşılama entegrasyonu</p></div></div>
+        <div class="tmod reveal"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span><div><h4>Uluslararası Ödeme</h4><p>EUR / USD / RUB / SAR · dövizli e-fatura</p></div></div>
+        <div class="tmod reveal"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h6M7 12h10M7 16h4"/></svg></span><div><h4>OCR Hasta Kaydı</h4><p>Pasaport tarama → 90 sn'de otomatik form</p></div></div>
+        <div class="tmod reveal" style="grid-column:1 / -1"><span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.3 3-5.5A5.5 5.5 0 0 0 12 5 5.5 5.5 0 0 0 2 8.5c0 2.2 1.5 4 3 5.5l7 7Z"/></svg></span><div><h4>İyileşme Takip Uygulaması</h4><p>Taburcu sonrası 90 gün uzaktan post-op izleme · komplikasyon erken tespiti %78 iyileşir</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ RESULTS ============================ -->
+<section class="section results" id="sonuc">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Ölçülebilir sonuç</span>
+      <h2>Kliniklerin sahada gördüğü fark</h2>
+    </div>
+    <div class="results-grid">
+      <div class="rcard reveal"><div class="rn">%68</div><div class="rl">Operasyonel zaman tasarrufu</div></div>
+      <div class="rcard reveal"><div class="rn">%8</div><div class="rl">No-show oranı (önce %31)</div></div>
+      <div class="rcard reveal"><div class="rn">+%22</div><div class="rl">Klinik doluluk artışı</div></div>
+      <div class="rcard reveal"><div class="rn">%74</div><div class="rl">Komplikasyon riski azalması</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LEAD FORM ============================ -->
+<section class="section cta-form" id="teklif">
+  <div class="wrap">
+    <div class="form-shell reveal">
+      <!-- aside -->
+      <aside class="form-aside">
+        <div class="inner">
+          <span class="eyebrow on-dark">Ücretsiz · Bağlayıcı değil</span>
+          <h3 style="margin-top:14px">Kliniğiniz için özel teklif alın</h3>
+          <p class="lead">Birkaç soruyu yanıtlayın; ihtiyaçlarınıza göre modül seçimi ve fiyatlandırmayı sizinle WhatsApp üzerinden paylaşalım.</p>
+          <ul class="aside-list">
+            <li><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span> Kliniğinize özel modül & fiyat planı</li>
+            <li><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span> Canlı demo randevusu</li>
+            <li><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span> Mevcut verilerinizin taşınma planı</li>
+            <li><span class="ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span> KVKK & SağlıkNet uyum danışmanlığı</li>
+          </ul>
+          <div class="aside-foot">
+            <span class="wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4ZM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.3A10 10 0 1 0 12 2Z"/></svg></span>
+            <div><div class="t">WhatsApp ile yanıt veriyoruz</div><div class="s">Genellikle aynı gün dönüş yapılır</div></div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- form -->
+      <div class="form-main">
+        <form id="leadForm" novalidate>
+          <!-- 1. iletişim -->
+          <div class="fgroup">
+            <div class="fgroup-title">İletişim Bilgileri</div>
+            <div class="frow">
+              <div class="field" data-required><label>Ad Soyad <span class="req">*</span></label><input type="text" name="ad" placeholder="Dr. Adınız Soyadınız" autocomplete="name"><span class="field-error">Lütfen ad soyad girin</span></div>
+              <div class="field" data-required><label>Klinik Adı <span class="req">*</span></label><input type="text" name="klinik" placeholder="Kliniğinizin adı"><span class="field-error">Lütfen klinik adı girin</span></div>
+            </div>
+            <div class="frow">
+              <div class="field" data-required data-type="phone"><label>Telefon <span class="req">*</span></label><input type="tel" name="telefon" placeholder="05XX XXX XX XX" autocomplete="tel"><span class="field-error">Geçerli bir telefon girin</span></div>
+              <div class="field"><label>E-posta</label><input type="email" name="email" placeholder="ornek@klinik.com" autocomplete="email"><span class="field-error">Geçerli bir e-posta girin</span></div>
+            </div>
+          </div>
+
+          <!-- 2. klinik profili -->
+          <div class="fgroup">
+            <div class="fgroup-title">Klinik Profili</div>
+            <div class="frow">
+              <div class="field" data-required><label>Klinik Tipi / Branş <span class="req">*</span></label>
+                <select name="brans">
+                  <option value="" selected disabled>Seçiniz…</option>
+                  <option>Estetik & Plastik Cerrahi</option>
+                  <option>Saç Ekimi</option>
+                  <option>Diş & Ağız Sağlığı</option>
+                  <option>Göz / Lazer</option>
+                  <option>Dermatoloji</option>
+                  <option>Genel / Çok Branşlı Klinik</option>
+                  <option>Diğer</option>
+                </select>
+                <span class="field-error">Lütfen branş seçin</span>
+              </div>
+              <div class="field" data-required><label>Aylık Hasta Hacmi <span class="req">*</span></label>
+                <select name="hacim">
+                  <option value="" selected disabled>Seçiniz…</option>
+                  <option>50'den az</option>
+                  <option>50 – 200 hasta</option>
+                  <option>200 – 500 hasta</option>
+                  <option>500 – 1.000 hasta</option>
+                  <option>1.000+ hasta</option>
+                </select>
+                <span class="field-error">Lütfen seçin</span>
+              </div>
+            </div>
+            <div class="field">
+              <label>Şu anda bir klinik yazılımı kullanıyor musunuz?</label>
+              <div class="choices" data-single="yazilim">
+                <label class="chip"><input type="radio" name="yazilim" value="Hayır, manuel/Excel"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>Hayır, manuel / Excel</span></label>
+                <label class="chip"><input type="radio" name="yazilim" value="Evet, başka bir yazılım"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>Evet, başka bir yazılım</span></label>
+                <label class="chip"><input type="radio" name="yazilim" value="Kısmen / parçalı araçlar"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>Kısmen / parçalı araçlar</span></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. sağlık turizmi -->
+          <div class="fgroup">
+            <div class="fgroup-title">Sağlık Turizmi</div>
+            <div class="field">
+              <label>Yurt dışından (uluslararası) hasta kabul ediyor musunuz?</label>
+              <div class="choices" data-single="turizm">
+                <label class="chip"><input type="radio" name="turizm" value="Evet, aktif" id="tEvet"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>Evet, aktif olarak</span></label>
+                <label class="chip"><input type="radio" name="turizm" value="Başlamayı planlıyorum" id="tPlan"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>Başlamayı planlıyorum</span></label>
+                <label class="chip"><input type="radio" name="turizm" value="Hayır" id="tHayir"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>Hayır</span></label>
+              </div>
+            </div>
+            <div class="field conditional" id="ulkelerField">
+              <label>Hedef ülkeler / pazarlar</label>
+              <input type="text" name="ulkeler" placeholder="Örn. Rusya, Körfez Ülkeleri, Almanya, İngiltere…">
+            </div>
+          </div>
+
+          <!-- 4. modüller -->
+          <div class="fgroup">
+            <div class="fgroup-title">İlgilendiğiniz Modüller</div>
+            <div class="modules-sub">Klinik Operasyon Modülleri</div>
+            <div class="modules-pick" id="clinicModules"></div>
+            <div class="modules-sub">Sağlık Turizmi Modülleri</div>
+            <div class="modules-pick" id="tourismModules"></div>
+          </div>
+
+          <!-- 5. bütçe -->
+          <div class="fgroup">
+            <div class="fgroup-title">Tahmini Bütçe (kurulum)</div>
+            <div class="choices cols" data-single="butce">
+              <label class="chip"><input type="radio" name="butce" value="₺50.000 – 75.000"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>₺50.000 – 75.000</span></label>
+              <label class="chip"><input type="radio" name="butce" value="₺75.000 – 100.000"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>₺75.000 – 100.000</span></label>
+              <label class="chip"><input type="radio" name="butce" value="₺100.000 – 150.000"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>₺100.000 – 150.000</span></label>
+              <label class="chip"><input type="radio" name="butce" value="₺150.000 – 200.000"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>₺150.000 – 200.000</span></label>
+              <label class="chip"><input type="radio" name="butce" value="₺200.000+"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>₺200.000+</span></label>
+              <label class="chip"><input type="radio" name="butce" value="Henüz net değil"><span><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>Henüz net değil</span></label>
+            </div>
+          </div>
+
+          <!-- 6. not -->
+          <div class="field">
+            <label>Eklemek istediğiniz not (opsiyonel)</label>
+            <textarea name="not" placeholder="Önceliğiniz, özel ihtiyaçlarınız veya sorularınız…"></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="kvkk">
+            <span><a href="#">KVKK Aydınlatma Metni</a>'ni okudum; bilgilerimin teklif amacıyla işlenmesini ve benimle iletişime geçilmesini onaylıyorum.</span>
+          </label>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.8-1.4.1-.2 0-.3 0-.5 0-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4ZM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.3A10 10 0 1 0 12 2Z"/></svg>
+              Teklifimi WhatsApp'tan gönder
+            </button>
+            <div class="form-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Bilgileriniz yalnızca teklif için kullanılır.</div>
+          </div>
+        </form>
+
+        <!-- success state -->
+        <div class="form-success" id="formSuccess">
+          <div class="sci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></div>
+          <h3>Talebiniz hazır!</h3>
+          <p>WhatsApp uygulamanız açılıyor. Mesaj otomatik dolduruldu — sadece <b>Gönder</b>'e basın, ekibimiz aynı gün size dönüş yapsın.</p>
+          <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-lg" id="waLink">WhatsApp'ı tekrar aç</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="brand">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c-4-2.5-7-6-7-10a7 7 0 0 1 14 0c0 4-3 7.5-7 10Z"/><path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg></span>
+          <span><div class="brand-name">Blue<span style="color:var(--mint)">Ember</span></div><div class="brand-sub">Klinik Yönetim Platformu</div></span>
+        </div>
+        <p class="footer-blurb">9 klinik operasyon modülü + 7 sağlık turizmi modülü. Hasta kaydından uluslararası hasta lojistiğine, kliniğin tüm operasyonu tek platformda.</p>
+      </div>
+      <div><h5>Platform</h5><ul><li><a href="#cozum">Klinik Modülleri</a></li><li><a href="#turizm">Sağlık Turizmi</a></li><li><a href="#sonuc">Sonuçlar</a></li><li><a href="#teklif">Teklif Al</a></li></ul></div>
+      <div><h5>Çözümler</h5><ul><li><a href="#">Estetik & Plastik</a></li><li><a href="#">Saç Ekimi</a></li><li><a href="#">Diş Klinikleri</a></li><li><a href="#">Çok Branşlı</a></li></ul></div>
+      <div><h5>İletişim</h5><ul><li><a href="tel:+905370580038">+90 537 058 00 38</a></li><li><a href="mailto:goktan@blueemberorg.com">goktan@blueemberorg.com</a></li><li><a href="https://wa.me/905370580038" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="#teklif">Demo Talep Et</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Blue Ember · Klinik Yönetim & Sağlık Turizmi Platformu</span>
+      <span>KVKK uyumlu · SağlıkNet entegrasyonu · 7/24 erişim</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">WA</a>
+<script src="/saglik/app.js"></script>
+</body>
+</html>
