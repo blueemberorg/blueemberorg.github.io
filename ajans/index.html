@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/landing-shell.css" />
+  <link rel="stylesheet" href="/mobile-menu.css" />
   <link rel="stylesheet" href="/ajans/styles.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -60,10 +62,6 @@
     }
     @media (max-width: 900px) {
       .site-nav, .site-actions { display: none; }
-      .site-mobile-link { display: inline-block; text-decoration: none; color: #111; font-weight: 600; }
-    }
-    @media (min-width: 901px) {
-      .site-mobile-link { display: none; }
     }
   </style>
 </head>
@@ -86,7 +84,9 @@
         <a href="/" class="btn-outline">Giriş Yap</a>
         <a href="#teklif" class="btn-primary">Teklif al</a>
       </div>
-      <a href="/" class="site-mobile-link">Menü</a>
+      <button type="button" class="site-menu-btn" aria-label="Menü aç">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
     </div>
   </header>
 
@@ -116,6 +116,7 @@
 
   <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-btn" aria-label="WhatsApp">WA</a>
 
+  <script src="/mobile-menu.js"></script>
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone@7.26.9/babel.min.js" crossorigin></script>

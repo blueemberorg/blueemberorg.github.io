@@ -1,0 +1,122 @@
+.site-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+.site-menu-btn svg { display: block; }
+
+.site-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.site-mobile-menu.open {
+  pointer-events: auto;
+  opacity: 1;
+}
+.site-mobile-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 18, 38, 0.45);
+  backdrop-filter: blur(2px);
+}
+.site-mobile-menu-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: min(320px, 88vw);
+  height: 100%;
+  background: #fff;
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.24s ease;
+}
+.site-mobile-menu.open .site-mobile-menu-panel {
+  transform: translateX(0);
+}
+.site-mobile-menu-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid #eceff4;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: #111;
+}
+.site-mobile-menu-close {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  background: #f3f5f8;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+}
+.site-mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 4px;
+  overflow-y: auto;
+}
+.site-mobile-menu-links a {
+  display: block;
+  padding: 14px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #1a2438;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.3;
+}
+.site-mobile-menu-links a:hover { background: #f4f6fa; }
+.site-mobile-menu-links a.active {
+  background: #111;
+  color: #fff;
+}
+.site-mobile-menu-cta {
+  margin-top: auto;
+  padding: 16px;
+  border-top: 1px solid #eceff4;
+  display: grid;
+  gap: 10px;
+}
+.site-mobile-menu-cta a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+}
+.site-mobile-menu-cta .outline {
+  border: 1.5px solid #111;
+  color: #111;
+}
+.site-mobile-menu-cta .primary {
+  background: #111;
+  color: #fff;
+}
+
+@media (max-width: 960px) {
+  .site-menu-btn { display: inline-flex; }
+  .site-mobile-link { display: none !important; }
+}

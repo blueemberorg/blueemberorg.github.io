@@ -140,22 +140,14 @@
 @media (max-width: 960px) {
   .site-nav,
   .site-actions { display: none; }
-  .site-mobile-link {
-    display: inline-block;
-    text-decoration: none;
-    color: #111;
-    font-weight: 600;
-    font-size: 14px;
-  }
   .page-subnav-inner {
     justify-content: flex-start;
     overflow-x: auto;
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    gap: 16px;
+    padding-bottom: 2px;
   }
   .page-subnav-inner::-webkit-scrollbar { display: none; }
-}
-@media (min-width: 961px) {
-  .site-mobile-link { display: none; }
 }

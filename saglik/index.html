@@ -7,6 +7,7 @@
 <meta name="description" content="Hasta takibinden ilaç yönetimine, hemşire koordinasyonundan uluslararası hasta lojistiğine — kliniğinizin tüm operasyonu tek ekranda. Kliniğiniz için özel teklif alın.">
 <link rel="icon" href="/icon.png" type="image/png">
 <link rel="stylesheet" href="/landing-shell.css">
+<link rel="stylesheet" href="/mobile-menu.css">
 <link rel="stylesheet" href="/saglik/styles.css">
 <style>
   html { scroll-padding-top: 120px; }
@@ -36,7 +37,9 @@
       <a href="/" class="site-btn-outline">Giriş Yap</a>
       <a href="#teklif" class="site-btn-primary">Teklif al</a>
     </div>
-    <a href="/" class="site-mobile-link">Menü</a>
+    <button type="button" class="site-menu-btn" aria-label="Menü aç">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
   </div>
 </header>
 
@@ -458,6 +461,7 @@
 </footer>
 
 <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">WA</a>
+<script src="/mobile-menu.js"></script>
 <script src="/saglik/app.js"></script>
 </body>
 </html>

@@ -41,4 +41,17 @@
     childList: true,
     subtree: true
   });
+
+  if (!document.querySelector('link[href="/mobile-menu.css"]')) {
+    var css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = '/mobile-menu.css';
+    document.head.appendChild(css);
+  }
+  if (!document.querySelector('script[src="/mobile-menu.js"]')) {
+    var js = document.createElement('script');
+    js.src = '/mobile-menu.js';
+    js.defer = true;
+    document.body.appendChild(js);
+  }
 })();
