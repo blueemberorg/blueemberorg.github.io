@@ -11,11 +11,13 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
 .kuyumcu-page {
   background: #F4EFE6;
   color: #1B1813;
-  font-family: 'Manrope', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+.kuyumcu-page .kuyumcu-main {
+  font-family: 'Manrope', system-ui, sans-serif;
+  overflow-x: hidden;
+}
 .kuyumcu-page .kuyumcu-main a { text-decoration: none; color: inherit; }
-.kuyumcu-page .kuyumcu-main { overflow-x: hidden; }
 
 /* site shell overrides */
 .kuyumcu-page .site-header { background: rgba(244, 239, 230, 0.95); border-bottom-color: rgba(27, 24, 19, 0.1); }
