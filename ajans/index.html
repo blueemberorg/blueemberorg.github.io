@@ -11,6 +11,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mobil Uygulama Hizmetleri — Blue Ember</title>
+  <meta name="description" content="iOS ve Android mobil uygulama tasarımı ve geliştirme. Fikrinizi cebe sığdıran uygulamalar için Blue Ember ile ücretsiz teklif alın." />
   <link rel="icon" href="/icon.png" type="image/png" />
   <script>document.documentElement.classList.remove('dark');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,21 +22,14 @@
   <link rel="stylesheet" href="/landing-hero-form.css" />
   <link rel="stylesheet" href="/mobile-menu.css" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin: 0; background: #f7f5ff; color: #15101f; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
     html { scroll-padding-top: 120px; }
-    .ajans-page { min-height: 70vh; position: relative; z-index: 1; }
-    .site-footer { background: #fff; border-top: 1px solid #e8e8e8; padding: 48px 20px; }
-    .site-footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 32px; }
-    .site-footer h2, .site-footer h3 { margin: 0 0 12px; color: #111; }
-    .site-footer p, .site-footer li, .site-footer a { color: #555; font-size: 14px; line-height: 1.6; }
-    .site-footer ul { list-style: none; padding: 0; margin: 0; }
-    .site-footer li + li { margin-top: 8px; }
-    .site-footer a { text-decoration: none; }
-    .site-footer a:hover { color: #007595; }
     #root:empty::before {
-      content: 'Yükleniyor...'; display: block; text-align: center;
-      padding: 100px 20px; color: #6b6480;
+      content: 'Yükleniyor...';
+      display: block;
+      text-align: center;
+      padding: 80px 20px;
+      color: #6b6480;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     }
   </style>
 </head>
@@ -73,34 +67,7 @@
     </div>
   </nav>
 
-  <main class="ajans-page">
-    <div class="wrap" style="padding: 24px 20px 0; max-width: 1200px; margin: 0 auto;">
-      <div class="hero-quick-form" id="teklif-ust" data-hero-form data-intro="Merhaba Blue Ember, mobil uygulama teklif talebim var.">
-        <div class="hqf-head">
-          <span class="hqf-badge">Ücretsiz · Bağlayıcı değil</span>
-          <h3>Hızlı teklif formu</h3>
-          <p>Ad ve telefonunuzu bırakın; projenize özel teklif için 24 saat içinde dönüş yapalım.</p>
-        </div>
-        <form class="hqf-form" novalidate>
-          <div class="hqf-row">
-            <div class="hqf-field">
-              <label>Ad Soyad <span>*</span></label>
-              <input type="text" name="ad" placeholder="Adınız Soyadınız" autocomplete="name" />
-            </div>
-            <div class="hqf-field">
-              <label>Telefon <span>*</span></label>
-              <input type="tel" name="tel" placeholder="05XX XXX XX XX" autocomplete="tel" />
-            </div>
-          </div>
-          <div class="hqf-field full">
-            <label>Uygulama fikri (kısa)</label>
-            <input type="text" name="extra" data-label="Uygulama fikri" placeholder="Örn. yemek sipariş, e-ticaret, fintech..." />
-          </div>
-          <button type="submit" class="hqf-submit">WhatsApp'tan Gönder</button>
-          <p class="hqf-more"><a href="#teklif">Detaylı teklif formu için aşağı kaydır ↓</a></p>
-        </form>
-      </div>
-    </div>
+  <main>
     <div id="root"></div>
   </main>
 
@@ -121,6 +88,14 @@
           <li><a href="/blog">Blog</a></li>
         </ul>
       </div>
+      <div>
+        <h3>İletişim</h3>
+        <ul>
+          <li><a href="tel:+905370580038">+90 537 058 00 38</a></li>
+          <li><a href="mailto:goktan@blueemberorg.com">goktan@blueemberorg.com</a></li>
+          <li><a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer">WhatsApp</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
@@ -132,5 +107,6 @@
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone@7.26.9/babel.min.js" crossorigin></script>
   <script src="/ajans/loader.js"></script>
+  <script src="/ajans/app-shell.js"></script>
 </body>
 </html>

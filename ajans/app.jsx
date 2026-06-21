@@ -8,7 +8,6 @@ function App() {
   var Testimonials = window.Testimonials;
   var FAQ = window.FAQ;
   var RequestForm = window.RequestForm;
-  var Contact = window.Contact;
 
   return (
     <React.Fragment>
@@ -20,7 +19,6 @@ function App() {
       <Testimonials />
       <FAQ />
       <RequestForm />
-      <Contact />
     </React.Fragment>
   );
 }

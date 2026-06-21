@@ -24,20 +24,45 @@ function Nav() {
 
 function Hero() {
   return (
-    <header className="hero wrap" id="top">
+    <section className="hero" id="top">
       <div className="hero-blob a"></div>
       <div className="hero-blob b"></div>
-      <div className="hero-grid">
-        <div className="reveal in">
+      <div className="wrap hero-grid">
+        <div className="hero-copy reveal in">
           <div className="hero-pill"><b>YENİ</b> Yapay zeka destekli mobil çözümler</div>
           <h1>Fikrini <span className="grad">cebe sığdıran</span> mobil uygulamalar</h1>
-          <p className="lead">Mobil Uygulama Ajansı; yemek siparişinden fintech'e, kurye takibinden e-ticarete kadar her sektöre özel iOS &amp; Android uygulamaları tasarlar ve geliştirir. Fikrini anlat, gerisini biz halledelim.</p>
+          <p className="lead">Mobil Uygulama Hizmetleri; yemek siparişinden fintech'e, kurye takibinden e-ticarete kadar her sektöre özel iOS &amp; Android uygulamaları tasarlar ve geliştirir.</p>
           <div className="hero-actions">
-            <a href="#cozumler" className="btn btn-primary">Çözümleri Gör
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
+            <a href="#cozumler" className="btn btn-ghost">Çözümleri Gör</a>
             <a href="#hizmetler" className="btn btn-ghost">Hizmetlerimiz</a>
           </div>
+
+          <div className="hero-quick-form" id="teklif-ust" data-hero-form data-intro="Merhaba Blue Ember, mobil uygulama teklif talebim var.">
+            <div className="hqf-head">
+              <span className="hqf-badge">Ücretsiz · Bağlayıcı değil</span>
+              <h3>Hızlı teklif formu</h3>
+              <p>Ad ve telefonunuzu bırakın; projenize özel teklif için 24 saat içinde dönüş yapalım.</p>
+            </div>
+            <form className="hqf-form" noValidate>
+              <div className="hqf-row">
+                <div className="hqf-field">
+                  <label>Ad Soyad <span>*</span></label>
+                  <input type="text" name="ad" placeholder="Adınız Soyadınız" autoComplete="name" />
+                </div>
+                <div className="hqf-field">
+                  <label>Telefon <span>*</span></label>
+                  <input type="tel" name="tel" placeholder="05XX XXX XX XX" autoComplete="tel" />
+                </div>
+              </div>
+              <div className="hqf-field full">
+                <label>Uygulama fikri (kısa)</label>
+                <input type="text" name="extra" data-label="Uygulama fikri" placeholder="Örn. yemek sipariş, e-ticaret, fintech..." />
+              </div>
+              <button type="submit" className="hqf-submit">WhatsApp'tan Gönder</button>
+              <p className="hqf-more"><a href="#teklif">Detaylı teklif formu için aşağı kaydır ↓</a></p>
+            </form>
+          </div>
+
           <div className="hero-trust">
             <div className="avatars">
               {[['#6d3bf5', 'A'], ['#ec3a8e', 'B'], ['#ff7a3c', 'C'], ['#0bbf9e', 'D']].map(([c, l], i) => <span key={i} style={{ background: c }}>{l}</span>)}
@@ -53,7 +78,7 @@ function Hero() {
           <div className="hero-spark s2"><div className="ico" style={{ background: 'var(--grad-hero)' }}>↑</div><div><b>+212%</b><small>Kullanıcı artışı</small></div></div>
         </div>
       </div>
-    </header>
+    </section>
   );
 }
 
