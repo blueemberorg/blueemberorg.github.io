@@ -43,11 +43,16 @@
       <nav class="site-nav" aria-label="Ana menü">
         <a href="/">Anasayfa</a>
         <a href="/product">Portföy</a>
-        <a href="/ajans" class="active">Mobil Uygulama Hizmetleri</a>
-        <a href="/saglik">Sağlık Sektörü Çözümleri</a>
-      <a href="/lojistik">Araç Kiralama ve Lojistik</a>
-      <a href="/kuyumcu">Kuyumcu White-Label</a>
-      <a href="/blog">Blog</a>
+        <div class="site-nav-group">
+          <button type="button" class="site-nav-group-btn active" aria-expanded="false" aria-haspopup="true">Sektör Çözümleri</button>
+          <div class="site-nav-group-menu" role="menu">
+            <a href="/ajans" class="active" role="menuitem">Mobil Uygulama Hizmetleri</a>
+            <a href="/saglik" role="menuitem">Sağlık Sektörü Çözümleri</a>
+            <a href="/lojistik" role="menuitem">Araç Kiralama ve Lojistik</a>
+            <a href="/kuyumcu" role="menuitem">Kuyumcu White-Label</a>
+          </div>
+        </div>
+        <a href="/blog">Blog</a>
       </nav>
       <div class="site-actions">
         <a href="/" class="site-btn-outline">Giriş Yap</a>
@@ -104,6 +109,7 @@
   <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">WA</a>
 
   <script src="/mobile-menu.js"></script>
+  <script src="/landing-nav.js"></script>
   <script src="/landing-hero-form.js"></script>
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
