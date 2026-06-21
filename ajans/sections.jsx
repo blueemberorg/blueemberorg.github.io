@@ -32,10 +32,6 @@ function Hero() {
           <div className="hero-pill"><b>YENİ</b> Yapay zeka destekli mobil çözümler</div>
           <h1>Fikrini <span className="grad">cebe sığdıran</span> mobil uygulamalar</h1>
           <p className="lead">Mobil Uygulama Hizmetleri; yemek siparişinden fintech'e, kurye takibinden e-ticarete kadar her sektöre özel iOS &amp; Android uygulamaları tasarlar ve geliştirir.</p>
-          <div className="hero-actions">
-            <a href="#cozumler" className="btn btn-ghost">Çözümleri Gör</a>
-            <a href="#hizmetler" className="btn btn-ghost">Hizmetlerimiz</a>
-          </div>
 
           <div className="hero-quick-form" id="teklif-ust" data-hero-form data-intro="Merhaba Blue Ember, mobil uygulama teklif talebim var.">
             <div className="hqf-head">

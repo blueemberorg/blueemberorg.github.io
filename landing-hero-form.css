@@ -115,6 +115,9 @@
   border-color: #ef8b34;
   box-shadow: 0 0 0 3px rgba(239, 139, 52, 0.15);
 }
+.ajans-page .hero-quick-form {
+  margin-top: 22px;
+}
 .ajans-page .hero-quick-form .hqf-badge {
   color: #6d3bf5;
   background: #f1ecff;

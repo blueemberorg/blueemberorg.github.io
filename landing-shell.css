@@ -122,8 +122,18 @@
   background: rgba(247, 245, 255, 0.95);
   border-bottom-color: #e8e4f5;
 }
-.page-subnav.ajans-theme a { color: #5a5080; }
-.page-subnav.ajans-theme a:hover { color: #6d3bf5; }
+.page-subnav.ajans-theme a {
+  color: #5a5080;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+.page-subnav.ajans-theme a:hover {
+  color: #6d3bf5;
+  background: #faf8ff;
+  border-color: #e8e0ff;
+}
 .page-subnav.ajans-theme .subnav-cta { background: #111; color: #fff; }
 .page-subnav-toggle {
   display: none;
