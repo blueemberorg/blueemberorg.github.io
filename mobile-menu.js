@@ -1,4 +1,7 @@
 (function () {
+  if (window.__siteMobileMenuReady) return;
+  window.__siteMobileMenuReady = true;
+
   var LINKS = [
     { label: 'Anasayfa', href: '/' },
     { label: 'Portföy', href: '/product' },
@@ -15,6 +18,17 @@
     return path === target || path.indexOf(target + '/') === 0;
   }
 
+  function getTeklifHref() {
+    if (document.getElementById('teklif')) return '#teklif';
+    if (document.getElementById('iletisim')) return '#iletisim';
+    return '/';
+  }
+
+  function isHomepage() {
+    var path = location.pathname.replace(/\/$/, '') || '/';
+    return path === '/' || path === '/index.html';
+  }
+
   function ensureDrawer() {
     var root = document.getElementById('siteMobileMenu');
     if (root) return root;
@@ -25,12 +39,14 @@
     root.innerHTML =
       '<div class="site-mobile-menu-backdrop" data-close></div>' +
       '<div class="site-mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Menü">' +
-        '<div class="site-mobile-menu-head"><strong>MENÜ</strong>' +
-        '<button type="button" class="site-mobile-menu-close" aria-label="Kapat">&times;</button></div>' +
+        '<div class="site-mobile-menu-head">' +
+          '<div class="site-mobile-menu-brand"><img src="/NavImage/logo.png" width="22" height="30" alt="" /><strong>MENÜ</strong></div>' +
+          '<button type="button" class="site-mobile-menu-close" aria-label="Kapat">&times;</button>' +
+        '</div>' +
         '<nav class="site-mobile-menu-links" aria-label="Site menüsü"></nav>' +
         '<div class="site-mobile-menu-cta">' +
           '<a href="/" class="outline">Giriş Yap</a>' +
-          '<a href="#teklif" class="primary" data-teklif>Teklif al</a>' +
+          '<a href="' + getTeklifHref() + '" class="primary" data-teklif>Teklif al</a>' +
         '</div>' +
       '</div>';
 
@@ -40,6 +56,7 @@
       a.href = item.href;
       a.textContent = item.label;
       if (isActive(item.href)) a.className = 'active';
+      a.addEventListener('click', close);
       nav.appendChild(a);
     });
 
@@ -47,7 +64,7 @@
     root.querySelector('.site-mobile-menu-close').addEventListener('click', close);
 
     var teklifBtn = root.querySelector('[data-teklif]');
-    if (location.pathname === '/' || location.pathname === '/index.html') {
+    if (isHomepage()) {
       teklifBtn.href = '#';
       teklifBtn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -55,6 +72,8 @@
         var target = document.querySelector('form[action*="script.google"]');
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
+    } else {
+      teklifBtn.addEventListener('click', close);
     }
 
     document.body.appendChild(root);
@@ -64,17 +83,17 @@
   function open() {
     ensureDrawer();
     document.getElementById('siteMobileMenu').classList.add('open');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('site-mobile-menu-open');
   }
 
   function close() {
     var root = document.getElementById('siteMobileMenu');
     if (root) root.classList.remove('open');
-    document.body.style.overflow = '';
+    document.body.classList.remove('site-mobile-menu-open');
   }
 
   function bindTriggers() {
-    document.querySelectorAll('.site-menu-btn, button[aria-label="menu"]').forEach(function (btn) {
+    document.querySelectorAll('.site-menu-btn, button[aria-label="menu"], button[aria-label="Menü aç"]').forEach(function (btn) {
       if (btn.dataset.menuBound === '1') return;
       btn.dataset.menuBound = '1';
       btn.addEventListener('click', function (e) {

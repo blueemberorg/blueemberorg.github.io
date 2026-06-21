@@ -48,10 +48,9 @@
     css.href = '/mobile-menu.css';
     document.head.appendChild(css);
   }
-  if (!document.querySelector('script[src="/mobile-menu.js"]')) {
+  if (!document.querySelector('script[src="/mobile-menu.js"]') && !window.__siteMobileMenuReady) {
     var js = document.createElement('script');
     js.src = '/mobile-menu.js';
-    js.defer = true;
-    document.body.appendChild(js);
+    document.head.appendChild(js);
   }
 })();

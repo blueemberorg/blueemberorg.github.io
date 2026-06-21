@@ -17,38 +17,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/landing-shell.css" />
-  <link rel="stylesheet" href="/mobile-menu.css" />
   <link rel="stylesheet" href="/ajans/styles.css" />
+  <link rel="stylesheet" href="/mobile-menu.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { margin: 0; background: #f7f5ff; color: #15101f; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
-    .site-header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(255,255,255,0.95); backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,0,0,0.08);
-    }
-    .site-header-inner {
-      max-width: 1200px; margin: 0 auto; padding: 18px 20px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    }
-    .site-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: #111; font-weight: 700; font-size: 18px; }
-    .site-nav { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-    .site-nav a {
-      text-decoration: none; color: #222; font-weight: 500; font-size: 15px;
-      padding: 10px 16px; border-radius: 999px; transition: background .2s;
-    }
-    .site-nav a:hover { background: rgba(0,0,0,0.05); }
-    .site-nav a.active { background: rgba(0,0,0,0.08); font-weight: 700; }
-    .site-actions { display: flex; align-items: center; gap: 10px; }
-    .btn-outline {
-      text-decoration: none; color: #111; border: 1.5px solid #111;
-      padding: 10px 20px; border-radius: 14px; font-weight: 500; font-size: 14px;
-    }
-    .btn-primary {
-      text-decoration: none; color: #fff; background: #111;
-      padding: 10px 24px; border-radius: 999px; font-weight: 700; font-size: 14px;
-    }
-    .ajans-page { padding-top: 84px; min-height: 70vh; position: relative; z-index: 1; }
+    html { scroll-padding-top: 120px; }
+    .ajans-page { min-height: 70vh; position: relative; z-index: 1; }
     .site-footer { background: #fff; border-top: 1px solid #e8e8e8; padding: 48px 20px; }
     .site-footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 32px; }
     .site-footer h2, .site-footer h3 { margin: 0 0 12px; color: #111; }
@@ -57,26 +32,17 @@
     .site-footer li + li { margin-top: 8px; }
     .site-footer a { text-decoration: none; }
     .site-footer a:hover { color: #007595; }
-    .wa-btn {
-      position: fixed; bottom: 24px; right: 24px; z-index: 1001;
-      width: 56px; height: 56px; border-radius: 50%; background: #25D366; color: #fff;
-      display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-      text-decoration: none;
-    }
     #root:empty::before {
       content: 'Yükleniyor...'; display: block; text-align: center;
       padding: 100px 20px; color: #6b6480;
     }
-    @media (max-width: 900px) {
-      .site-nav, .site-actions { display: none; }
-    }
   </style>
 </head>
-<body>
+<body class="landing-body">
   <header class="site-header">
     <div class="site-header-inner">
       <a href="/" class="site-logo">
-        <img width="25" height="34" alt="logo" src="/NavImage/logo.png" />
+        <img width="25" height="34" alt="Blue Ember" src="/NavImage/logo.png" />
         <span>BLUE EMBER</span>
       </a>
       <nav class="site-nav" aria-label="Ana menü">
@@ -88,14 +54,24 @@
         <a href="/blog">Blog</a>
       </nav>
       <div class="site-actions">
-        <a href="/" class="btn-outline">Giriş Yap</a>
-        <a href="#teklif" class="btn-primary">Teklif al</a>
+        <a href="/" class="site-btn-outline">Giriş Yap</a>
+        <a href="#teklif" class="site-btn-primary">Teklif al</a>
       </div>
       <button type="button" class="site-menu-btn" aria-label="Menü aç">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </header>
+
+  <nav class="page-subnav ajans-theme" id="pageSubnav" aria-label="Sayfa bölümleri">
+    <div class="page-subnav-inner">
+      <a href="#cozumler">Çözümler</a>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#sss">SSS</a>
+      <a href="#teklif" class="subnav-cta">Teklif Al</a>
+    </div>
+  </nav>
 
   <main class="ajans-page">
     <div id="root"></div>
@@ -121,7 +97,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-btn" aria-label="WhatsApp">WA</a>
+  <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">WA</a>
 
   <script src="/mobile-menu.js"></script>
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
