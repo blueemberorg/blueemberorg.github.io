@@ -15,6 +15,7 @@
 <link rel="icon" href="/icon.png" type="image/png">
 <link rel="stylesheet" href="/landing-shell.css" />
 <link rel="stylesheet" href="/saglik/styles.css" />
+<link rel="stylesheet" href="/landing-hero-form.css" />
 <link rel="stylesheet" href="/mobile-menu.css" />
 <style>
   html { scroll-padding-top: 120px; }
@@ -42,7 +43,7 @@
     </nav>
     <div class="site-actions">
       <a href="/" class="site-btn-outline">Giriş Yap</a>
-      <a href="#teklif" class="site-btn-primary">Teklif al</a>
+      <a href="#teklif-ust" class="site-btn-primary">Teklif al</a>
     </div>
     <button type="button" class="site-menu-btn" aria-label="Menü aç">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -72,6 +73,33 @@
         <a href="#cozum" class="btn btn-ghost btn-lg">Modülleri keşfet</a>
         <a href="#turizm" class="btn btn-ghost btn-lg">Sağlık turizmi modülleri</a>
       </div>
+
+      <div class="hero-quick-form reveal" id="teklif-ust" data-hero-form data-intro="Merhaba Blue Ember, klinik yönetim platformu için teklif talebim var.">
+        <div class="hqf-head">
+          <span class="hqf-badge">Ücretsiz · Bağlayıcı değil</span>
+          <h3>Hızlı teklif formu</h3>
+          <p>Ad ve telefonunuzu bırakın; kliniğinize özel teklif için hemen WhatsApp'tan dönüş yapalım.</p>
+        </div>
+        <form class="hqf-form" novalidate>
+          <div class="hqf-row">
+            <div class="hqf-field">
+              <label>Ad Soyad <span>*</span></label>
+              <input type="text" name="ad" placeholder="Dr. Adınız Soyadınız" autocomplete="name" />
+            </div>
+            <div class="hqf-field">
+              <label>Telefon <span>*</span></label>
+              <input type="tel" name="telefon" placeholder="05XX XXX XX XX" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="hqf-field full">
+            <label>Klinik Adı</label>
+            <input type="text" name="extra" data-label="Klinik Adı" placeholder="Kliniğinizin adı" />
+          </div>
+          <button type="submit" class="hqf-submit">WhatsApp'tan Gönder</button>
+          <p class="hqf-more"><a href="#teklif">Detaylı teklif formu için aşağı kaydır ↓</a></p>
+        </form>
+      </div>
+
       <div class="hero-stats">
         <div class="hero-stat"><div class="num"><span>16×</span></div><div class="lbl">Toplam modül</div></div>
         <div class="hero-stat"><div class="num">4+</div><div class="lbl">Dil desteği</div></div>
@@ -465,6 +493,7 @@
 
 <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">WA</a>
 <script src="/mobile-menu.js"></script>
+<script src="/landing-hero-form.js"></script>
 <script src="/saglik/app.js"></script>
 </body>
 </html>

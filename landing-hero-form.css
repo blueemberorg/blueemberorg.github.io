@@ -1,0 +1,151 @@
+.hero-quick-form {
+  margin-top: 28px;
+  padding: 22px 22px 20px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(8, 18, 38, 0.08);
+  position: relative;
+  z-index: 2;
+}
+.hero-quick-form .hqf-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0a90b8;
+  background: #ecfafd;
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.hero-quick-form .hqf-head h3 {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0d1b22;
+  margin: 0;
+}
+.hero-quick-form .hqf-head p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5a6781;
+}
+.hero-quick-form .hqf-form {
+  margin-top: 16px;
+}
+.hero-quick-form .hqf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.hero-quick-form .hqf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hero-quick-form .hqf-field.full {
+  margin-top: 12px;
+}
+.hero-quick-form .hqf-field.full {
+  grid-column: 1 / -1;
+}
+#teklif-ust {
+  scroll-margin-top: 130px;
+}
+.hero-quick-form .hqf-field label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #38505a;
+}
+.hero-quick-form .hqf-field label span {
+  color: #e06a60;
+}
+.hero-quick-form .hqf-field input {
+  width: 100%;
+  border: 1.5px solid #d8e4ea;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #0d1b22;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.hero-quick-form .hqf-field input:focus {
+  outline: none;
+  border-color: #0a90b8;
+  box-shadow: 0 0 0 3px rgba(10, 144, 184, 0.12);
+}
+.hero-quick-form .hqf-field input.err {
+  border-color: #e06a60;
+}
+.hero-quick-form .hqf-submit {
+  width: 100%;
+  margin-top: 14px;
+  border: none;
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  color: #fff;
+  background: #111;
+  transition: transform 0.15s, background 0.15s;
+}
+.hero-quick-form .hqf-submit:hover {
+  transform: translateY(-1px);
+  background: #222;
+}
+.lojistik-page .hero-quick-form .hqf-badge {
+  color: #d9772a;
+  background: #fff4e9;
+}
+.lojistik-page .hero-quick-form .hqf-submit {
+  background: #ef8b34;
+  color: #27160a;
+}
+.lojistik-page .hero-quick-form .hqf-submit:hover {
+  background: #d9772a;
+}
+.lojistik-page .hero-quick-form .hqf-field input:focus {
+  border-color: #ef8b34;
+  box-shadow: 0 0 0 3px rgba(239, 139, 52, 0.15);
+}
+.ajans-page .hero-quick-form .hqf-badge {
+  color: #6d3bf5;
+  background: #f1ecff;
+}
+.ajans-page .hero-quick-form .hqf-submit {
+  background: linear-gradient(135deg, #6d3bf5, #a02bf0);
+}
+.ajans-page .hero-quick-form .hqf-field input:focus {
+  border-color: #6d3bf5;
+  box-shadow: 0 0 0 3px rgba(109, 59, 245, 0.12);
+}
+.hero-quick-form .hqf-more {
+  margin: 12px 0 0;
+  text-align: center;
+  font-size: 13px;
+}
+.hero-quick-form .hqf-more a {
+  color: #5a6781;
+  text-decoration: none;
+  font-weight: 600;
+}
+.hero-quick-form .hqf-more a:hover {
+  color: #0a90b8;
+  text-decoration: underline;
+}
+@media (max-width: 720px) {
+  .hero-quick-form .hqf-row {
+    grid-template-columns: 1fr;
+  }
+  .hero-quick-form {
+    margin-top: 22px;
+    padding: 18px 16px;
+  }
+}

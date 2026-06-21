@@ -18,6 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/landing-shell.css" />
   <link rel="stylesheet" href="/ajans/styles.css" />
+  <link rel="stylesheet" href="/landing-hero-form.css" />
   <link rel="stylesheet" href="/mobile-menu.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; }
@@ -38,7 +39,7 @@
     }
   </style>
 </head>
-<body class="landing-body">
+<body class="landing-body ajans-page">
   <header class="site-header">
     <div class="site-header-inner">
       <a href="/" class="site-logo">
@@ -55,7 +56,7 @@
       </nav>
       <div class="site-actions">
         <a href="/" class="site-btn-outline">Giriş Yap</a>
-        <a href="#teklif" class="site-btn-primary">Teklif al</a>
+        <a href="#teklif-ust" class="site-btn-primary">Teklif al</a>
       </div>
       <button type="button" class="site-menu-btn" aria-label="Menü aç">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -73,6 +74,33 @@
   </nav>
 
   <main class="ajans-page">
+    <div class="wrap" style="padding: 24px 20px 0; max-width: 1200px; margin: 0 auto;">
+      <div class="hero-quick-form" id="teklif-ust" data-hero-form data-intro="Merhaba Blue Ember, mobil uygulama teklif talebim var.">
+        <div class="hqf-head">
+          <span class="hqf-badge">Ücretsiz · Bağlayıcı değil</span>
+          <h3>Hızlı teklif formu</h3>
+          <p>Ad ve telefonunuzu bırakın; projenize özel teklif için 24 saat içinde dönüş yapalım.</p>
+        </div>
+        <form class="hqf-form" novalidate>
+          <div class="hqf-row">
+            <div class="hqf-field">
+              <label>Ad Soyad <span>*</span></label>
+              <input type="text" name="ad" placeholder="Adınız Soyadınız" autocomplete="name" />
+            </div>
+            <div class="hqf-field">
+              <label>Telefon <span>*</span></label>
+              <input type="tel" name="tel" placeholder="05XX XXX XX XX" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="hqf-field full">
+            <label>Uygulama fikri (kısa)</label>
+            <input type="text" name="extra" data-label="Uygulama fikri" placeholder="Örn. yemek sipariş, e-ticaret, fintech..." />
+          </div>
+          <button type="submit" class="hqf-submit">WhatsApp'tan Gönder</button>
+          <p class="hqf-more"><a href="#teklif">Detaylı teklif formu için aşağı kaydır ↓</a></p>
+        </form>
+      </div>
+    </div>
     <div id="root"></div>
   </main>
 
@@ -99,6 +127,7 @@
   <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">WA</a>
 
   <script src="/mobile-menu.js"></script>
+  <script src="/landing-hero-form.js"></script>
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone@7.26.9/babel.min.js" crossorigin></script>

@@ -18,6 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="/landing-shell.css" />
 <link rel="stylesheet" href="/lojistik/styles.css" />
+<link rel="stylesheet" href="/landing-hero-form.css" />
 <link rel="stylesheet" href="/mobile-menu.css" />
 <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
 </head>
@@ -39,7 +40,7 @@
     </nav>
     <div class="site-actions">
       <a href="/" class="site-btn-outline">Giriş Yap</a>
-      <a href="#teklif" class="site-btn-primary">Teklif al</a>
+      <a href="#teklif-ust" class="site-btn-primary">Teklif al</a>
     </div>
     <button type="button" class="site-menu-btn" aria-label="Menü aç">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -67,6 +68,33 @@
         <a href="#ozellikler" class="btn btn-primary"><i data-lucide="layers"></i>Özellikleri İncele</a>
         <a href="#" class="btn btn-wa wa-link"><i data-lucide="message-circle"></i>WhatsApp'tan Yaz</a>
       </div>
+
+      <div class="hero-quick-form reveal" id="teklif-ust" data-hero-form data-intro="Merhaba Blue Ember, whitelabel araç kiralama platformu için teklif talebim var.">
+        <div class="hqf-head">
+          <span class="hqf-badge">Ücretsiz · Bağlayıcı değil</span>
+          <h3>Hızlı teklif formu</h3>
+          <p>Ad ve telefonunuzu bırakın; size özel demo ve teklif için WhatsApp'tan hemen dönüş yapalım.</p>
+        </div>
+        <form class="hqf-form" novalidate>
+          <div class="hqf-row">
+            <div class="hqf-field">
+              <label>Ad Soyad <span>*</span></label>
+              <input type="text" name="ad" placeholder="Adınız Soyadınız" autocomplete="name" />
+            </div>
+            <div class="hqf-field">
+              <label>Telefon <span>*</span></label>
+              <input type="tel" name="tel" placeholder="05XX XXX XX XX" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="hqf-field full">
+            <label>Şehir</label>
+            <input type="text" name="extra" data-label="Şehir" placeholder="Örn. İstanbul" />
+          </div>
+          <button type="submit" class="hqf-submit"><i data-lucide="message-circle"></i> WhatsApp'tan Gönder</button>
+          <p class="hqf-more"><a href="#teklif">Detaylı teklif formu için aşağı kaydır ↓</a></p>
+        </form>
+      </div>
+
       <div class="hero-trust">
         <div class="t"><span class="n"><span class="em">%100</span></span><span class="l">Markanıza özel</span></div>
         <div class="t"><span class="n">8</span><span class="l">Modül, tek panel</span></div>
@@ -404,6 +432,7 @@
 
 <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">WA</a>
 <script src="/mobile-menu.js"></script>
+<script src="/landing-hero-form.js"></script>
 <script src="/lojistik/app.js"></script>
 </body>
 </html>
