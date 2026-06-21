@@ -4,6 +4,8 @@
 .site-header,
 .site-header .site-logo,
 .site-header .site-nav a,
+.site-header .site-nav-main a,
+.site-header .site-nav-extra,
 .site-header .site-btn-outline,
 .site-header .site-btn-primary,
 .page-subnav,
@@ -50,104 +52,43 @@
 .site-nav {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   flex-wrap: nowrap;
-  justify-content: center;
   flex: 1 1 auto;
   min-width: 0;
 }
-.site-nav > a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  font-size: 13px;
-  padding: 7px 10px;
-  border-radius: 999px;
-  transition: background 0.2s;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.site-nav > a:hover { background: rgba(0, 0, 0, 0.05); }
-.site-nav > a.active { background: rgba(0, 0, 0, 0.08); font-weight: 700; }
-
-.site-nav-group {
-  position: relative;
-  flex-shrink: 0;
-}
-.site-nav-group-btn {
-  display: inline-flex;
+.site-nav-main {
+  display: flex;
   align-items: center;
-  gap: 5px;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 500;
-  color: #333;
-  padding: 7px 10px;
-  border-radius: 999px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s;
+  justify-content: center;
+  gap: 4px;
+  flex: 1 1 auto;
+  min-width: 0;
 }
-.site-nav-group-btn::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid #666;
-  margin-top: 2px;
-}
-.site-nav-group-btn:hover,
-.site-nav-group.open .site-nav-group-btn,
-.site-nav-group-btn.active {
-  background: rgba(0, 0, 0, 0.08);
-  font-weight: 700;
-}
-.site-nav-group-menu {
-  position: absolute;
-  top: calc(100% + 10px);
-  left: 50%;
-  transform: translateX(-50%);
-  min-width: 280px;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 14px;
-  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
-  padding: 8px;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 0.15s ease, visibility 0.15s ease;
-  z-index: 1300;
-}
-.site-nav-group:hover .site-nav-group-menu,
-.site-nav-group.open .site-nav-group-menu {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-.site-nav-group-menu a {
-  display: block;
+.site-nav-main a,
+.site-nav-extra {
   text-decoration: none;
   color: #333;
-  font-size: 13px;
   font-weight: 500;
-  line-height: 1.4;
-  padding: 10px 12px;
-  border-radius: 10px;
-  transition: background 0.15s;
+  font-size: 13px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  transition: background 0.2s;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
-.site-nav-group-menu a:hover { background: rgba(0, 0, 0, 0.05); }
-.site-nav-group-menu a.active {
-  background: rgba(0, 0, 0, 0.08);
-  font-weight: 700;
+.site-nav-main a:hover,
+.site-nav-extra:hover { background: rgba(0, 0, 0, 0.05); }
+.site-nav-main a.active,
+.site-nav-extra.active { background: rgba(0, 0, 0, 0.08); font-weight: 700; }
+.site-nav-extra {
+  margin-left: auto;
+  margin-right: 4px;
 }
 @media (max-width: 1080px) {
   .site-logo span { display: none; }
-  .site-nav > a,
-  .site-nav-group-btn { font-size: 12.5px; padding: 7px 8px; }
+  .site-nav-main a,
+  .site-nav-extra { font-size: 12px; padding: 7px 8px; }
 }
 .site-actions {
   display: flex;
