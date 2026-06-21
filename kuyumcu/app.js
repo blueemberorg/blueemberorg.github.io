@@ -88,7 +88,7 @@
   function waModuleHref() {
     var chosen = Object.keys(state.selected).filter(function (k) { return state.selected[k]; });
     var lines = [
-      'Merhaba, dijital kuyumcu çözümü için bilgi almak istiyorum.', '',
+      'Merhaba, kuyumculuk çözümü için bilgi almak istiyorum.', '',
       'Mağaza: ' + (state.storeName || '—'),
       'Konum: ' + (state.district || '—'), '',
       'İlgilendiğim modüller:',
