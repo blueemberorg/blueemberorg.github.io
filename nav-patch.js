@@ -3,7 +3,7 @@
     { label: 'Mobil Uygulama Hizmetleri', href: '/ajans' },
     { label: 'Sağlık Sektörü Çözümleri', href: '/saglik' },
     { label: 'Araç Kiralama ve Lojistik', href: '/lojistik' },
-    { label: 'Kuyumculuk Çözümleri', href: '/kuyumcu' }
+    { label: 'Kuyumcu White-Label', href: '/kuyumcu' }
   ];
 
   function createItem(label, href) {
