@@ -33,10 +33,10 @@ function Hero() {
           <h1>Fikrini <span className="grad">cebe sığdıran</span> mobil uygulamalar</h1>
           <p className="lead">Mobil Uygulama Ajansı; yemek siparişinden fintech'e, kurye takibinden e-ticarete kadar her sektöre özel iOS &amp; Android uygulamaları tasarlar ve geliştirir. Fikrini anlat, gerisini biz halledelim.</p>
           <div className="hero-actions">
-            <a href="#teklif" className="btn btn-primary">Ücretsiz Teklif Al
+            <a href="#cozumler" className="btn btn-primary">Çözümleri Gör
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a href="#cozumler" className="btn btn-ghost">Çözümleri Gör</a>
+            <a href="#hizmetler" className="btn btn-ghost">Hizmetlerimiz</a>
           </div>
           <div className="hero-trust">
             <div className="avatars">
@@ -191,8 +191,7 @@ function FAQ() {
         <div className="reveal">
           <span className="eyebrow">SSS</span>
           <h2 className="h-sec" style={{ marginTop: 16 }}>Sıkça sorulan sorular</h2>
-          <p className="lead" style={{ marginTop: 16 }}>Merak ettiğin 20 soruyu yanıtladık. Aradığını bulamadın mı? Formu doldur, 24 saat içinde dönüş yapalım.</p>
-          <a href="#teklif" className="btn btn-dark" style={{ marginTop: 24 }}>Soru Sor</a>
+          <p className="lead" style={{ marginTop: 16 }}>Merak ettiğin 20 soruyu yanıtladık. Aradığını bulamadın mı? Bize e-posta veya telefonla ulaşabilirsin.</p>
         </div>
         <div className="faq-list">
           {faqs.map(([q, a], i) => (
@@ -234,9 +233,9 @@ function Contact() {
 
 function Footer() {
   const cols = [
-    ['Çözümler', ['Yemek Sipariş', 'Fintech', 'E-ticaret', 'Kurye Takip']],
-    ['Şirket', ['Hizmetler', 'Yorumlar', 'SSS', 'İletişim']],
-    ['Kaynaklar', ['Blog', 'Vaka Çalışmaları', 'Kariyer', 'Gizlilik']],
+    ['Çözümler', [['Yemek Sipariş', '#cozumler'], ['Fintech', '#cozumler'], ['E-ticaret', '#cozumler'], ['Kurye Takip', '#cozumler']]],
+    ['Şirket', [['Hizmetler', '#hizmetler'], ['Yorumlar', '#yorumlar'], ['SSS', '#sss'], ['İletişim', '#iletisim']]],
+    ['Kaynaklar', [['Blog', '/blog'], ['Vaka Çalışmaları', '#yorumlar'], ['Kariyer', '#iletisim'], ['Gizlilik', '#top']]],
   ];
   return (
     <footer className="footer">
@@ -248,7 +247,7 @@ function Footer() {
           </div>
           <div className="footer-cols">
             {cols.map(([h, links], i) => (
-              <div className="footer-col" key={i}><h5>{h}</h5>{links.map(l => <a key={l} href="#teklif">{l}</a>)}</div>
+              <div className="footer-col" key={i}><h5>{h}</h5>{links.map(([l, href]) => <a key={l} href={href}>{l}</a>)}</div>
             ))}
           </div>
         </div>

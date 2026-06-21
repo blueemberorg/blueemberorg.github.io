@@ -18,17 +18,6 @@
     return path === target || path.indexOf(target + '/') === 0;
   }
 
-  function getTeklifHref() {
-    if (document.getElementById('teklif')) return '#teklif';
-    if (document.getElementById('iletisim')) return '#iletisim';
-    return '/';
-  }
-
-  function isHomepage() {
-    var path = location.pathname.replace(/\/$/, '') || '/';
-    return path === '/' || path === '/index.html';
-  }
-
   function ensureDrawer() {
     var root = document.getElementById('siteMobileMenu');
     if (root) return root;
@@ -44,10 +33,6 @@
           '<button type="button" class="site-mobile-menu-close" aria-label="Kapat">&times;</button>' +
         '</div>' +
         '<nav class="site-mobile-menu-links" aria-label="Site menüsü"></nav>' +
-        '<div class="site-mobile-menu-cta">' +
-          '<a href="/" class="outline">Giriş Yap</a>' +
-          '<a href="' + getTeklifHref() + '" class="primary" data-teklif>Teklif al</a>' +
-        '</div>' +
       '</div>';
 
     var nav = root.querySelector('.site-mobile-menu-links');
@@ -62,19 +47,6 @@
 
     root.querySelector('[data-close]').addEventListener('click', close);
     root.querySelector('.site-mobile-menu-close').addEventListener('click', close);
-
-    var teklifBtn = root.querySelector('[data-teklif]');
-    if (isHomepage()) {
-      teklifBtn.href = '#';
-      teklifBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        close();
-        var target = document.querySelector('form[action*="script.google"]');
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      });
-    } else {
-      teklifBtn.addEventListener('click', close);
-    }
 
     document.body.appendChild(root);
     return root;
