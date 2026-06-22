@@ -2,20 +2,24 @@
   'use strict';
 
   var WA = '905370580038';
-  var bound = false;
-  var observer = null;
+
+  function isHomepage() {
+    var path = (location.pathname || '/').replace(/\/$/, '') || '/';
+    return path === '/' || path === '/index.html';
+  }
 
   function cleanPhone(v) {
     return (v || '').replace(/\D/g, '');
   }
 
-  function findHomeForm() {
-    return document.querySelector('form[data-home-wa-form]') ||
-      document.querySelector('form[action*="script.google.com"]') ||
-      (function () {
-        var ad = document.querySelector('[name="AdSoyad"]');
-        return ad ? ad.closest('form') : null;
-      })();
+  function isHomeContactForm(form) {
+    if (!form || form.tagName !== 'FORM') return false;
+    if (form.closest('[data-hero-form]')) return false;
+    return !!(
+      form.querySelector('[name="AdSoyad"]') &&
+      form.querySelector('[name="Email"]') &&
+      form.querySelector('[name="Telefon"]')
+    );
   }
 
   function focusFirst(fields) {
@@ -27,101 +31,114 @@
     }
   }
 
-  function bindHomeForm() {
-    if (bound) return;
-
-    var form = findHomeForm();
-    if (!form) return;
-
-    bound = true;
+  function prepareForm(form) {
     form.setAttribute('data-home-wa-form', '1');
-
-    var wrap = form.parentElement;
-    while (wrap && wrap.tagName !== 'SECTION' && wrap.tagName !== 'MAIN' && !wrap.id) {
-      wrap = wrap.parentElement;
-    }
-    if (wrap && !document.getElementById('teklif-ust')) {
-      wrap.id = 'teklif-ust';
-    }
-
     form.removeAttribute('action');
     form.removeAttribute('method');
     form.removeAttribute('target');
-
     var iframe = document.getElementById('hidden_iframe');
     if (iframe) iframe.remove();
+  }
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
+  function sendToWhatsApp(form) {
+    var ad = form.querySelector('[name="AdSoyad"]');
+    var email = form.querySelector('[name="Email"]');
+    var tel = form.querySelector('[name="Telefon"]');
+    var mesaj = form.querySelector('[name="Mesaj"]');
+    var ok = true;
 
-      var ad = form.querySelector('[name="AdSoyad"]');
-      var email = form.querySelector('[name="Email"]');
-      var tel = form.querySelector('[name="Telefon"]');
-      var mesaj = form.querySelector('[name="Mesaj"]');
-      var ok = true;
-
-      [ad, email, tel].forEach(function (el) {
-        if (!el) return;
-        el.classList.remove('ring-2', 'ring-red-500');
-      });
-
-      if (!ad || ad.value.trim().length < 2) {
-        if (ad) ad.classList.add('ring-2', 'ring-red-500');
-        ok = false;
-      }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
-        if (email) email.classList.add('ring-2', 'ring-red-500');
-        ok = false;
-      }
-      if (!tel || cleanPhone(tel.value).length < 10) {
-        if (tel) tel.classList.add('ring-2', 'ring-red-500');
-        ok = false;
-      }
-      if (!ok) {
-        focusFirst([ad, email, tel]);
-        return;
-      }
-
-      var lines = [
-        'Merhaba Blue Ember, teklif talebim var.',
-        '',
-        '*Ad Soyad:* ' + ad.value.trim(),
-        '*E-posta:* ' + email.value.trim(),
-        '*Telefon:* ' + tel.value.trim()
-      ];
-      if (mesaj && mesaj.value.trim()) {
-        lines.push('*Mesaj:* ' + mesaj.value.trim());
-      }
-
-      var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'));
-      window.open(url, '_blank', 'noopener');
+    [ad, email, tel].forEach(function (el) {
+      if (!el) return;
+      el.classList.remove('ring-2', 'ring-red-500');
     });
 
-    if (observer) {
-      observer.disconnect();
-      observer = null;
+    if (!ad || ad.value.trim().length < 2) {
+      if (ad) ad.classList.add('ring-2', 'ring-red-500');
+      ok = false;
     }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      if (email) email.classList.add('ring-2', 'ring-red-500');
+      ok = false;
+    }
+    if (!tel || cleanPhone(tel.value).length < 10) {
+      if (tel) tel.classList.add('ring-2', 'ring-red-500');
+      ok = false;
+    }
+    if (!ok) {
+      focusFirst([ad, email, tel]);
+      return false;
+    }
+
+    var lines = [
+      'Merhaba Blue Ember, teklif talebim var.',
+      '',
+      '*Ad Soyad:* ' + ad.value.trim(),
+      '*E-posta:* ' + email.value.trim(),
+      '*Telefon:* ' + tel.value.trim()
+    ];
+    if (mesaj && mesaj.value.trim()) {
+      lines.push('*Mesaj:* ' + mesaj.value.trim());
+    }
+
+    var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'));
+    window.location.href = url;
+    return true;
   }
 
-  function start() {
-    try {
-      bindHomeForm();
-      if (!bound) {
-        observer = new MutationObserver(function () {
-          bindHomeForm();
-        });
-        observer.observe(document.documentElement, { childList: true, subtree: true });
-        window.setTimeout(bindHomeForm, 500);
-        window.setTimeout(bindHomeForm, 2000);
-      }
-    } catch (err) {
-      /* avoid breaking the page */
+  function handleSubmit(e) {
+    if (!isHomepage()) return;
+    var form = e.target;
+    if (!isHomeContactForm(form)) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+    if (typeof e.stopImmediatePropagation === 'function') {
+      e.stopImmediatePropagation();
     }
+
+    prepareForm(form);
+    sendToWhatsApp(form);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', start, { once: true });
-  } else {
-    start();
+  function handleClick(e) {
+    if (!isHomepage()) return;
+    var btn = e.target && e.target.closest ? e.target.closest('button') : null;
+    if (!btn) return;
+    var form = btn.closest('form');
+    if (!isHomeContactForm(form)) return;
+    if (btn.type !== 'submit' && !/teklif/i.test(btn.textContent || '')) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+    if (typeof e.stopImmediatePropagation === 'function') {
+      e.stopImmediatePropagation();
+    }
+
+    prepareForm(form);
+    sendToWhatsApp(form);
   }
+
+  function patchForms() {
+    if (!isHomepage()) return;
+    document.querySelectorAll('form').forEach(function (form) {
+      if (isHomeContactForm(form)) prepareForm(form);
+    });
+  }
+
+  document.addEventListener('submit', handleSubmit, true);
+  document.addEventListener('click', handleClick, true);
+
+  patchForms();
+  document.addEventListener('DOMContentLoaded', patchForms, { once: true });
+  window.addEventListener('load', function () {
+    patchForms();
+    window.setTimeout(patchForms, 500);
+    window.setTimeout(patchForms, 2000);
+  }, { once: true });
+
+  var observer = new MutationObserver(patchForms);
+  observer.observe(document.documentElement, { childList: true, subtree: true });
+  window.setTimeout(function () {
+    observer.disconnect();
+  }, 30000);
 })();
