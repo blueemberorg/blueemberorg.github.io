@@ -61,9 +61,49 @@
     patched = true;
   }
 
+  function scrollToForm() {
+    var target = document.getElementById('teklif-ust');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    location.hash = 'teklif-ust';
+  }
+
+  function wireHeroCta() {
+    if (!isHomepage()) return;
+
+    document.querySelectorAll('a[href="#teklif-ust"], button').forEach(function (el) {
+      if (el.closest('.site-header')) return;
+      var label = (el.textContent || '').trim().toLocaleLowerCase('tr-TR');
+      if (label.indexOf('teklif al') === -1) return;
+      if (el.dataset.formCtaBound === '1') return;
+      el.dataset.formCtaBound = '1';
+      if (el.tagName === 'BUTTON') {
+        el.addEventListener('click', function (e) {
+          e.preventDefault();
+          scrollToForm();
+        });
+      }
+    });
+  }
+
+  function removeProjectButtons() {
+    if (!isHomepage()) return;
+
+    document.querySelectorAll('button').forEach(function (btn) {
+      var label = (btn.textContent || '').trim().toLocaleLowerCase('tr-TR');
+      if (label.indexOf('projeyi görüntüle') !== -1 || label.indexOf('projeyi goruntule') !== -1) {
+        btn.remove();
+      }
+    });
+  }
+
   function run() {
     try {
       ensureHeader();
+      wireHeroCta();
+      removeProjectButtons();
     } catch (err) {
       /* ignore */
     }
