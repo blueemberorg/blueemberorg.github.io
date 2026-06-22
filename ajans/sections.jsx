@@ -144,6 +144,48 @@ function Testimonials() {
     { q: 'Blue Ember, sağlık sektörüne özel geliştirdiğimiz projemizde tüm modülleri eksiksiz ve entegre biçimde hayata geçirdi. Hem kullanıcı deneyimi hem de teknik mimari açısından beklentimizin çok üzerinde bir proje oldu.', n: 'Sağlık Rehberim', r: '', c: '#1f9d6b', stars: 5 },
     { q: 'Blue Ember ile yürüttüğümüz projelerde mükemmel bir uyum yakaladık. Ekip son derece disiplinli, hızlı ve güvenilir şekilde çalışıyor.', n: 'Emir Kaan Kaya', r: '', c: '#ef8b34', stars: 5 },
   ];
+
+  const scRef = React.useRef(null);
+  const [atStart, setAtStart] = React.useState(true);
+  const [atEnd, setAtEnd] = React.useState(false);
+  const drag = React.useRef({ down: false, startX: 0, startScroll: 0 });
+
+  const updateEdges = React.useCallback(() => {
+    const sc = scRef.current;
+    if (!sc) return;
+    setAtStart(sc.scrollLeft < 8);
+    setAtEnd(sc.scrollLeft + sc.clientWidth > sc.scrollWidth - 8);
+  }, []);
+
+  React.useEffect(() => { updateEdges(); }, [updateEdges]);
+
+  const step = (dir) => {
+    const sc = scRef.current;
+    if (!sc) return;
+    const card = sc.querySelector('.tst-scroll-card');
+    const w = card ? card.offsetWidth + 22 : 382;
+    sc.scrollBy({ left: dir * w, behavior: 'smooth' });
+  };
+
+  const onDown = (e) => {
+    const sc = scRef.current;
+    if (!sc) return;
+    drag.current = { down: true, startX: e.pageX, startScroll: sc.scrollLeft };
+    sc.classList.add('dragging');
+  };
+  const onMove = (e) => {
+    const d = drag.current;
+    if (!d.down) return;
+    const sc = scRef.current;
+    if (!sc) return;
+    sc.scrollLeft = d.startScroll - (e.pageX - d.startX);
+  };
+  const onUp = () => {
+    const sc = scRef.current;
+    if (sc) sc.classList.remove('dragging');
+    drag.current.down = false;
+  };
+
   return (
     <section className="section" id="yorumlar" style={{ background: 'linear-gradient(180deg,#f7f5ff,#f1ecff)' }}>
       <div className="wrap">
@@ -151,18 +193,44 @@ function Testimonials() {
           <span className="eyebrow" style={{ justifyContent: 'center' }}>Müşteri Yorumları</span>
           <h2 className="h-sec" style={{ marginTop: 16 }}>Markalar bize güveniyor</h2>
         </div>
-        <div className="tst-grid">
-          {t.map((x, i) => (
-            <div className="tst reveal" key={i} style={{ transitionDelay: `${i * 80}ms` }}>
-              <div className="qm">“</div>
-              <div className="stars" style={{ color: 'var(--amber)' }}>{'★'.repeat(x.stars)}</div>
-              <p>{x.q}</p>
-              <div className="who">
-                <div className="av" style={{ background: x.c }}>{x.n.split(' ').map(w => w[0]).join('')}</div>
-                <div><b>{x.n}</b>{x.r ? <small>{x.r}</small> : null}</div>
+      </div>
+
+      <div className="tst-scroller-wrap">
+        <div className="wrap" style={{ overflow: 'visible' }}>
+          <div
+            className="scroller tst-scroller"
+            ref={scRef}
+            onScroll={updateEdges}
+            onMouseDown={onDown}
+            onMouseMove={onMove}
+            onMouseUp={onUp}
+            onMouseLeave={onUp}
+          >
+            {t.map((x, i) => (
+              <div className="tst tst-scroll-card reveal" key={i} style={{ transitionDelay: `${i * 80}ms` }}>
+                <div className="qm">“</div>
+                <div className="stars" style={{ color: 'var(--amber)' }}>{'★'.repeat(x.stars)}</div>
+                <p>{x.q}</p>
+                <div className="who">
+                  <div className="av" style={{ background: x.c }}>{x.n.split(' ').map(w => w[0]).join('')}</div>
+                  <div><b>{x.n}</b>{x.r ? <small>{x.r}</small> : null}</div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="wrap">
+        <div className="tst-scroll-foot">
+          <div className="show-hint">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 12h14M5 12l4-4M5 12l4 4M19 12l-4-4M19 12l-4 4" opacity=".5"/></svg>
+            Sürükleyerek veya oklarla yorumları kaydır
+          </div>
+          <div className="scroll-nav">
+            <button className="snav" type="button" onClick={() => step(-1)} disabled={atStart} aria-label="Önceki"><Icon name="arrowLeft" size={20} stroke="currentColor" /></button>
+            <button className="snav" type="button" onClick={() => step(1)} disabled={atEnd} aria-label="Sonraki"><span style={{ transform: 'rotate(180deg)', display: 'grid' }}><Icon name="arrowLeft" size={20} stroke="currentColor" /></span></button>
+          </div>
         </div>
       </div>
     </section>
