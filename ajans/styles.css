@@ -262,26 +262,7 @@ h1,h2,h3,h4 { font-family: var(--display); font-weight: 700; line-height: 1.04; 
 /* =========================================================
    TESTIMONIALS
    ========================================================= */
-.tst-scroller-wrap { margin-top: 52px; }
-.tst-scroller {
-  gap: 22px;
-  padding: 4px 4px 28px;
-  scroll-snap-type: x mandatory;
-}
-.tst-scroll-card {
-  flex: 0 0 auto;
-  width: min(360px, calc(100vw - 88px));
-  scroll-snap-align: start;
-}
-.tst-scroll-foot {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 4px;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-.tst-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; margin-top: 52px; }
+.tst-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 52px; }
 .tst { background: #fff; border-radius: var(--r-lg); padding: 30px; box-shadow: var(--sh-1); display:flex; flex-direction:column; }
 .tst .qm { font-family: var(--display); font-size: 56px; line-height: .6; color: var(--violet); opacity:.25; height: 28px; }
 .tst p { font-size: 16px; color: var(--ink-soft); flex: 1; margin: 16px 0 22px; }
