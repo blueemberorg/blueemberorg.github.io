@@ -44,33 +44,41 @@
   flex-shrink: 0;
 }
 .site-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   align-items: center;
   flex: 1 1 auto;
   min-width: 0;
-  gap: 2px;
+  gap: 4px;
 }
 .site-nav a {
-  flex: 1 1 0;
   min-width: 0;
   text-align: center;
   text-decoration: none;
   color: #222;
   font-weight: 600;
-  font-size: 12px;
-  line-height: 1.3;
-  padding: 8px 6px;
+  font-size: 13px;
+  line-height: 1.25;
+  padding: 10px 8px;
   border-radius: 999px;
   transition: background 0.2s, color 0.2s;
-  white-space: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .site-nav a:hover { background: rgba(0, 0, 0, 0.06); }
 .site-nav a.active { background: rgba(0, 0, 0, 0.09); font-weight: 700; color: #111; }
 @media (min-width: 1100px) {
-  .site-nav a { font-size: 12.5px; padding: 8px 10px; }
+  .site-nav a { font-size: 13px; padding: 10px 10px; }
 }
 @media (min-width: 1280px) {
-  .site-nav a { font-size: 13px; padding: 9px 12px; }
+  .site-nav a {
+    font-size: 13.5px;
+    padding: 10px 12px;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
 }
 @media (max-width: 1080px) {
   .site-logo span { display: none; }
@@ -104,6 +112,7 @@
 }
 .landing-body { padding-top: 64px; font-family: var(--font-sans); }
 .landing-body.has-subnav { padding-top: 112px; scroll-padding-top: 120px; }
+.landing-body #teklif-ust { scroll-margin-top: 100px; }
 .landing-body html { scroll-padding-top: 120px; }
 
 /* Slim in-page section nav — fixed under main header */
@@ -125,19 +134,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px 20px;
-  flex-wrap: wrap;
+  gap: 8px 28px;
+  flex-wrap: nowrap;
 }
 .page-subnav a {
   text-decoration: none;
-  font-size: 13.5px;
+  font-size: 14px;
   font-weight: 600;
   color: #5a6781;
-  padding: 6px 2px;
+  padding: 8px 4px;
   transition: color 0.15s;
   white-space: nowrap;
 }
 .page-subnav a:hover { color: #0b1e3f; }
+.page-subnav.saglik-theme {
+  background: rgba(238, 244, 246, 0.96);
+  border-bottom-color: #e0eaee;
+}
+.page-subnav.saglik-theme a { color: #38505a; }
+.page-subnav.saglik-theme a:hover { color: #0a90b8; }
+.page-subnav.lojistik-theme {
+  background: rgba(247, 249, 255, 0.96);
+  border-bottom-color: #e4e9f2;
+}
+.page-subnav.lojistik-theme a { color: #5a6781; }
+.page-subnav.lojistik-theme a:hover { color: #0b1e3f; }
 .page-subnav .subnav-cta {
   margin-left: 4px;
   padding: 8px 16px;

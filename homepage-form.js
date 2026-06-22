@@ -22,6 +22,18 @@
     );
   }
 
+  function findHomeForm(fromEl) {
+    if (fromEl && fromEl.tagName === 'FORM' && isHomeContactForm(fromEl)) {
+      return fromEl;
+    }
+    if (fromEl && fromEl.closest) {
+      var inForm = fromEl.closest('form');
+      if (isHomeContactForm(inForm)) return inForm;
+    }
+    var ad = document.querySelector('form [name="AdSoyad"]');
+    return ad && ad.closest ? ad.closest('form') : null;
+  }
+
   function focusFirst(fields) {
     for (var i = 0; i < fields.length; i++) {
       if (fields[i] && typeof fields[i].focus === 'function') {
@@ -32,7 +44,9 @@
   }
 
   function prepareForm(form) {
+    form.id = 'teklif-ust';
     form.setAttribute('data-home-wa-form', '1');
+    form.setAttribute('novalidate', 'novalidate');
     form.removeAttribute('action');
     form.removeAttribute('method');
     form.removeAttribute('target');
@@ -80,83 +94,111 @@
       lines.push('*Mesaj:* ' + mesaj.value.trim());
     }
 
-    var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'));
-    window.location.href = url;
+    window.location.assign(
+      'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'))
+    );
     return true;
   }
 
-  function stopEvent(e) {
-    e.preventDefault();
-    e.stopPropagation();
-    if (typeof e.stopImmediatePropagation === 'function') {
-      e.stopImmediatePropagation();
-    }
-  }
-
-  function isTeklifButton(btn) {
-    if (!btn) return false;
+  function isContactSubmitButton(btn) {
+    if (!btn || btn.tagName !== 'BUTTON') return false;
+    var form = findHomeForm(btn);
+    if (!form || !btn.closest('form')) return false;
     var label = (btn.textContent || '').toLocaleLowerCase('tr-TR');
     return label.indexOf('teklif') !== -1 && label.indexOf('gönderiliyor') === -1;
   }
 
-  function findHomeForm(fromEl) {
-    if (fromEl && fromEl.tagName === 'FORM' && isHomeContactForm(fromEl)) {
-      return fromEl;
+  function bindForm(form) {
+    if (!form || form.dataset.waBound === '1') return;
+    form.dataset.waBound = '1';
+    prepareForm(form);
+
+    form.addEventListener(
+      'submit',
+      function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (typeof e.stopImmediatePropagation === 'function') {
+          e.stopImmediatePropagation();
+        }
+        sendToWhatsApp(form);
+      },
+      true
+    );
+
+    form.querySelectorAll('button').forEach(function (btn) {
+      if (!isContactSubmitButton(btn)) return;
+      btn.type = 'button';
+      btn.removeAttribute('disabled');
+      btn.addEventListener(
+        'click',
+        function (e) {
+          e.preventDefault();
+          e.stopPropagation();
+          if (typeof e.stopImmediatePropagation === 'function') {
+            e.stopImmediatePropagation();
+          }
+          sendToWhatsApp(form);
+        },
+        true
+      );
+    });
+  }
+
+  function hijackForm() {
+    if (!isHomepage()) return;
+    var form = findHomeForm();
+    if (!form) return;
+
+    if (form.dataset.waBound === '1') {
+      prepareForm(form);
+      return;
     }
-    if (fromEl && fromEl.closest) {
-      var inForm = fromEl.closest('form');
-      if (isHomeContactForm(inForm)) return inForm;
-    }
-    var ad = document.querySelector('[name="AdSoyad"]');
-    return ad && ad.closest ? ad.closest('form') : null;
+
+    var parent = form.parentNode;
+    if (!parent) return;
+
+    var clone = form.cloneNode(true);
+    parent.replaceChild(clone, form);
+    bindForm(clone);
   }
 
   function patchForms() {
     if (!isHomepage()) return;
     var form = findHomeForm();
-    if (!form) return;
-    prepareForm(form);
-    form.querySelectorAll('button').forEach(function (btn) {
-      if (!isTeklifButton(btn)) return;
-      btn.type = 'button';
-      btn.removeAttribute('disabled');
-    });
+    if (form) bindForm(form);
   }
 
-  function intercept(e) {
-    if (!isHomepage()) return;
-
-    var form = null;
-    if (e.type === 'submit' && e.target && e.target.tagName === 'FORM') {
-      form = findHomeForm(e.target);
-    } else {
-      var btn = e.target && e.target.closest ? e.target.closest('button') : null;
-      if (!isTeklifButton(btn)) return;
-      form = findHomeForm(btn);
-    }
-
-    if (!form || !isHomeContactForm(form)) return;
-
-    stopEvent(e);
-    prepareForm(form);
-    sendToWhatsApp(form);
-  }
-
-  window.addEventListener('submit', intercept, true);
-  window.addEventListener('click', intercept, true);
-  window.addEventListener('pointerdown', intercept, true);
-
+  hijackForm();
   patchForms();
-  document.addEventListener('DOMContentLoaded', patchForms, { once: true });
-  window.addEventListener('load', function () {
+
+  document.addEventListener('DOMContentLoaded', function () {
+    hijackForm();
     patchForms();
-    window.setTimeout(patchForms, 500);
-    window.setTimeout(patchForms, 2000);
   }, { once: true });
 
-  var observer = new MutationObserver(patchForms);
+  window.addEventListener('load', function () {
+    hijackForm();
+    patchForms();
+    window.setTimeout(hijackForm, 400);
+    window.setTimeout(patchForms, 400);
+    window.setTimeout(hijackForm, 1500);
+    window.setTimeout(patchForms, 1500);
+    window.setTimeout(hijackForm, 3500);
+  }, { once: true });
+
+  var observer = new MutationObserver(function () {
+    if (!isHomepage()) return;
+    var form = findHomeForm();
+    if (form && form.dataset.waBound !== '1') {
+      hijackForm();
+    } else if (form) {
+      prepareForm(form);
+    }
+  });
+
   observer.observe(document.documentElement, { childList: true, subtree: true });
   window.setTimeout(function () {
     observer.disconnect();
-  }, 30000);
+  }, 45000);
 })();
