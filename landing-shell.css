@@ -100,12 +100,6 @@
   }
 }
 
-@media (max-width: 1080px) {
-  .site-logo span {
-    display: none;
-  }
-}
-
 @media (max-width: 1180px) {
   .site-btn-outline {
     display: none;
@@ -333,6 +327,11 @@
     margin-right: auto;
     flex-shrink: 0;
     font-size: 14px;
+  }
+
+  .site-logo span {
+    font-size: 11px;
+    letter-spacing: 0.08em;
   }
 
   .site-logo img {

@@ -29,7 +29,7 @@
       '<div class="site-mobile-menu-backdrop" data-close></div>' +
       '<div class="site-mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Menü">' +
         '<div class="site-mobile-menu-head">' +
-          '<div class="site-mobile-menu-brand"><img src="/NavImage/logo.png" width="22" height="30" alt="" /><strong>MENÜ</strong></div>' +
+          '<div class="site-mobile-menu-brand"><img src="/NavImage/logo.png" width="22" height="30" alt="Blue Ember" /><strong>BLUE EMBER</strong></div>' +
           '<button type="button" class="site-mobile-menu-close" aria-label="Kapat">&times;</button>' +
         '</div>' +
         '<nav class="site-mobile-menu-links" aria-label="Site menüsü"></nav>' +

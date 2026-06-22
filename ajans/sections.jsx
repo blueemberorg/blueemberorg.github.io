@@ -138,9 +138,11 @@ function Tech() {
 
 function Testimonials() {
   const t = [
-    { q: 'Yemek sipariş uygulamamızı 7 haftada yayına aldılar. İlk ayda 12 bin indirme aldık, ekip inanılmaz hızlıydı.', n: 'Selin Aksoy', r: 'Kurucu · LezzetGo', c: '#ff3c5e', stars: 5 },
-    { q: 'Fintech ürünümüzün arayüzü tam hayal ettiğimiz gibi oldu. Kullanıcı memnuniyetimiz %40 arttı.', n: 'Burak Demir', r: 'CPO · PayNova', c: '#6d3bf5', stars: 5 },
-    { q: 'Kurye takip sistemimiz harita entegrasyonuyla kusursuz çalışıyor. Operasyon verimliliğimiz ikiye katlandı.', n: 'Ece Yılmaz', r: 'COO · HızlıKurye', c: '#2b7cff', stars: 5 },
+    { q: 'Gayrimenkul sektörüne özel e-ticaret yazılımlarımızı Blue Ember ekibiyle birlikte geliştirdik. Ekibimizi eğittikleri için tam bir dijital dönüşüm yaşadık.', n: 'Özkan Koç', r: '', c: '#0a90b8', stars: 5 },
+    { q: 'Kompleks veri çekme sistemi gerektiren projemi onlar dışında kimse yapamadı. Onlarca firmayla görüştüm ama sadece Blue Ember ekibi hem yapay zekâ hem web hem de mobil kısmı inanılmaz kısa sürede ve eksiksiz tamamladı.', n: 'İlan Ediyor', r: '', c: '#6d3bf5', stars: 5 },
+    { q: 'Projemizde karmaşık süreçleri sadeleştirip, otomasyon sistemimizi sıfırdan kurdular. Teknik bilgi kadar iletişim tarafında da çok güçlü bir ekip. Sürecin her aşamasında bize rehberlik ettiler.', n: 'Tutar Teknoloji', r: '', c: '#2b7cff', stars: 5 },
+    { q: 'Blue Ember, sağlık sektörüne özel geliştirdiğimiz projemizde tüm modülleri eksiksiz ve entegre biçimde hayata geçirdi. Hem kullanıcı deneyimi hem de teknik mimari açısından beklentimizin çok üzerinde bir proje oldu.', n: 'Sağlık Rehberim', r: '', c: '#1f9d6b', stars: 5 },
+    { q: 'Blue Ember ile yürüttüğümüz projelerde mükemmel bir uyum yakaladık. Ekip son derece disiplinli, hızlı ve güvenilir şekilde çalışıyor.', n: 'Emir Kaan Kaya', r: '', c: '#ef8b34', stars: 5 },
   ];
   return (
     <section className="section" id="yorumlar" style={{ background: 'linear-gradient(180deg,#f7f5ff,#f1ecff)' }}>
@@ -157,7 +159,7 @@ function Testimonials() {
               <p>{x.q}</p>
               <div className="who">
                 <div className="av" style={{ background: x.c }}>{x.n.split(' ').map(w => w[0]).join('')}</div>
-                <div><b>{x.n}</b><small>{x.r}</small></div>
+                <div><b>{x.n}</b>{x.r ? <small>{x.r}</small> : null}</div>
               </div>
             </div>
           ))}
