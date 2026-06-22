@@ -1,7 +1,7 @@
 /* ============================================================
    Mobilab — Mobil Uygulama Ajansı
    Design system: canlı & modern, enerjik
-   Type: Sora (display) + Plus Jakarta Sans (body)
+   Type: Plus Jakarta Sans (unified site font)
    ============================================================ */
 
 :root {
@@ -29,8 +29,8 @@
   --grad-coral:linear-gradient(120deg,#ff7a3c,#ff3c6e);
 
   /* type */
-  --display: "Sora", system-ui, sans-serif;
-  --body: "Plus Jakarta Sans", system-ui, sans-serif;
+  --display: var(--font-sans);
+  --body: var(--font-sans);
 
   /* radius / shadow */
   --r-sm: 12px;

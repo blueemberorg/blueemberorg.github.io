@@ -1,0 +1,44 @@
+/* Shared typography — one sans family across homepage, landings, blog */
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: var(--font-sans);
+  --font-mono: ui-monospace, 'SFMono-Regular', Menlo, Monaco, Consolas, monospace;
+}
+
+html {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+body.__className_0cb770,
+.landing-body,
+#root {
+  font-family: var(--font-sans) !important;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+/* Kuyumcu export uses many inline font-family rules */
+.kuyumcu-page .kuyumcu-main {
+  font-family: var(--font-sans) !important;
+}
+
+.kuyumcu-page .kuyumcu-main *:not(code):not(pre) {
+  font-family: inherit !important;
+}

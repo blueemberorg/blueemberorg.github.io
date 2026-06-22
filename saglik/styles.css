@@ -3,8 +3,6 @@
    Landing page styles. Palet: referans panolardan teal / nane yeşili.
    =================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap');
-
 :root {
   /* Surfaces */
   --bg:          #eef4f6;
@@ -40,8 +38,8 @@
   --gold:        #d9a441;
 
   /* Type */
-  --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-  --mono: 'Space Mono', ui-monospace, monospace;
+  --sans: var(--font-sans);
+  --mono: var(--font-mono);
 
   /* Geometry */
   --r-sm: 10px;

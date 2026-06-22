@@ -27,7 +27,7 @@ body.site-mobile-menu-open {
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.2s ease;
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
 }
 #siteMobileMenu.site-mobile-menu.open {
   pointer-events: auto;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+/* Fonts: /site-fonts.css + /site-unify.css */
 
 /* Shared site header for landing pages (saglik, lojistik, etc.) */
 .site-header,
@@ -8,7 +8,7 @@
 .site-header .site-btn-primary,
 .page-subnav,
 .page-subnav a {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-sans);
 }
 .site-header {
   position: fixed;
@@ -102,7 +102,7 @@
   font-weight: 700;
   font-size: 13px;
 }
-.landing-body { padding-top: 64px; font-family: 'Plus Jakarta Sans', system-ui, sans-serif; }
+.landing-body { padding-top: 64px; font-family: var(--font-sans); }
 .landing-body html { scroll-padding-top: 120px; }
 
 /* Slim in-page section nav — no duplicate brand */
