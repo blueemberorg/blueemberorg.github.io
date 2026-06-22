@@ -1,4 +1,6 @@
 (function () {
+  'use strict';
+
   var NAV = [
     { label: 'Anasayfa', href: '/' },
     { label: 'Portföy', href: '/product' },
@@ -7,6 +9,13 @@
     { label: 'Araç Kiralama ve Lojistik', href: '/lojistik' },
     { label: 'Kuyumcu White-Label', href: '/kuyumcu' }
   ];
+
+  var patched = false;
+  var observer = null;
+
+  function isNextPage() {
+    return !!document.querySelector('link[href*="/_next/static/"]');
+  }
 
   function isActive(href) {
     var path = location.pathname.replace(/\/$/, '') || '/';
@@ -31,19 +40,20 @@
     if (!document.querySelector('script[src="/mobile-menu.js"]') && !window.__siteMobileMenuReady) {
       var menuJs = document.createElement('script');
       menuJs.src = '/mobile-menu.js';
-      document.head.appendChild(menuJs);
+      menuJs.defer = true;
+      document.body.appendChild(menuJs);
     }
   }
 
   function replaceHeader() {
-    var existing = document.querySelector('header.site-header[data-unified]');
-    if (existing) return;
+    if (patched || !isNextPage()) return false;
+    if (document.querySelector('header.site-header[data-unified]')) {
+      patched = true;
+      return true;
+    }
 
     var old = document.querySelector('body > header');
-    if (!old || old.classList.contains('site-header')) return;
-
-    old.style.display = 'none';
-    old.setAttribute('aria-hidden', 'true');
+    if (!old || old.classList.contains('site-header')) return false;
 
     var header = document.createElement('header');
     header.className = 'site-header';
@@ -88,21 +98,41 @@
     inner.appendChild(menuBtn);
     header.appendChild(inner);
 
+    old.setAttribute('aria-hidden', 'true');
+    old.style.cssText = 'position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;pointer-events:none!important;';
+
     document.body.insertBefore(header, document.body.firstChild);
     document.body.style.paddingTop = '64px';
+
+    patched = true;
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
+    return true;
   }
 
   function run() {
-    ensureAssets();
-    replaceHeader();
+    try {
+      if (!isNextPage()) return;
+      ensureAssets();
+      replaceHeader();
+    } catch (err) {
+      /* avoid breaking the page */
+    }
   }
 
-  run();
-  [100, 400, 1000, 2500].forEach(function (ms) {
-    setTimeout(run, ms);
-  });
-  new MutationObserver(run).observe(document.documentElement, {
-    childList: true,
-    subtree: true
-  });
+  function schedule() {
+    run();
+    if (!patched) {
+      window.setTimeout(run, 300);
+      window.setTimeout(run, 1200);
+    }
+  }
+
+  if (document.readyState === 'complete') {
+    schedule();
+  } else {
+    window.addEventListener('load', schedule, { once: true });
+  }
 })();

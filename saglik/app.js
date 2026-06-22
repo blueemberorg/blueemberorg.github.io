@@ -69,13 +69,16 @@ renderModules('tourismModules', TOURISM_MODULES, 'turizm');
 
 /* ---------- Conditional: target countries on tourism = Evet/Plan ---------- */
 const ulkelerField = document.getElementById('ulkelerField');
-document.querySelectorAll('input[name="turizm"]').forEach(r => {
-  r.addEventListener('change', () => {
-    const show = (r.id === 'tEvet' || r.id === 'tPlan') && r.checked;
-    ulkelerField.classList.toggle('show', show);
-    if (!show) ulkelerField.querySelector('input').value = '';
+if (ulkelerField) {
+  document.querySelectorAll('input[name="turizm"]').forEach(r => {
+    r.addEventListener('change', () => {
+      const show = (r.id === 'tEvet' || r.id === 'tPlan') && r.checked;
+      ulkelerField.classList.toggle('show', show);
+      const input = ulkelerField.querySelector('input');
+      if (!show && input) input.value = '';
+    });
   });
-});
+}
 
 /* ---------- Validation helpers ---------- */
 function setInvalid(field, on) { field.classList.toggle('invalid', on); }
@@ -103,12 +106,14 @@ function validate(form) {
   }
   // KVKK
   const kvkk = document.getElementById('kvkk');
-  if (!kvkk.checked) {
+  if (kvkk && !kvkk.checked) {
     ok = false;
-    kvkk.closest('.consent').style.color = 'var(--coral)';
-    firstBad = firstBad || kvkk.closest('.consent');
-  } else {
-    kvkk.closest('.consent').style.color = '';
+    const consent = kvkk.closest('.consent');
+    if (consent) consent.style.color = 'var(--coral)';
+    firstBad = firstBad || consent;
+  } else if (kvkk) {
+    const consent = kvkk.closest('.consent');
+    if (consent) consent.style.color = '';
   }
   if (firstBad) firstBad.scrollIntoView ? null : null; // avoid scrollIntoView per guidance
   return { ok, firstBad };
@@ -125,9 +130,13 @@ document.querySelectorAll('#leadForm input, #leadForm select').forEach(el => {
     if (f) setInvalid(f, false);
   });
 });
-document.getElementById('kvkk').addEventListener('change', e => {
-  e.target.closest('.consent').style.color = e.target.checked ? '' : 'var(--coral)';
-});
+const kvkkInput = document.getElementById('kvkk');
+if (kvkkInput) {
+  kvkkInput.addEventListener('change', e => {
+    const consent = e.target.closest('.consent');
+    if (consent) consent.style.color = e.target.checked ? '' : 'var(--coral)';
+  });
+}
 
 /* ---------- Build WhatsApp message & submit ---------- */
 function val(name) {
@@ -177,6 +186,7 @@ const form = document.getElementById('leadForm');
 const successBox = document.getElementById('formSuccess');
 const waLink = document.getElementById('waLink');
 
+if (form && successBox && waLink) {
 form.addEventListener('submit', e => {
   e.preventDefault();
   const { ok } = validate(form);
@@ -193,6 +203,7 @@ form.addEventListener('submit', e => {
   form.style.display = 'none';
   successBox.classList.add('show');
 });
+}
 
 /* ---------- Subnav: scrolled state ---------- */
 const subnav = document.getElementById('pageSubnav');

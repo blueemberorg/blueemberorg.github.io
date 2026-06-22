@@ -1,14 +1,40 @@
 (function () {
+  'use strict';
+
   var WA = '905370580038';
+  var bound = false;
+  var observer = null;
 
   function cleanPhone(v) {
     return (v || '').replace(/\D/g, '');
   }
 
+  function findHomeForm() {
+    return document.querySelector('form[data-home-wa-form]') ||
+      document.querySelector('form[action*="script.google.com"]') ||
+      (function () {
+        var ad = document.querySelector('[name="AdSoyad"]');
+        return ad ? ad.closest('form') : null;
+      })();
+  }
+
+  function focusFirst(fields) {
+    for (var i = 0; i < fields.length; i++) {
+      if (fields[i] && typeof fields[i].focus === 'function') {
+        fields[i].focus();
+        return;
+      }
+    }
+  }
+
   function bindHomeForm() {
-    var form = document.querySelector('form[action*="script.google.com"]');
-    if (!form || form.dataset.waBound === '1') return;
-    form.dataset.waBound = '1';
+    if (bound) return;
+
+    var form = findHomeForm();
+    if (!form) return;
+
+    bound = true;
+    form.setAttribute('data-home-wa-form', '1');
 
     var wrap = form.parentElement;
     while (wrap && wrap.tagName !== 'SECTION' && wrap.tagName !== 'MAIN' && !wrap.id) {
@@ -52,7 +78,7 @@
         ok = false;
       }
       if (!ok) {
-        (ad && !ad.value.trim() ? ad : email && !email.value.trim() ? email : tel).focus();
+        focusFirst([ad, email, tel]);
         return;
       }
 
@@ -70,14 +96,32 @@
       var url = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(lines.join('\n'));
       window.open(url, '_blank', 'noopener');
     });
+
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
   }
 
-  bindHomeForm();
-  [200, 800, 2000].forEach(function (ms) {
-    setTimeout(bindHomeForm, ms);
-  });
-  new MutationObserver(bindHomeForm).observe(document.documentElement, {
-    childList: true,
-    subtree: true
-  });
+  function start() {
+    try {
+      bindHomeForm();
+      if (!bound) {
+        observer = new MutationObserver(function () {
+          bindHomeForm();
+        });
+        observer.observe(document.documentElement, { childList: true, subtree: true });
+        window.setTimeout(bindHomeForm, 500);
+        window.setTimeout(bindHomeForm, 2000);
+      }
+    } catch (err) {
+      /* avoid breaking the page */
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', start, { once: true });
+  } else {
+    start();
+  }
 })();

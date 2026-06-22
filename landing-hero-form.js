@@ -35,7 +35,8 @@
           ok = false;
         }
         if (!ok) {
-          (ad && ad.classList.contains('err') ? ad : tel).focus();
+          var target = (ad && ad.classList.contains('err')) ? ad : tel;
+          if (target && typeof target.focus === 'function') target.focus();
           return;
         }
 

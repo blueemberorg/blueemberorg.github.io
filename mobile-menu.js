@@ -53,9 +53,15 @@
   }
 
   function open() {
-    ensureDrawer();
-    document.getElementById('siteMobileMenu').classList.add('open');
-    document.body.classList.add('site-mobile-menu-open');
+    try {
+      ensureDrawer();
+      var menu = document.getElementById('siteMobileMenu');
+      if (!menu) return;
+      menu.classList.add('open');
+      document.body.classList.add('site-mobile-menu-open');
+    } catch (err) {
+      /* ignore */
+    }
   }
 
   function close() {

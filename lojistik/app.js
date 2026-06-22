@@ -14,6 +14,7 @@
   const success = document.getElementById('formSuccess');
   const successWa = document.getElementById('successWa');
 
+  if (form && success && successWa) {
   form.addEventListener('submit', function(e){
     e.preventDefault();
     const f = form;
@@ -43,6 +44,7 @@
     success.classList.add('on');
     if(window.lucide) lucide.createIcons();
   });
+  }
 
   const subnav = document.getElementById('pageSubnav');
   if (subnav) {
