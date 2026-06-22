@@ -85,17 +85,20 @@
     return true;
   }
 
-  function handleSubmit(e) {
-    if (!isHomepage()) return;
-    var form = e.target;
-    if (!isHomeContactForm(form)) return;
-
+  function stopEvent(e) {
     e.preventDefault();
     e.stopPropagation();
     if (typeof e.stopImmediatePropagation === 'function') {
       e.stopImmediatePropagation();
     }
+  }
 
+  function handleSubmit(e) {
+    if (!isHomepage()) return;
+    var form = e.target;
+    if (!isHomeContactForm(form)) return;
+
+    stopEvent(e);
     prepareForm(form);
     sendToWhatsApp(form);
   }
@@ -108,12 +111,7 @@
     if (!isHomeContactForm(form)) return;
     if (btn.type !== 'submit' && !/teklif/i.test(btn.textContent || '')) return;
 
-    e.preventDefault();
-    e.stopPropagation();
-    if (typeof e.stopImmediatePropagation === 'function') {
-      e.stopImmediatePropagation();
-    }
-
+    stopEvent(e);
     prepareForm(form);
     sendToWhatsApp(form);
   }
