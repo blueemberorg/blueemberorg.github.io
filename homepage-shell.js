@@ -57,7 +57,7 @@
     }
 
     document.body.classList.add('landing-body');
-    document.body.style.paddingTop = '64px';
+    document.body.style.paddingTop = '56px';
     patched = true;
   }
 
