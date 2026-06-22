@@ -93,6 +93,12 @@
     }
   }
 
+  function isTeklifButton(btn) {
+    if (!btn) return false;
+    var label = (btn.textContent || '').toLocaleLowerCase('tr-TR');
+    return label.indexOf('teklif') !== -1 && label.indexOf('gönderiliyor') === -1;
+  }
+
   function findHomeForm(fromEl) {
     if (fromEl && fromEl.tagName === 'FORM' && isHomeContactForm(fromEl)) {
       return fromEl;
@@ -111,7 +117,7 @@
     if (!form) return;
     prepareForm(form);
     form.querySelectorAll('button').forEach(function (btn) {
-      if (!/teklif/i.test(btn.textContent || '')) return;
+      if (!isTeklifButton(btn)) return;
       btn.type = 'button';
       btn.removeAttribute('disabled');
     });
@@ -125,7 +131,7 @@
       form = findHomeForm(e.target);
     } else {
       var btn = e.target && e.target.closest ? e.target.closest('button') : null;
-      if (!btn || !/teklif/i.test(btn.textContent || '')) return;
+      if (!isTeklifButton(btn)) return;
       form = findHomeForm(btn);
     }
 
