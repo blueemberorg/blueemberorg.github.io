@@ -93,16 +93,27 @@
     }
   }
 
+  function findHomeForm(fromEl) {
+    if (fromEl && fromEl.tagName === 'FORM' && isHomeContactForm(fromEl)) {
+      return fromEl;
+    }
+    if (fromEl && fromEl.closest) {
+      var inForm = fromEl.closest('form');
+      if (isHomeContactForm(inForm)) return inForm;
+    }
+    var ad = document.querySelector('[name="AdSoyad"]');
+    return ad && ad.closest ? ad.closest('form') : null;
+  }
+
   function patchForms() {
     if (!isHomepage()) return;
-    document.querySelectorAll('form').forEach(function (form) {
-      if (!isHomeContactForm(form)) return;
-      prepareForm(form);
-      form.querySelectorAll('button').forEach(function (btn) {
-        if (!/teklif/i.test(btn.textContent || '')) return;
-        btn.type = 'button';
-        btn.removeAttribute('disabled');
-      });
+    var form = findHomeForm();
+    if (!form) return;
+    prepareForm(form);
+    form.querySelectorAll('button').forEach(function (btn) {
+      if (!/teklif/i.test(btn.textContent || '')) return;
+      btn.type = 'button';
+      btn.removeAttribute('disabled');
     });
   }
 
@@ -111,16 +122,14 @@
 
     var form = null;
     if (e.type === 'submit' && e.target && e.target.tagName === 'FORM') {
-      form = e.target;
+      form = findHomeForm(e.target);
     } else {
       var btn = e.target && e.target.closest ? e.target.closest('button') : null;
-      if (!btn) return;
-      form = btn.closest('form');
-      if (!form) return;
-      if (!/teklif/i.test(btn.textContent || '')) return;
+      if (!btn || !/teklif/i.test(btn.textContent || '')) return;
+      form = findHomeForm(btn);
     }
 
-    if (!isHomeContactForm(form)) return;
+    if (!form || !isHomeContactForm(form)) return;
 
     stopEvent(e);
     prepareForm(form);
