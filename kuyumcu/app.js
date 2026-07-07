@@ -330,6 +330,7 @@
 
   initCarousel('eticaretScroller', 'eticaretPrev', 'eticaretNext', '.k-carousel-card');
   initCarousel('beyazScroller', 'beyazPrev', 'beyazNext', '.k-carousel-card');
+  initCarousel('modulScroller', 'modulPrev', 'modulNext', '.k-mod-card');
 
   var subnav = document.getElementById('pageSubnav');
   if (subnav) {
