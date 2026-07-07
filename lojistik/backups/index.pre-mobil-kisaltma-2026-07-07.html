@@ -165,27 +165,11 @@
       <span class="eyebrow">Tanıdık geldi mi?</span>
       <h2>Araç işini hâlâ telefon ve Excel ile yönetmek yoruyor.</h2>
     </div>
-    <div class="prob-scroller-wrap">
-      <div class="prob-grid" id="probScroller">
+    <div class="prob-grid">
       <div class="prob reveal"><span class="pi"><i data-lucide="phone-off"></i></span><h4>Her şey aramaya bağlı</h4><p>Müsaitlik sorgusu, fiyat, rezervasyon… hepsi telefonla. Online rezervasyon yok, mesai dışı talep kaçıyor.</p></div>
       <div class="prob reveal"><span class="pi"><i data-lucide="folder-x"></i></span><h4>Dağınık evraklar</h4><p>Sözleşmeler ve hasar fotoğrafları telefonlarda, WhatsApp'ta, çekmecede. İade anında ihtilaf çıkıyor.</p></div>
       <div class="prob reveal"><span class="pi"><i data-lucide="table-2"></i></span><h4>Excel'de filo takibi</h4><p>Bakım, muayene, sigorta tarihleri tablolarda kayboluyor. Cezalar ve aksamalar sürpriz oluyor.</p></div>
       <div class="prob reveal"><span class="pi"><i data-lucide="map-pin-off"></i></span><h4>Araç nerede belirsiz</h4><p>Aracın konumu, kim aldı, ne zaman dönecek — net bir tablo yok. Her sorgu yeni bir telefon.</p></div>
-      </div>
-    </div>
-    <div class="prob-scroll-foot reveal">
-      <div class="prob-scroll-hint">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M5 12l4-4M5 12l4 4M19 12l-4-4M19 12l-4 4" opacity=".5"/></svg>
-        Kaydırarak veya oklarla sorunları gez
-      </div>
-      <div class="scroll-nav">
-        <button class="snav" type="button" id="probPrev" disabled aria-label="Önceki">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
-        </button>
-        <button class="snav" type="button" id="probNext" aria-label="Sonraki">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
-        </button>
-      </div>
     </div>
   </div>
 </section>
@@ -343,7 +327,7 @@
             <div class="field"><label>E-posta</label><input type="email" name="email" placeholder="ornek@firma.com" /></div>
           </div>
           <div class="row">
-            <div class="field full"><label>Araç sayısı / filo</label>
+            <div class="field"><label>Araç sayısı / filo</label>
               <select name="filo">
                 <option value="">Seçiniz</option>
                 <option>1–10 araç</option>
@@ -352,7 +336,18 @@
                 <option>75+ araç</option>
               </select>
             </div>
+            <div class="field"><label>Aylık bütçe (yaklaşık)</label>
+              <select name="butce">
+                <option value="">Seçiniz</option>
+                <option>Henüz net değil</option>
+                <option>₺5.000 altı</option>
+                <option>₺5.000 – ₺10.000</option>
+                <option>₺10.000 – ₺25.000</option>
+                <option>₺25.000+</option>
+              </select>
+            </div>
           </div>
+          <div class="field full"><label>Mesaj / ihtiyaç</label><textarea name="mesaj" placeholder="Hangi modüller ilginizi çekiyor? İhtiyacınızı kısaca yazın..."></textarea></div>
           <div class="form-foot">
             <button type="submit" class="btn btn-primary submit-btn"><i data-lucide="message-circle"></i>WhatsApp'tan Gönder</button>
             <div class="form-note"><i data-lucide="lock"></i>Bilgileriniz yalnızca size dönüş için kullanılır.</div>

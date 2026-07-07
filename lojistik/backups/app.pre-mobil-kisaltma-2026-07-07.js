@@ -33,6 +33,8 @@
     msg += L("Şehir", f.sehir.value);
     msg += L("E-posta", f.email.value);
     msg += L("Filo büyüklüğü", f.filo.value);
+    msg += L("Aylık bütçe", f.butce.value);
+    msg += L("Mesaj", f.mesaj.value);
 
     const url = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
     successWa.href = url;
@@ -43,30 +45,6 @@
     if(window.lucide) lucide.createIcons();
   });
   }
-
-  (function initProbScroller() {
-    const sc = document.getElementById('probScroller');
-    const prev = document.getElementById('probPrev');
-    const next = document.getElementById('probNext');
-    if (!sc || !prev || !next) return;
-
-    function updateEdges() {
-      prev.disabled = sc.scrollLeft < 8;
-      next.disabled = sc.scrollLeft + sc.clientWidth > sc.scrollWidth - 8;
-    }
-
-    function step(dir) {
-      const card = sc.querySelector('.prob');
-      const w = card ? card.offsetWidth + 14 : 294;
-      sc.scrollBy({ left: dir * w, behavior: 'smooth' });
-    }
-
-    prev.addEventListener('click', () => step(-1));
-    next.addEventListener('click', () => step(1));
-    sc.addEventListener('scroll', updateEdges, { passive: true });
-    window.addEventListener('resize', updateEdges);
-    updateEdges();
-  })();
 
   const subnav = document.getElementById('pageSubnav');
   if (subnav) {

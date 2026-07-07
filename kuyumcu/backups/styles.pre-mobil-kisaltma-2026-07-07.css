@@ -1,0 +1,101 @@
+/* Dijital Kuyumcu page — base from design export */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+::selection{background:#B08D57;color:#fff}
+@keyframes pulseDot{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes scan{0%{transform:translateY(0)}100%{transform:translateY(150px)}}
+input[type=range]{-webkit-appearance:none;appearance:none;height:3px;background:rgba(255,255,255,.22);border-radius:3px;outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:#E8C98A;cursor:pointer;border:2px solid #1C1A15}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#E8C98A;cursor:pointer;border:2px solid #1C1A15}
+
+.kuyumcu-page {
+  background: #F4EFE6;
+  color: #1B1813;
+  -webkit-font-smoothing: antialiased;
+}
+.kuyumcu-page .kuyumcu-main {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+.kuyumcu-page .kuyumcu-main a { text-decoration: none; color: inherit; }
+
+/* site shell overrides */
+.kuyumcu-page .site-header { background: rgba(244, 239, 230, 0.95); border-bottom-color: rgba(27, 24, 19, 0.1); }
+.kuyumcu-page .site-btn-primary { background: #1C1A15; color: #F4EFE6; }
+.kuyumcu-page .site-btn-primary:hover { background: #2a2720; }
+
+.page-subnav.kuyumcu-theme {
+  background: rgba(248, 243, 234, 0.96);
+  border-bottom-color: rgba(27, 24, 19, 0.1);
+}
+.page-subnav.kuyumcu-theme a {
+  color: #5A5247;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  transition: color 0.15s, background 0.15s, border-color 0.15s;
+}
+.page-subnav.kuyumcu-theme a:hover {
+  color: #8C6D3F;
+  background: #fff;
+  border-color: rgba(176, 141, 87, 0.35);
+}
+
+.kuyumcu-page .hero-quick-form {
+  margin-top: 0;
+  margin-bottom: 28px;
+  max-width: 490px;
+  border-color: rgba(27, 24, 19, 0.12);
+  box-shadow: 0 22px 48px -36px rgba(28, 26, 21, 0.5);
+}
+.kuyumcu-page .hero-quick-form .hqf-badge {
+  color: #9A7B46;
+  background: rgba(176, 141, 87, 0.14);
+}
+.kuyumcu-page .hero-quick-form .hqf-submit {
+  background: #1C1A15;
+}
+.kuyumcu-page .hero-quick-form .hqf-submit:hover {
+  background: #2a2720;
+}
+.kuyumcu-page .hero-quick-form .hqf-field input:focus {
+  border-color: #B08D57;
+  box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.18);
+}
+
+@media (max-width: 960px) {
+  .kuyumcu-page header#top {
+    grid-template-columns: 1fr !important;
+    padding: 48px 20px 40px !important;
+    gap: 36px !important;
+  }
+  .kuyumcu-page .kuyumcu-demo-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .kuyumcu-page section[id="eticaret"] > div > div:first-child,
+  .kuyumcu-page section[id="beyazetiket"] > div > div,
+  .kuyumcu-page section[id="yaklasim"] > div > div:last-child,
+  .kuyumcu-page section[id="teklif"] > div > div {
+    grid-template-columns: 1fr !important;
+  }
+  .kuyumcu-page section[id="eticaret"] > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+  .kuyumcu-page section[id="beyazetiket"] > div > div > div:last-child {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .kuyumcu-page #demo > div:last-of-type > div:last-child > div:last-child {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .kuyumcu-page h1 { font-size: 38px !important; }
+  .kuyumcu-page section { padding-left: 20px !important; padding-right: 20px !important; }
+  .kuyumcu-page section[id="beyazetiket"] > div > div > div:last-child {
+    grid-template-columns: 1fr !important;
+  }
+  .kuyumcu-page #demo > div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
