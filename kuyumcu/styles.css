@@ -63,12 +63,25 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
   box-shadow: 0 0 0 3px rgba(176, 141, 87, 0.18);
 }
 
+/* Carousel sections */
+.k-carousel-wrap { margin-top: 0; }
+.k-carousel { display: grid; gap: 0; }
+.kuyumcu-page section[id="eticaret"] .k-carousel {
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.kuyumcu-page section[id="beyazetiket"] .k-carousel {
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
 @media (max-width: 960px) {
   .kuyumcu-page header#top {
     grid-template-columns: 1fr !important;
     padding: 48px 20px 40px !important;
     gap: 36px !important;
   }
+  .kuyumcu-page .kuyumcu-hero-phone { display: none !important; }
   .kuyumcu-page .kuyumcu-demo-grid {
     grid-template-columns: 1fr !important;
   }
@@ -78,24 +91,107 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;bac
   .kuyumcu-page section[id="teklif"] > div > div {
     grid-template-columns: 1fr !important;
   }
-  .kuyumcu-page section[id="eticaret"] > div > div:last-child {
-    grid-template-columns: 1fr !important;
-  }
-  .kuyumcu-page section[id="beyazetiket"] > div > div > div:last-child {
-    grid-template-columns: 1fr 1fr !important;
-  }
   .kuyumcu-page #demo > div:last-of-type > div:last-child > div:last-child {
     grid-template-columns: 1fr 1fr !important;
   }
 }
 
 @media (max-width: 640px) {
-  .kuyumcu-page h1 { font-size: 38px !important; }
   .kuyumcu-page section { padding-left: 20px !important; padding-right: 20px !important; }
-  .kuyumcu-page section[id="beyazetiket"] > div > div > div:last-child {
-    grid-template-columns: 1fr !important;
-  }
   .kuyumcu-page #demo > div[style*="grid-template-columns:1fr 1fr"] {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* Carousel (mobile) */
+.k-scroll-foot { display: none; }
+.k-scroll-hint { display: flex; align-items: center; gap: 9px; font-size: 14px; color: #5A5247; font-weight: 600; }
+.k-scroll-nav { display: flex; gap: 12px; }
+.k-snav {
+  width: 48px; height: 48px; border-radius: 50%; background: #fff;
+  box-shadow: 0 4px 14px rgba(28, 26, 21, 0.08); border: 1px solid rgba(27, 24, 19, 0.12);
+  display: grid; place-items: center; color: #1B1813; transition: all .18s; cursor: pointer;
+}
+.k-snav:hover:not(:disabled) { background: #1C1A15; color: #F4EFE6; transform: translateY(-2px); }
+.k-snav:disabled { opacity: .35; cursor: default; }
+
+@media (max-width: 640px) {
+  .kuyumcu-page header#top {
+    padding: 40px 20px 36px !important;
+    gap: 28px !important;
+  }
+  .kuyumcu-page h1 { font-size: clamp(30px, 7vw, 38px) !important; margin-bottom: 16px !important; }
+  .kuyumcu-page header#top p { font-size: 15px !important; margin-bottom: 24px !important; }
+  .kuyumcu-page .kuyumcu-hero-phone { display: none !important; }
+  .kuyumcu-page .kuyumcu-hero-stats { display: none !important; }
+  .kuyumcu-page .kuyumcu-hero-links { display: none !important; }
+  .kuyumcu-page section[id="eticaret"] > div,
+  .kuyumcu-page section[id="beyazetiket"] > div,
+  .kuyumcu-page section[id="yaklasim"] > div,
+  .kuyumcu-page section[id="moduller"],
+  .kuyumcu-page section[id="demo"],
+  .kuyumcu-page section[id="teklif"] > div {
+    padding-top: 48px !important;
+    padding-bottom: 48px !important;
+  }
+  .kuyumcu-page section[id="eticaret"] h2,
+  .kuyumcu-page section[id="beyazetiket"] h2,
+  .kuyumcu-page section[id="yaklasim"] h2,
+  .kuyumcu-page section[id="moduller"] h2,
+  .kuyumcu-page section[id="demo"] h2,
+  .kuyumcu-page section[id="teklif"] h2 {
+    font-size: clamp(24px, 6vw, 30px) !important;
+  }
+  .kuyumcu-page section[id="eticaret"] > div > div:first-child { margin-bottom: 28px !important; }
+  .kuyumcu-page section[id="eticaret"] > div > div:first-child p,
+  .kuyumcu-page section[id="moduller"] > p,
+  .kuyumcu-page section[id="demo"] > p {
+    font-size: 14px !important;
+  }
+  .kuyumcu-page .k-carousel-wrap { overflow: visible; margin-top: -4px; }
+  .kuyumcu-page .k-carousel {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+    gap: 14px; padding-bottom: 12px;
+    -ms-overflow-style: none; scrollbar-width: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .kuyumcu-page section[id="beyazetiket"] .k-carousel { border-top: none; }
+  .kuyumcu-page .k-carousel::-webkit-scrollbar { display: none; }
+  .kuyumcu-page .k-carousel-card {
+    flex: 0 0 min(280px, 86vw); scroll-snap-align: start;
+    border-right: none !important; padding: 20px !important;
+  }
+  .kuyumcu-page section[id="beyazetiket"] .k-carousel-card h3 { font-size: 14px !important; }
+  .kuyumcu-page section[id="beyazetiket"] .k-carousel-card p { font-size: 13px !important; }
+  .kuyumcu-page .k-scroll-foot {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 8px; flex-wrap: wrap; gap: 14px;
+  }
+  .kuyumcu-page section[id="yaklasim"] > div > div:last-child {
+    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
+    gap: 14px; padding-bottom: 12px; border-top: 1px solid rgba(255, 255, 255, 0.12);
+    -ms-overflow-style: none; scrollbar-width: none;
+  }
+  .kuyumcu-page section[id="yaklasim"] > div > div:last-child::-webkit-scrollbar { display: none; }
+  .kuyumcu-page section[id="yaklasim"] > div > div:last-child > div {
+    flex: 0 0 min(280px, 86vw); scroll-snap-align: start;
+    border-right: none !important; padding: 20px !important;
+  }
+  .kuyumcu-page section[id="yaklasim"] > div > div:last-child h3 { font-size: 18px !important; }
+  .kuyumcu-page section[id="yaklasim"] > div > div:last-child p { font-size: 13px !important; }
+  .kuyumcu-page section[id="moduller"] > div {
+    gap: 0 !important;
+  }
+  .kuyumcu-page section[id="moduller"] > div > div {
+    padding: 18px 4px !important;
+    grid-template-columns: 44px 1fr !important;
+    gap: 14px !important;
+  }
+  .kuyumcu-page section[id="moduller"] > div > div > p { display: none; }
+  .kuyumcu-page section[id="moduller"] > div > div h3 { font-size: 18px !important; }
+  .kuyumcu-page .kuyumcu-demo-grid > div:first-child { display: none !important; }
+  .kuyumcu-page .kuyumcu-demo-grid { gap: 24px !important; margin-bottom: 0 !important; }
+  .kuyumcu-page #demo h3 { font-size: 22px !important; }
+  .kuyumcu-page #demo > div[style*="grid-template-columns:1fr 1fr"] { margin-top: 40px !important; gap: 28px !important; }
+  .kuyumcu-page section[id="teklif"] > div > div { gap: 32px !important; }
 }

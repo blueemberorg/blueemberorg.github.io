@@ -304,6 +304,33 @@
     }, 3200);
   }
 
+  function initCarousel(scrollerId, prevId, nextId, cardSel) {
+    var sc = document.getElementById(scrollerId);
+    var prev = document.getElementById(prevId);
+    var next = document.getElementById(nextId);
+    if (!sc || !prev || !next) return;
+
+    function updateEdges() {
+      prev.disabled = sc.scrollLeft < 8;
+      next.disabled = sc.scrollLeft + sc.clientWidth > sc.scrollWidth - 8;
+    }
+
+    function step(dir) {
+      var card = sc.querySelector(cardSel);
+      var w = card ? card.offsetWidth + 14 : 294;
+      sc.scrollBy({ left: dir * w, behavior: 'smooth' });
+    }
+
+    prev.addEventListener('click', function () { step(-1); });
+    next.addEventListener('click', function () { step(1); });
+    sc.addEventListener('scroll', updateEdges, { passive: true });
+    window.addEventListener('resize', updateEdges);
+    updateEdges();
+  }
+
+  initCarousel('eticaretScroller', 'eticaretPrev', 'eticaretNext', '.k-carousel-card');
+  initCarousel('beyazScroller', 'beyazPrev', 'beyazNext', '.k-carousel-card');
+
   var subnav = document.getElementById('pageSubnav');
   if (subnav) {
     window.addEventListener('scroll', function () {
