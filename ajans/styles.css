@@ -170,7 +170,8 @@ h1,h2,h3,h4 { font-family: var(--display); font-weight: 700; line-height: 1.04; 
 
 @media (max-width: 940px) {
   .hero-grid { grid-template-columns: 1fr; gap: 28px; }
-  .hero-stage { height: 480px; margin-top: 8px; }
+  .hero-stage { display: none; }
+  .stats { display: none; }
   .hero { padding: 32px 0 48px; }
 }
 
