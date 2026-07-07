@@ -143,39 +143,6 @@ function Testimonials() {
     { q: 'Projemizde karmaşık süreçleri sadeleştirip, otomasyon sistemimizi sıfırdan kurdular. Teknik bilgi kadar iletişim tarafında da çok güçlü bir ekip. Sürecin her aşamasında bize rehberlik ettiler.', n: 'Tutar Teknoloji', r: '', c: '#2b7cff', stars: 5 },
   ];
 
-  const scRef = React.useRef(null);
-  const [atStart, setAtStart] = React.useState(true);
-  const [atEnd, setAtEnd] = React.useState(false);
-
-  const updateEdges = React.useCallback(() => {
-    const sc = scRef.current;
-    if (!sc) return;
-    setAtStart(sc.scrollLeft < 8);
-    setAtEnd(sc.scrollLeft + sc.clientWidth > sc.scrollWidth - 8);
-  }, []);
-
-  React.useEffect(() => { updateEdges(); }, [updateEdges]);
-
-  const step = (dir) => {
-    const sc = scRef.current;
-    if (!sc) return;
-    const card = sc.querySelector('.tst-scroll-card');
-    const w = card ? card.offsetWidth + 16 : 316;
-    sc.scrollBy({ left: dir * w, behavior: 'smooth' });
-  };
-
-  const renderCard = (x, i, extraClass) => (
-    <div className={'tst reveal' + (extraClass ? ' ' + extraClass : '')} key={i} style={{ transitionDelay: `${i * 80}ms` }}>
-      <div className="qm">“</div>
-      <div className="stars" style={{ color: 'var(--amber)' }}>{'★'.repeat(x.stars)}</div>
-      <p>{x.q}</p>
-      <div className="who">
-        <div className="av" style={{ background: x.c }}>{x.n.split(' ').map(w => w[0]).join('')}</div>
-        <div><b>{x.n}</b>{x.r ? <small>{x.r}</small> : null}</div>
-      </div>
-    </div>
-  );
-
   return (
     <section className="section" id="yorumlar" style={{ background: 'linear-gradient(180deg,#f7f5ff,#f1ecff)' }}>
       <div className="wrap">
@@ -183,29 +150,18 @@ function Testimonials() {
           <span className="eyebrow" style={{ justifyContent: 'center' }}>Müşteri Yorumları</span>
           <h2 className="h-sec" style={{ marginTop: 16 }}>Markalar bize güveniyor</h2>
         </div>
-        <div className="tst-grid tst-grid-desktop">
-          {t.map((x, i) => renderCard(x, i))}
-        </div>
-      </div>
-
-      <div className="tst-scroller-wrap">
-        <div className="wrap" style={{ overflow: 'visible' }}>
-          <div className="scroller tst-scroller" ref={scRef} onScroll={updateEdges}>
-            {t.map((x, i) => renderCard(x, i, 'tst-scroll-card'))}
-          </div>
-        </div>
-      </div>
-
-      <div className="wrap">
-        <div className="tst-scroll-foot">
-          <div className="show-hint">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 12h14M5 12l4-4M5 12l4 4M19 12l-4-4M19 12l-4 4" opacity=".5"/></svg>
-            Kaydırarak veya oklarla yorumları gez
-          </div>
-          <div className="scroll-nav">
-            <button className="snav" type="button" onClick={() => step(-1)} disabled={atStart} aria-label="Önceki"><Icon name="arrowLeft" size={20} stroke="currentColor" /></button>
-            <button className="snav" type="button" onClick={() => step(1)} disabled={atEnd} aria-label="Sonraki"><span style={{ transform: 'rotate(180deg)', display: 'grid' }}><Icon name="arrowLeft" size={20} stroke="currentColor" /></span></button>
-          </div>
+        <div className="tst-grid">
+          {t.map((x, i) => (
+            <div className="tst reveal" key={i} style={{ transitionDelay: `${i * 80}ms` }}>
+              <div className="qm">“</div>
+              <div className="stars" style={{ color: 'var(--amber)' }}>{'★'.repeat(x.stars)}</div>
+              <p>{x.q}</p>
+              <div className="who">
+                <div className="av" style={{ background: x.c }}>{x.n.split(' ').map(w => w[0]).join('')}</div>
+                <div><b>{x.n}</b>{x.r ? <small>{x.r}</small> : null}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
