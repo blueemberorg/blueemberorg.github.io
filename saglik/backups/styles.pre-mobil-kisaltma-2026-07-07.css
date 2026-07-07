@@ -250,18 +250,6 @@ p { margin: 0; }
 .problem-foot .big { font-size: 19px; font-weight: 700; color: var(--ink); }
 .problem-foot .big b { color: var(--teal); }
 
-/* Problem carousel (mobile) */
-.problem-scroll-foot { display: none; }
-.problem-scroll-hint { display: flex; align-items: center; gap: 9px; font-size: 14px; color: var(--ink-soft); font-weight: 600; }
-.scroll-nav { display: flex; gap: 12px; }
-.snav {
-  width: 48px; height: 48px; border-radius: 50%; background: var(--surface);
-  box-shadow: var(--shadow-s); border: 1px solid var(--line); display: grid; place-items: center;
-  color: var(--ink); transition: all .18s; cursor: pointer;
-}
-.snav:hover:not(:disabled) { background: var(--ink); color: #fff; transform: translateY(-2px); box-shadow: var(--shadow); }
-.snav:disabled { opacity: .35; cursor: default; }
-
 /* ============================ Solution / modules ============================ */
 .sol-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
 .sol-list { display: grid; gap: 16px; margin-top: 30px; }
@@ -458,7 +446,7 @@ p { margin: 0; }
 /* ============================ Responsive ============================ */
 @media (max-width: 980px) {
   .hero-grid, .sol-grid, .tour-grid { grid-template-columns: 1fr; gap: 40px; }
-  .mock-stage { display: none; }
+  .mock-stage { max-width: 520px; margin: 0 auto; }
   .form-shell { grid-template-columns: 1fr; }
   .form-aside { padding: 36px 30px; }
   .results-grid { grid-template-columns: 1fr 1fr; }
@@ -468,51 +456,10 @@ p { margin: 0; }
 }
 @media (max-width: 600px) {
   .wrap { padding: 0 18px; }
-  .section { padding: 48px 0; }
-  .hero { padding: 40px 0 48px; }
-  .section-head { margin-bottom: 28px; }
-  .section-head h2 { font-size: clamp(24px, 6vw, 26px); }
-  .section-head p { font-size: 14px; margin-top: 12px; }
-  .hero-stats { display: none; }
-  .trust { display: none; }
-  .tour-grid > .reveal:first-child { display: none; }
-  .hero-actions .btn-ghost:last-child { display: none; }
-  .problem-scroller-wrap { overflow: visible; margin-top: -8px; }
-  .problem-grid {
-    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth;
-    gap: 14px; padding-bottom: 12px; grid-template-columns: unset;
-    -ms-overflow-style: none; scrollbar-width: none;
-  }
-  .problem-grid::-webkit-scrollbar { display: none; }
-  .problem-grid .pcard {
-    flex: 0 0 min(280px, 86vw); scroll-snap-align: start;
-    padding: 18px;
-  }
-  .problem-grid .pcard-ico { width: 36px; height: 36px; margin-bottom: 12px; }
-  .problem-grid .pcard-ico svg { width: 18px; height: 18px; }
-  .problem-grid .pcard h3 { font-size: 15px; }
-  .problem-grid .pcard p { font-size: 13px; margin-top: 7px; }
-  .problem-scroll-foot {
-    display: flex; justify-content: space-between; align-items: center;
-    margin-top: 8px; margin-bottom: 8px; flex-wrap: wrap; gap: 14px;
-  }
-  .problem-foot { margin-top: 24px; }
-  .problem-foot .big { font-size: 16px; }
-  .modgrid, .tour-mods, .langs, .frow, .modules-pick, .choices.cols { grid-template-columns: 1fr; }
-  .results-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .modcard { padding: 14px; }
-  .modcard h4 { font-size: 14px; }
-  .modcard p { font-size: 12px; }
-  .modcard .mi { width: 34px; height: 34px; margin-bottom: 10px; }
-  .sol-item h4 { font-size: 14px; }
-  .sol-item p { font-size: 13px; }
-  .tmod { padding: 12px; gap: 11px; }
-  .tmod .ti { width: 32px; height: 32px; }
-  .tmod h4 { font-size: 13px; }
-  .tmod p { font-size: 11.5px; }
-  .rcard { padding: 18px 16px; }
-  .rcard .rn { font-size: 32px; }
-  .rcard .rl { font-size: 12.5px; margin-top: 8px; }
+  .section { padding: 64px 0; }
+  .problem-grid, .modgrid, .tour-mods, .langs, .results-grid, .frow, .modules-pick, .choices.cols { grid-template-columns: 1fr; }
+  .hero-stats { gap: 18px; }
+  .hero-stat + .hero-stat { padding-left: 18px; }
   .form-main { padding: 32px 22px; }
   .mock-float { display: none; }
   .hero h1 { font-size: 34px; }

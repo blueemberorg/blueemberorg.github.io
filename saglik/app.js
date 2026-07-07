@@ -29,57 +29,6 @@ const WHATSAPP_NUMBER = '905370580038';
   });
 })();
 
-/* ---------- Module checkbox lists ---------- */
-const CLINIC_MODULES = [
-  ['01', 'Hasta Takip & CRM'],
-  ['02', 'İlaç Takibi & Reçete'],
-  ['03', 'Akıllı Takvim & Randevu'],
-  ['04', 'Video Görüşme'],
-  ['05', 'Vital Değer Grafikleri'],
-  ['06', 'Hemşire & Personel'],
-  ['07', 'Ekipman Kaydı & Bakım'],
-  ['08', 'Muayene Notları (SOAP)'],
-  ['09', 'Tıbbi Geçmiş Arşivi'],
-];
-const TOURISM_MODULES = [
-  ['T1', 'Çok Dilli Hasta Portalı'],
-  ['T2', 'WhatsApp Randevu Botu'],
-  ['T3', 'Anlık Tercüman Chatbot'],
-  ['T4', 'Transfer + Otel Paketi'],
-  ['T5', 'Uluslararası Ödeme'],
-  ['T6', 'OCR Hasta Kaydı'],
-  ['T7', 'İyileşme Takip Uygulaması'],
-];
-const TICK = `<span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 13 4 4L19 7"/></svg></span>`;
-
-function renderModules(targetId, list, group) {
-  const wrap = document.getElementById(targetId);
-  if (!wrap) return;
-  list.forEach(([code, name]) => {
-    const id = `mod-${code}`;
-    const div = document.createElement('div');
-    div.className = 'mpick';
-    div.innerHTML = `<input type="checkbox" id="${id}" name="modul" value="${code} — ${name}" data-group="${group}">
-      <label for="${id}">${TICK}<span class="tag">${code}</span> ${name}</label>`;
-    wrap.appendChild(div);
-  });
-}
-renderModules('clinicModules', CLINIC_MODULES, 'klinik');
-renderModules('tourismModules', TOURISM_MODULES, 'turizm');
-
-/* ---------- Conditional: target countries on tourism = Evet/Plan ---------- */
-const ulkelerField = document.getElementById('ulkelerField');
-if (ulkelerField) {
-  document.querySelectorAll('input[name="turizm"]').forEach(r => {
-    r.addEventListener('change', () => {
-      const show = (r.id === 'tEvet' || r.id === 'tPlan') && r.checked;
-      ulkelerField.classList.toggle('show', show);
-      const input = ulkelerField.querySelector('input');
-      if (!show && input) input.value = '';
-    });
-  });
-}
-
 /* ---------- Validation helpers ---------- */
 function setInvalid(field, on) { field.classList.toggle('invalid', on); }
 
@@ -147,10 +96,6 @@ function radioVal(name) {
   const el = document.querySelector(`#leadForm [name="${name}"]:checked`);
   return el ? el.value : '';
 }
-function checkedModules(group) {
-  return [...document.querySelectorAll(`#leadForm [name="modul"]:checked[data-group="${group}"]`)]
-    .map(el => el.value);
-}
 
 function buildMessage() {
   const L = [];
@@ -166,18 +111,6 @@ function buildMessage() {
   L.push(`• Branş: ${val('brans')}`);
   L.push(`• Aylık hasta hacmi: ${val('hacim')}`);
   if (radioVal('yazilim')) L.push(`• Mevcut yazılım: ${radioVal('yazilim')}`);
-  L.push('');
-  L.push('*Sağlık Turizmi*');
-  L.push(`• Uluslararası hasta: ${radioVal('turizm') || 'Belirtilmedi'}`);
-  if (val('ulkeler')) L.push(`• Hedef ülkeler: ${val('ulkeler')}`);
-  L.push('');
-  const clinic = checkedModules('klinik');
-  const tourism = checkedModules('turizm');
-  L.push('*İlgilenilen Modüller*');
-  L.push(`• Klinik: ${clinic.length ? clinic.join(', ') : '—'}`);
-  L.push(`• Turizm: ${tourism.length ? tourism.join(', ') : '—'}`);
-  L.push('');
-  L.push(`*Tahmini Bütçe:* ${radioVal('butce') || 'Belirtilmedi'}`);
   if (val('not')) { L.push(''); L.push(`*Not:* ${val('not')}`); }
   return L.join('\n');
 }
@@ -204,6 +137,31 @@ form.addEventListener('submit', e => {
   successBox.classList.add('show');
 });
 }
+
+/* ---------- Problem carousel ---------- */
+(function initProblemScroller() {
+  const sc = document.getElementById('problemScroller');
+  const prev = document.getElementById('problemPrev');
+  const next = document.getElementById('problemNext');
+  if (!sc || !prev || !next) return;
+
+  function updateEdges() {
+    prev.disabled = sc.scrollLeft < 8;
+    next.disabled = sc.scrollLeft + sc.clientWidth > sc.scrollWidth - 8;
+  }
+
+  function step(dir) {
+    const card = sc.querySelector('.pcard');
+    const w = card ? card.offsetWidth + 14 : 294;
+    sc.scrollBy({ left: dir * w, behavior: 'smooth' });
+  }
+
+  prev.addEventListener('click', () => step(-1));
+  next.addEventListener('click', () => step(1));
+  sc.addEventListener('scroll', updateEdges, { passive: true });
+  window.addEventListener('resize', updateEdges);
+  updateEdges();
+})();
 
 /* ---------- Subnav: scrolled state ---------- */
 const subnav = document.getElementById('pageSubnav');
