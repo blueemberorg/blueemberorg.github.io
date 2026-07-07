@@ -147,8 +147,9 @@
   .prob p{font-size:14.5px;color:var(--muted)}
 
   /* ---------- features ---------- */
+  #ozellikler{background:var(--paper)}
   .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .feat{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:26px 24px;transition:transform .2s ease, box-shadow .2s ease, border-color .2s;position:relative;overflow:hidden}
+  .feat{background:#fff;border:1px solid var(--border);border-radius:var(--r-md);padding:26px 24px;box-shadow:var(--shadow-sm);transition:transform .2s ease, box-shadow .2s ease, border-color .2s;position:relative;overflow:hidden}
   .feat:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--border-strong)}
   .feat .fi{width:48px;height:48px;border-radius:13px;background:var(--navy-800);color:#fff;display:grid;place-items:center;margin-bottom:18px}
   .feat .fi svg{width:23px;height:23px}
@@ -292,9 +293,9 @@
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease, transform .6s ease}
   .reveal.in{opacity:1;transform:none}
 
-  /* Problem carousel (mobile) */
-  .prob-scroll-foot { display: none; }
-  .prob-scroll-hint { display: flex; align-items: center; gap: 9px; font-size: 14px; color: var(--muted); font-weight: 600; }
+  /* Problem / feature carousel */
+  .prob-scroll-foot, .feat-scroll-foot { display: none; }
+  .prob-scroll-hint, .feat-scroll-hint { display: flex; align-items: center; gap: 9px; font-size: 14px; color: var(--muted); font-weight: 600; }
   .scroll-nav { display: flex; gap: 12px; }
   .snav {
     width: 48px; height: 48px; border-radius: 50%; background: #fff;
@@ -308,7 +309,22 @@
   @media(max-width:960px){
     .hero-grid,.wl-grid,.lead-card{grid-template-columns:1fr}
     .mock{display:none}
-    .prob-grid,.feat-grid,.step-grid{grid-template-columns:repeat(2,1fr)}
+    .prob-grid{grid-template-columns:repeat(2,1fr)}
+    .feat-scroller-wrap{overflow:visible;margin-top:-4px}
+    .feat-grid{
+      display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+      gap:14px;padding-bottom:12px;grid-template-columns:unset;
+      -ms-overflow-style:none;scrollbar-width:none;
+    }
+    .feat-grid::-webkit-scrollbar{display:none}
+    .feat-grid .feat{
+      flex:0 0 min(300px,88vw);scroll-snap-align:start;
+      padding:22px;
+    }
+    .feat-scroll-foot{
+      display:flex;justify-content:space-between;align-items:center;
+      margin-top:8px;flex-wrap:wrap;gap:14px;
+    }
     .aud-grid{grid-template-columns:1fr}
     .faq-grid{grid-template-columns:1fr}
     .lead-left{padding:38px 30px}
@@ -343,15 +359,10 @@
       display:flex;justify-content:space-between;align-items:center;
       margin-top:8px;flex-wrap:wrap;gap:14px;
     }
-    .feat-grid,.step-grid{grid-template-columns:1fr;gap:14px}
-    .feat{padding:20px}
-    .feat h3{font-size:16px}
-    .feat p{font-size:13px;line-height:1.45}
-    .feat .fi{width:42px;height:42px;border-radius:12px;margin-bottom:14px}
-    .feat .fi svg{width:20px;height:20px}
-    .step{padding:20px}
-    .step h4{font-size:15px}
-    .step p{font-size:13px}
+    .feat-grid .feat h3{font-size:16px}
+    .feat-grid .feat p{font-size:13px;line-height:1.45}
+    .feat-grid .feat .fi{width:42px;height:42px;border-radius:12px;margin-bottom:14px}
+    .feat-grid .feat .fi svg{width:20px;height:20px}
     .wl-grid > .reveal:last-child{display:none}
     form .row{grid-template-columns:1fr}
     .swap-phones{grid-template-columns:1fr}

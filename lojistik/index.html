@@ -52,7 +52,6 @@
       <a href="#ozellikler">Özellikler</a>
       <a href="#whitelabel">Whitelabel</a>
       <a href="#kimler">Kimler İçin</a>
-      <a href="#nasil">Nasıl Çalışır</a>
     </div>
   </nav>
 </header>
@@ -198,7 +197,8 @@
       <h2>İşinizi büyüten 8 modül, tek panelde</h2>
       <p>Hepsi birbirine bağlı çalışır — rezervasyondan teslime, sözleşmeden tahsilata kadar.</p>
     </div>
-    <div class="feat-grid">
+    <div class="feat-scroller-wrap">
+      <div class="feat-grid" id="featScroller">
       <div class="feat reveal"><span class="num">01</span><span class="fi"><i data-lucide="smartphone"></i></span><h3>Mobil rezervasyon</h3><p>Müşteri aracı seçer, tarihi belirler, ödemeyi yapar — Uber rahatlığında, tamamen sizin uygulamanızdan.</p></div>
       <div class="feat ai reveal"><span class="num">02</span><span class="fi"><i data-lucide="scan-line"></i></span><h3>AI hasar tespiti</h3><p>Teslim ve iade anında fotoğraftan yapay zekâ hasarı işaretler. Karşılaştırmalı rapor, ihtilafa son.</p><span class="tag">Yapay Zekâ</span></div>
       <div class="feat reveal"><span class="num">03</span><span class="fi"><i data-lucide="pen-tool"></i></span><h3>Dijital sözleşme & imza</h3><p>Sözleşme otomatik dolar, müşteri telefonundan ıslak imza atar. Tüm evrak dijital arşivde.</p></div>
@@ -207,6 +207,21 @@
       <div class="feat reveal"><span class="num">06</span><span class="fi"><i data-lucide="map-pin"></i></span><h3>Canlı araç konumu</h3><p>Müşteri ve siz, aracın canlı konumunu harita üzerinden takip edersiniz. Şeffaf ve güvenli.</p></div>
       <div class="feat ai reveal"><span class="num">07</span><span class="fi"><i data-lucide="trending-up"></i></span><h3>Dinamik fiyatlandırma</h3><p>Talep, sezon ve doluluk oranına göre yapay zekâ en kârlı fiyatı önerir. Boş araç, kaçan gelir azalır.</p><span class="tag">Yapay Zekâ</span></div>
       <div class="feat reveal"><span class="num">08</span><span class="fi"><i data-lucide="network"></i></span><h3>Çok lokasyon & acente paneli</h3><p>Bayi, acente ve şubelerinizi tek panelden yönetin. Her lokasyonun cirosu ve filosu ayrı ayrı net.</p></div>
+      </div>
+    </div>
+    <div class="feat-scroll-foot reveal">
+      <div class="feat-scroll-hint">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M5 12l4-4M5 12l4 4M19 12l-4-4M19 12l-4 4" opacity=".5"/></svg>
+        Kaydırarak modülleri gez
+      </div>
+      <div class="scroll-nav">
+        <button class="snav" type="button" id="featPrev" disabled aria-label="Önceki">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button class="snav" type="button" id="featNext" aria-label="Sonraki">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
   </div>
 </section>
@@ -292,22 +307,6 @@
           <li><i data-lucide="check"></i>Lokasyon bazlı ciro</li>
         </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- STEPS -->
-<section class="sec steps" id="nasil">
-  <div class="wrap">
-    <div class="sec-head center reveal">
-      <span class="eyebrow">Nasıl çalışır</span>
-      <h2>Görüşmeden yayına 4 adım</h2>
-    </div>
-    <div class="step-grid">
-      <div class="step reveal"><span class="n">1</span><h4>Tanışma & analiz</h4><p>Filonuzu, ihtiyacınızı ve hedeflerinizi konuşuyoruz. Size uygun modülleri belirliyoruz.</p></div>
-      <div class="step reveal"><span class="n">2</span><h4>Markanıza kurulum</h4><p>Logonuz, renkleriniz ve alan adınızla platformu kuruyoruz. Verilerinizi taşıyoruz.</p></div>
-      <div class="step reveal"><span class="n">3</span><h4>Eğitim & test</h4><p>Ekibinize kullanım eğitimi veriyoruz. Birlikte test edip her şeyi yerine oturtuyoruz.</p></div>
-      <div class="step last reveal"><span class="n">4</span><h4>Yayında!</h4><p>Uygulamanız ve paneliniz canlıda. Sürekli destek ve güncellemelerle yanınızdayız.</p></div>
     </div>
   </div>
 </section>
@@ -411,7 +410,6 @@
           <h5>Platform</h5>
           <a href="#ozellikler">Özellikler</a>
           <a href="#whitelabel">Whitelabel</a>
-          <a href="#nasil">Nasıl çalışır</a>
         </div>
         <div class="foot-col">
           <h5>Kimler için</h5>

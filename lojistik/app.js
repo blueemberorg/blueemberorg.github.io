@@ -44,10 +44,10 @@
   });
   }
 
-  (function initProbScroller() {
-    const sc = document.getElementById('probScroller');
-    const prev = document.getElementById('probPrev');
-    const next = document.getElementById('probNext');
+  function initScroller(scrollerId, prevId, nextId, cardSel) {
+    const sc = document.getElementById(scrollerId);
+    const prev = document.getElementById(prevId);
+    const next = document.getElementById(nextId);
     if (!sc || !prev || !next) return;
 
     function updateEdges() {
@@ -56,7 +56,7 @@
     }
 
     function step(dir) {
-      const card = sc.querySelector('.prob');
+      const card = sc.querySelector(cardSel);
       const w = card ? card.offsetWidth + 14 : 294;
       sc.scrollBy({ left: dir * w, behavior: 'smooth' });
     }
@@ -66,7 +66,10 @@
     sc.addEventListener('scroll', updateEdges, { passive: true });
     window.addEventListener('resize', updateEdges);
     updateEdges();
-  })();
+  }
+
+  initScroller('probScroller', 'probPrev', 'probNext', '.prob');
+  initScroller('featScroller', 'featPrev', 'featNext', '.feat');
 
   const subnav = document.getElementById('pageSubnav');
   if (subnav) {
