@@ -7,7 +7,7 @@
     { label: 'Mobil Uygulama Hizmetleri', href: '/ajans' },
     { label: 'Sağlık Sektörü Çözümleri', href: '/saglik' },
     { label: 'Araç Kiralama ve Lojistik', href: '/lojistik' },
-    { label: 'Kuyumcu White-Label', href: '/kuyumcu' }
+    { label: 'E-ticaret', href: '/eticaret' }
   ];
 
   var patched = false;
