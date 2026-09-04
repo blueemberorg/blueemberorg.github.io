@@ -26,6 +26,50 @@ html { scroll-padding-top: 120px; }
 nav[data-screen-label="Navbar"] { display: none !important; }
 section#top { padding-top: 64px !important; }
 section[id] { scroll-margin-top: 120px !important; }
+
+@media(max-width:860px){
+  /* moduller: 3-col grid → yatay kaydırmalı */
+  section#moduller [data-r~="col"]{
+    display:flex!important;
+    overflow-x:auto!important;
+    scroll-snap-type:x mandatory!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+    gap:12px!important;
+    padding-bottom:18px!important;
+  }
+  section#moduller [data-r~="col"]::-webkit-scrollbar{display:none}
+  section#moduller [data-r~="col"] > *{
+    flex:0 0 76vw!important;
+    max-width:280px!important;
+    min-width:220px!important;
+    scroll-snap-align:start!important;
+  }
+
+  /* sektorler: sağ mockup gizle, kartlar yatay kaydırmalı */
+  section#sektorler [data-r~="col"]{
+    grid-template-columns:1fr!important;
+  }
+  section#sektorler [data-r~="col"] > div:last-child:not(:first-child){
+    display:none!important;
+  }
+  section#sektorler [data-r~="col"] > div:first-child{
+    flex-direction:row!important;
+    overflow-x:auto!important;
+    scroll-snap-type:x mandatory!important;
+    -webkit-overflow-scrolling:touch!important;
+    scrollbar-width:none!important;
+    gap:12px!important;
+    padding-bottom:18px!important;
+  }
+  section#sektorler [data-r~="col"] > div:first-child::-webkit-scrollbar{display:none}
+  section#sektorler [data-r~="col"] > div:first-child > div{
+    flex:0 0 80vw!important;
+    max-width:300px!important;
+    min-width:240px!important;
+    scroll-snap-align:start!important;
+  }
+}
 </style>
 <script src="./support.js"></script>
 </head>
