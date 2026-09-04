@@ -15,9 +15,54 @@
 <title>Blue Ember — E-ticaret Mobil Uygulama | Shopify Uyumlu</title>
 <meta name="description" content="Shopify mağazanızın üstüne oturan, kendi markanızla App Store ve Google Play'de yayınlanan native e-ticaret mobil uygulaması. Sektörünüze özel AI ve AR modülleri.">
 <link rel="icon" href="/icon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="/site-fonts.css" />
+<link rel="stylesheet" href="/site-unify.css" />
+<link rel="stylesheet" href="/landing-shell.css?v=6" />
+<link rel="stylesheet" href="/mobile-menu.css?v=3" />
+<style>
+html { scroll-padding-top: 120px; }
+nav[data-screen-label="Navbar"] { display: none !important; }
+section#top { padding-top: 64px !important; }
+section[id] { scroll-margin-top: 120px !important; }
+</style>
 <script src="./support.js"></script>
 </head>
-<body>
+<body class="landing-body eticaret-page has-subnav">
+
+<header class="site-header site-header--with-subnav">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo">
+      <img width="25" height="34" alt="Blue Ember" src="/NavImage/logo.png" />
+      <span>BLUE EMBER</span>
+    </a>
+    <nav class="site-nav" aria-label="Ana menü">
+      <a href="/">Anasayfa</a>
+      <a href="/product">Portföy</a>
+      <a href="/ajans">Mobil Uygulama Hizmetleri</a>
+      <a href="/saglik">Sağlık Sektörü Çözümleri</a>
+      <a href="/lojistik">Araç Kiralama ve Lojistik</a>
+      <a href="/eticaret" class="active">E-ticaret</a>
+    </nav>
+    <div class="site-actions">
+      <a href="#teklif" class="site-btn-primary">Teklif al</a>
+    </div>
+    <button type="button" class="site-menu-btn" aria-label="Menü aç">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="page-subnav" id="pageSubnav" aria-label="Sayfa bölümleri">
+    <div class="page-subnav-inner">
+      <a href="#neden">Neden Uygulama</a>
+      <a href="#moduller">Özellikler</a>
+      <a href="#sektorler">Sektörler</a>
+      <a href="#surec">Süreç</a>
+    </div>
+  </nav>
+</header>
+<script src="/mobile-menu.js"></script>
+
 <x-dc>
 <helmet>
 <meta name="viewport" content="width=device-width, initial-scale=1">
