@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<script src="/meta-pixel.js"></script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=27809215598676599&ev=PageView&noscript=1" /></noscript>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZEQ0MQ65Q"></script>
+<script src="/google-analytics.js"></script>
+<script src="/clarity.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WebView mi, Native mi? E-ticaret Uygulama Farkı — Blue Ember</title>
+<meta name="description" content="WebView uygulama ile Flutter native uygulama arasındaki teknik ve kullanıcı deneyimi farkları. Hangisi e-ticaret için doğru seçim?">
+<link rel="canonical" href="https://blueemberorg.com/eticaret/webview-native-farki">
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="/site-fonts.css" />
+<link rel="stylesheet" href="/site-unify.css" />
+<link rel="stylesheet" href="/landing-shell.css?v=6" />
+<link rel="stylesheet" href="/mobile-menu.css?v=3" />
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#FCFDFC;color:#1A211E;-webkit-font-smoothing:antialiased}
+a{color:#008060;text-decoration:none}
+h1,h2,h3{font-family:'Space Grotesk',sans-serif}
+.yes{color:#008060;font-weight:700}
+.no{color:#C24040;font-weight:700}
+@media(max-width:760px){.be-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.be-table-inner{min-width:520px}.be-grid-2{grid-template-columns:1fr!important}.be-hero-btns{flex-direction:column!important}.be-hero-btns a{text-align:center}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"WebView mi, Native mi? E-ticaret Uygulama Farkı","description":"WebView uygulama ile Flutter native uygulama arasındaki teknik ve kullanıcı deneyimi farkları.","publisher":{"@type":"Organization","name":"Blue Ember","url":"https://blueemberorg.com"}}
+</script>
+</head>
+<body class="landing-body has-subnav">
+<header class="site-header site-header--with-subnav">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo"><img width="25" height="34" alt="Blue Ember" src="/NavImage/logo.png" /><span>BLUE EMBER</span></a>
+    <nav class="site-nav" aria-label="Ana menü">
+      <a href="/">Anasayfa</a><a href="/product">Portföy</a><a href="/ajans">Mobil Uygulama Hizmetleri</a><a href="/saglik">Sağlık Sektörü Çözümleri</a><a href="/lojistik">Araç Kiralama ve Lojistik</a><a href="/eticaret" class="active">E-ticaret</a>
+    </nav>
+    <div class="site-actions"><a href="/eticaret#teklif" class="site-btn-primary">Teklif al</a></div>
+    <button type="button" class="site-menu-btn" aria-label="Menü aç"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+  <nav class="page-subnav" id="pageSubnav" aria-label="Sayfa bölümleri">
+    <div class="page-subnav-inner">
+      <a href="/eticaret">← E-ticaret</a>
+      <a href="#nedir">Nedir?</a>
+      <a href="#karsilastirma">Karşılaştırma</a>
+      <a href="#teklif">Teklif Al</a>
+    </div>
+  </nav>
+</header>
+<script src="/mobile-menu.js"></script>
+<main>
+
+<section style="padding:96px 24px 64px;background:#0B1F18">
+  <div style="max-width:900px;margin:0 auto">
+    <a href="/eticaret" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;color:#8FDDA9;font-weight:600;margin-bottom:24px">← E-ticaret ana sayfasına dön</a>
+    <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8FDDA9;margin-bottom:16px">Teknik Rehber</div>
+    <h1 style="font-size:clamp(28px,4.5vw,48px);font-weight:700;color:#fff;margin:0 0 20px;text-wrap:pretty">WebView mi, <span style="background:linear-gradient(90deg,#8FDDA9,#6DAE4F);-webkit-background-clip:text;background-clip:text;color:transparent">Native mi?</span></h1>
+    <p style="font-size:17px;line-height:1.65;color:#B9CEC5;margin:0 0 32px;max-width:680px">Piyasadaki birçok "mobil uygulama" aslında web sitesini uygulama kabuğuna saran WebView'dır. Fark kullanıcı deneyiminde, performansta ve uygulama mağazası onayında hissedilir.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:8px 16px;font-size:13px;color:#fff">5 dakikada okuma</div>
+      <div style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:8px 16px;font-size:13px;color:#fff">Blue Ember — Eylül 2026</div>
+    </div>
+  </div>
+</section>
+
+<section id="nedir" style="padding:80px 24px;background:#fff;scroll-margin-top:70px">
+  <div style="max-width:900px;margin:0 auto">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#008060;margin-bottom:14px">Tanımlar</div>
+    <h2 style="font-size:30px;font-weight:700;color:#0B1F18;margin:0 0 32px">İki yaklaşım ne anlama gelir?</h2>
+    <div class="be-grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:40px">
+      <div style="background:#FFF8F8;border:1px solid #F5C2C2;border-radius:16px;padding:28px">
+        <div style="font-size:13px;font-weight:700;color:#C24040;text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px">WebView Uygulama</div>
+        <p style="font-size:14px;line-height:1.7;color:#5A6A63;margin:0">Mevcut web sitenizi bir tarayıcı penceresi (WebView) içinde gösterir. Uygulama simgesi ve push bildirimi ekler; içerik web teknolojisiyle çalışır. Kamera, GPS ve dokunmatik gibi telefon özelliklere erişim sınırlıdır.</p>
+      </div>
+      <div style="background:#F2F8F5;border:2px solid #008060;border-radius:16px;padding:28px">
+        <div style="font-size:13px;font-weight:700;color:#008060;text-transform:uppercase;letter-spacing:.07em;margin-bottom:14px">Flutter Native Uygulama</div>
+        <p style="font-size:14px;line-height:1.7;color:#5A6A63;margin:0">Telefon işlemcisine doğrudan derlenen native kod. iOS ve Android UI bileşenlerini kullanır. Kamera, GPS, Face ID, ARKit/ARCore ve dokunmatik hareketlere tam erişim sağlar. Hız ve his açısından fark belirgindir.</p>
+      </div>
+    </div>
+    <div style="background:#E3F2EA;border-left:4px solid #008060;border-radius:0 12px 12px 0;padding:20px 24px;font-size:14px;line-height:1.65;color:#0B1F18">
+      <strong>Kısa test:</strong> Uygulamayı indirdikten sonra uçak moduna alın. WebView uygulama tamamen çalışmayı durdurur. Native uygulama daha önce yüklenmiş içerikleri göstermeye devam eder.
+    </div>
+  </div>
+</section>
+
+<section id="karsilastirma" style="padding:80px 24px;background:#F2F8F5;scroll-margin-top:70px">
+  <div style="max-width:900px;margin:0 auto">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#008060;margin-bottom:14px">Karşılaştırma</div>
+    <h2 style="font-size:30px;font-weight:700;color:#0B1F18;margin:0 0 32px">Özellik tablosu</h2>
+    <div class="be-table-wrap">
+      <div class="be-table-inner" style="border:1px solid #E0EAE4;border-radius:16px;overflow:hidden">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr;background:#fff;padding:14px 20px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#5A6A63;gap:12px">
+          <div>Özellik</div><div style="text-align:center">WebView</div><div style="text-align:center;color:#008060">Flutter Native</div>
+        </div>
+        <div style="font-size:13.5px">
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">Sayfa açılış hızı</div><div style="text-align:center;color:#C24040">Yavaş (web yükleme)</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px;color:#008060;font-weight:600">Hızlı (native render)</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">Geçiş animasyonları</div><div style="text-align:center" class="no">Yok / kaba</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px" class="yes">Akıcı 60fps</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">Kamera &amp; ARKit/ARCore</div><div style="text-align:center" class="no">Sınırlı / Yok</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px" class="yes">Tam erişim</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">Face ID / Parmak izi ödeme</div><div style="text-align:center" class="no">Yok</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px" class="yes">Var</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">Çevrimdışı çalışma</div><div style="text-align:center" class="no">Yok</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px" class="yes">Kısmi (önbellek)</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">App Store onayı riski</div><div style="text-align:center" class="no">Yüksek (ret riski)</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px" class="yes">Düşük</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">Push bildirimi</div><div style="text-align:center" class="yes">Var</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px" class="yes">Var + zengin içerik</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">Barkod / QR okuma</div><div style="text-align:center" class="no">Yavaş / Sınırlı</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px" class="yes">Hızlı native kamera</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">AI / AR entegrasyonu</div><div style="text-align:center" class="no">Mümkün değil</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px" class="yes">Tam destek</div>
+          </div>
+          <div style="display:grid;grid-template-columns:2fr 1fr 1fr;padding:14px 20px;border-top:1px solid #F0F4F2;gap:12px;background:#fff;align-items:center">
+            <div style="color:#0B1F18;font-weight:500">Geliştirme süresi</div><div style="text-align:center;color:#5A6A63">1–5 gün</div><div style="text-align:center;background:#F8FCF9;border-radius:8px;padding:6px;color:#5A6A63">4 hafta</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:80px 24px;background:#fff">
+  <div style="max-width:900px;margin:0 auto">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#008060;margin-bottom:14px">Gerçek Dünya Etkisi</div>
+    <h2 style="font-size:30px;font-weight:700;color:#0B1F18;margin:0 0 32px">Kullanıcı deneyiminde ne değişir?</h2>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="background:#F2F8F5;border-radius:16px;padding:24px;border-left:4px solid #008060">
+        <div style="font-size:15px;font-weight:700;color:#0B1F18;margin-bottom:8px">Ödeme akışı</div>
+        <p style="font-size:14px;line-height:1.6;color:#5A6A63;margin:0">WebView'da kullanıcı her sayfada web yükleme bekler. Native'de Face ID ile tek dokunuşta ödeme tamamlanır. Checkout terk oranı native'de belirgin biçimde düşer.</p>
+      </div>
+      <div style="background:#F2F8F5;border-radius:16px;padding:24px;border-left:4px solid #008060">
+        <div style="font-size:15px;font-weight:700;color:#0B1F18;margin-bottom:8px">Ürün keşfi</div>
+        <p style="font-size:14px;line-height:1.6;color:#5A6A63;margin:0">WebView kaydırmada web tarayıcısı gibi tepki verir. Native'de liste ve filtre akıcı 60fps çalışır; büyük kataloglarda (10K+ SKU) fark kritik hale gelir.</p>
+      </div>
+      <div style="background:#F2F8F5;border-radius:16px;padding:24px;border-left:4px solid #008060">
+        <div style="font-size:15px;font-weight:700;color:#0B1F18;margin-bottom:8px">App Store ret riski</div>
+        <p style="font-size:14px;line-height:1.6;color:#5A6A63;margin:0">Apple, "yalnızca web sitesini saran" uygulamaları guideline 4.2 kapsamında reddedebilir. Flutter native bu kısıtlamanın dışında kalır.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="teklif" style="padding:80px 24px;background:#0B1F18;scroll-margin-top:70px">
+  <div style="max-width:720px;margin:0 auto;text-align:center">
+    <div style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#8FDDA9;margin-bottom:16px">Blue Ember yaklaşımı</div>
+    <h2 style="font-size:34px;font-weight:700;color:#fff;margin:0 0 16px">Biz yalnızca <span style="background:linear-gradient(90deg,#8FDDA9,#6DAE4F);-webkit-background-clip:text;background-clip:text;color:transparent">Flutter native</span> geliştiriyoruz</h2>
+    <p style="font-size:15px;color:#B9CEC5;margin:0 0 32px;line-height:1.6">WebView sarma yapmıyoruz. Her proje sıfırdan Flutter ile kodlanır; performans, AI/AR modülleri ve App Store uyumluluğu için başka seçenek yok.</p>
+    <div class="be-hero-btns" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="/eticaret#teklif" style="background:linear-gradient(135deg,#008060,#5FA052);color:#fff;font-weight:700;font-size:15px;padding:15px 30px;border-radius:12px;box-shadow:0 6px 20px rgba(0,128,96,.4)">Teklif Al</a>
+      <a href="https://wa.me/905370580038?text=Merhaba%2C%20native%20uygulama%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);color:#fff;font-weight:600;font-size:15px;padding:15px 30px;border-radius:12px">WhatsApp'tan Sor</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer style="background:#06342A;color:#B9CEC5;padding:40px 24px;text-align:center;font-size:13px">
+  <div style="margin-bottom:14px">
+    <a href="/eticaret" style="color:#8FDDA9;font-weight:600">E-ticaret Ana Sayfa</a>
+    <span style="color:#4D7A68;margin:0 10px">·</span>
+    <a href="/eticaret/hazir-platform-mu-ozel-uygulama-mi" style="color:#B9CEC5">Hazır Platform vs Özel</a>
+    <span style="color:#4D7A68;margin:0 10px">·</span>
+    <a href="/eticaret/kozmetik" style="color:#B9CEC5">Kozmetik</a>
+    <span style="color:#4D7A68;margin:0 10px">·</span>
+    <a href="/eticaret/giyim" style="color:#B9CEC5">Giyim</a>
+  </div>
+  <span>© 2026 Blue Ember · WebView vs Native Farkı Rehberi</span>
+</footer>
+</body>
+</html>
