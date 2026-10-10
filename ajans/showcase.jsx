@@ -1,5 +1,7 @@
 // showcase.jsx — kaydırmalı uygulama vitrini
 const CATEGORIES = [
+  { key: 'taksi',    tag: 'Taksi & Transfer',  accent: '#ff7a00', screen: () => <TaxiApp />,    statusBg: '#ffffff', tint: 'dark',  glow: 'rgba(255,122,0,.28)',  title: 'Taksi Uygulaması',   desc: 'Uber gibi: araç seçimi, canlı sürücü takibi, transfer ve ödeme.' },
+  { key: 'emlak',    tag: 'Emlak & İlan',      accent: '#16a34a', screen: () => <EmlakApp />,   statusBg: '#ffffff', tint: 'dark',  glow: 'rgba(22,163,74,.26)',  title: 'Emlak & İlan',       desc: 'Sahibinden gibi: ilan, filtre, harita, favori ve mesajlaşma.' },
   { key: 'yemek',    tag: 'Yemek & Teslimat',  accent: '#ff3c5e', screen: () => <FoodApp />,    statusBg: '#ff7c3e', tint: 'light', glow: 'rgba(255,90,60,.32)',  title: 'Yemek Sipariş',     desc: 'Canlı menü, akıllı sepet ve adım adım teslimat takibi.' },
   { key: 'fintech',  tag: 'Bankacılık & Fintech', accent: '#6d3bf5', screen: () => <FintechApp />, statusBg: '#0e0a18', tint: 'light', glow: 'rgba(109,59,245,.34)', title: 'Dijital Bankacılık', desc: 'Kart yönetimi, harcama analizi ve anlık para transferi.' },
   { key: 'rezervasyon', tag: 'Rezervasyon & Randevu', accent: '#07b6ac', screen: () => <BookingApp />, statusBg: '#0bbf9e', tint: 'light', glow: 'rgba(11,191,158,.32)', title: 'Randevu Sistemi',   desc: 'Takvim, uygun saat seçimi ve tek dokunuşla onay.' },
@@ -55,10 +57,10 @@ function Showcase() {
       <div className="wrap">
         <div className="show-head reveal">
           <div>
-            <span className="eyebrow">Mobil Uygulama Çözümleri</span>
-            <h2 className="h-sec" style={{ marginTop: 16 }}>Her sektöre özel,<br />gerçek çalışan deneyimler</h2>
+            <span className="eyebrow">Tüm uygulama tipleri</span>
+            <h2 className="h-sec" style={{ marginTop: 16 }}>Ekranlar hazır,<br /><span className="grad">dokun ve dene</span></h2>
           </div>
-          <p className="lead">Aşağıdaki ekranlar tasarım sistemimizle üretilmiş gerçek arayüzlerdir. Kaydır, dokun, keşfet — markanın uygulamasını birlikte hayal edelim.</p>
+          <p className="lead">Aşağıdaki ekranlar tıklanabilir. Kendi logonuz, renkleriniz ve içeriğinizle aynı uygulamayı birkaç haftada mağazaya çıkarıyoruz.</p>
         </div>
 
         <div className="chips reveal">

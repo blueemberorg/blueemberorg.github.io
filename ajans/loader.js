@@ -1,10 +1,12 @@
 (function () {
+  var VERSION = '20261009d';
   var files = [
     'phone.jsx',
     'techlogos.jsx',
     'screens1.jsx',
     'screens2.jsx',
     'screens3.jsx',
+    'screens4.jsx',
     'showcase.jsx',
     'sections.jsx',
     'form.jsx',
@@ -28,7 +30,7 @@
 
   function loadNext(index) {
     if (index >= files.length) return;
-    fetch('/ajans/' + files[index])
+    fetch('/ajans/' + files[index] + '?v=' + VERSION)
       .then(function (res) {
         if (!res.ok) throw new Error(files[index] + ' bulunamadı');
         return res.text();

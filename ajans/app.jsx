@@ -1,24 +1,27 @@
 // app.jsx — kök bileşen
 function App() {
-  var Hero = window.Hero;
-  var Stats = window.Stats;
-  var Showcase = window.Showcase;
-  var Services = window.Services;
-  var Tech = window.Tech;
-  var Testimonials = window.Testimonials;
-  var FAQ = window.FAQ;
-  var RequestForm = window.RequestForm;
-
+  var W = window;
   return (
     <React.Fragment>
-      <Hero />
-      <Stats />
-      <Showcase />
-      <Services />
-      <Tech />
-      <Testimonials />
-      <FAQ />
-      <RequestForm />
+      <W.Hero />
+      <W.ClientLogos />
+      <W.Commitments />
+      <W.Showcase />
+      <W.AppFeatures />
+      <W.Sectors />
+      <W.WhiteLabel />
+      <W.Package />
+      <W.Integrations />
+      <W.IntegrationWall />
+      <W.Process />
+      <W.Revenue />
+      <W.QuickAnswers />
+      <W.Compare />
+      <W.Plans />
+      <W.Services />
+      <W.Testimonials />
+      <W.FAQ />
+      <W.RequestForm />
     </React.Fragment>
   );
 }

@@ -46,7 +46,7 @@
   var tries = 0;
   var timer = setInterval(function () {
     tries += 1;
-    if (document.querySelector('#root .hero') || tries > 60) {
+    if (document.querySelector('#root .hero2, #root .hero') || tries > 60) {
       clearInterval(timer);
       boot();
     }

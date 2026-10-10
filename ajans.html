@@ -12,15 +12,16 @@
 <script src="/clarity.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobil Uygulama Hizmetleri — Blue Ember</title>
-  <meta name="description" content="iOS ve Android mobil uygulama tasarımı ve geliştirme. Fikrinizi cebe sığdıran uygulamalar için Blue Ember ile ücretsiz teklif alın." />
+  <title>Kendi Markanızla Mobil Uygulama — Blue Ember</title>
+  <meta name="description" content="Taksi, yemek siparişi, randevu, emlak, e-ticaret: modülleri hazır uygulamayı kendi markanızla App Store ve Google Play’e çıkarıyoruz. Kaynak kod sizin, aylık zorunlu ücret yok." />
   <link rel="icon" href="/icon.png" type="image/png" />
   <script>document.documentElement.classList.remove('dark');</script><link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="/site-fonts.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" />
 <link rel="stylesheet" href="/site-unify.css" />
   <link rel="stylesheet" href="/landing-shell.css?v=6" />
-  <link rel="stylesheet" href="/ajans/styles.css" />
+  <link rel="stylesheet" href="/ajans/styles.css?v=20261009d" />
   <link rel="stylesheet" href="/landing-hero-form.css" />
   <link rel="stylesheet" href="/mobile-menu.css?v=3" />
   <style>
@@ -30,10 +31,147 @@
       display: block;
       text-align: center;
       padding: 80px 20px;
-      color: #6b6480;
+      color: #5a6781;
       font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
     }
   </style>
+  <!-- SSS yapısal veri (FAQ schema) — ajans/sections.jsx içindeki QUICK_ANSWERS + FAQ ile aynı tutun -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "White-label mobil uygulama nedir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hazır ve test edilmiş bir uygulama altyapısının sizin logonuz, renkleriniz ve içeriğinizle yeniden markalanıp kendi App Store ve Google Play hesabınızda yayınlanmasıdır. Sıfırdan yazılıma göre daha hızlı ve daha düşük maliyetlidir; uygulamada başka bir firmanın adı geçmez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "“Uber gibi” veya “Yemeksepeti gibi” uygulama yaptırmak ne demek?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bilinen bir uygulamanın iş modelini (araç çağırma, yemek siparişi, ilan) kendi markanızla kurmaktır. Yolcu / müşteri uygulaması, sürücü / kurye uygulaması ve yönetim paneli birlikte teslim edilir. Marka, tasarım ve kod size aittir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kendi uygulamam mı, ortak platform mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ortak platformlarda müşteri platformun uygulamasını indirir, aylık ücret ödersiniz ve müşteri verisi platformda kalır. Kendi uygulamanızda müşteri sizin markanızı görür, komisyon ödemezsiniz, veri ve kaynak kod sizde kalır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mobil uygulama yaptırmak ne kadar sürer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hazır modüllerle çalışan, markalı bir uygulama yaklaşık 4 haftada mağazada olur. Özel akışlar ve ERP / CRM entegrasyonları içeren projelerde süre keşif görüşmesinde netleşir ve sözleşmeye yazılır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Uygulama gerçekten benim adıma mı yayınlanıyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Uygulama sizin Apple ve Google geliştirici hesabınızda, sizin markanızla yayınlanır. Hesap açılışında da yardımcı oluyoruz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kaynak kodu bize ait olacak mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Proje teslimi sonrası tüm kaynak kod ve fikri mülkiyet hakları size aittir. İsterseniz başka bir ekiple devam edebilirsiniz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Aylık ücret ödemem gerekiyor mu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zorunlu aylık ücret yok. Sunucu masrafı ve isteğe bağlı bakım paketi dışında ödeme yapmazsınız."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bir uygulama ne kadar sürede yayına çıkar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hazır modüllerle çalışan bir uygulama yaklaşık 4 haftada mağazada olur. Özel akışlar içeren projelerde süre keşif sonunda sözleşmeye yazılır."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Maliyet nasıl belirleniyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seçtiğiniz modüllere, platform sayısına ve entegrasyonlara göre sabit fiyat veriyoruz. Formu doldurmanız ya da WhatsApp’tan yazmanız yeterli; 24 saat içinde dönüyoruz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mevcut sitem veya Shopify / ikas mağazamla çalışır mı?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Ürün, stok ve siparişler mevcut altyapınızla eşitlenir. Hangi bağlantıların hazır olduğunu Entegrasyonlar bölümünde görebilirsiniz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hem iOS hem Android için ayrı mı geliştiriyorsunuz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tek kod tabanından (React Native / Flutter) iki platforma birden geliştiriyoruz. Bu hem süreyi hem maliyeti düşürür."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Uygulamaya ödeme alma özelliği ekleyebilir misiniz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. iyzico, PayTR, Stripe ve yerel bankalarla güvenli ödeme, abonelik ve cüzdan sistemleri kuruyoruz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Yayın sonrası destek veriyor musunuz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Yayın sonrası hata düzeltme, mağaza güncellemeleri ve teknik destek veriyoruz. Düzenli bakım için ayrı paketler var."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Verilerimizin güvenliği nasıl sağlanıyor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KVKK uyumlu mimari, şifreli veri saklama ve güvenli API tasarımı standart yaklaşımımızdır. Veriler sizin sunucunuzda tutulur."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Fikrim henüz net değil, yine de başvurabilir miyim?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tabii. Sayfanın başındaki kutuya ne istediğinizi kabaca yazın; ücretsiz ön görüşmede birlikte netleştiririz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Web sitesi veya yönetim paneli de yapıyor musunuz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Uygulamayı besleyen yönetim panelleri, web sürümleri ve API altyapısını uçtan uca geliştiriyoruz."
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body class="landing-body ajans-page has-subnav">
   <header class="site-header site-header--with-subnav">
@@ -59,9 +197,11 @@
     </div>
     <nav class="page-subnav ajans-theme" id="pageSubnav" aria-label="Sayfa bölümleri">
       <div class="page-subnav-inner">
-        <a href="#cozumler">Çözümleri Gör</a>
-        <a href="#hizmetler">Hizmetlerimiz</a>
-        <a href="#yorumlar">Yorumlar</a>
+        <a href="#cozumler">Uygulamalar</a>
+        <a href="#sektorler">Sektörler</a>
+        <a href="#entegrasyonlar">Entegrasyonlar</a>
+        <a href="#surec">Süreç</a>
+        <a href="#paketler">Paketler</a>
         <a href="#sss">SSS</a>
       </div>
     </nav>
@@ -75,7 +215,7 @@
     <div class="site-footer-inner">
       <div>
         <h2>BLUE EMBER</h2>
-        <p>© 2025 BLUE EMBER</p>
+        <p>© 2026 BLUE EMBER</p>
         <p>Geleceğin teknolojilerini bugünün ihtiyaçlarına uyarlayan yenilikçi teknoloji ortağınız.</p>
       </div>
       <div>
@@ -99,6 +239,13 @@
     </div>
   </footer>
 
+  <!-- Telefonda sabit alt buton çubuğu -->
+  <div class="m-cta-bar" aria-label="Hızlı iletişim">
+    <a class="m-wa" href="https://wa.me/905370580038?text=Merhaba%20Blue%20Ember%2C%20mobil%20uygulama%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/></svg>WhatsApp
+    </a>
+    <a class="m-quote" href="#teklif">Teklif al</a>
+  </div>
   <a href="https://wa.me/905370580038" target="_blank" rel="noopener noreferrer" class="wa-float" aria-label="WhatsApp">WA</a>
 
   <script src="/mobile-menu.js?v=2"></script>
@@ -106,7 +253,7 @@
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone@7.26.9/babel.min.js" crossorigin></script>
-  <script src="/ajans/loader.js"></script>
-  <script src="/ajans/app-shell.js"></script>
+  <script src="/ajans/loader.js?v=20261009d"></script>
+  <script src="/ajans/app-shell.js?v=20261009d"></script>
 </body>
 </html>
